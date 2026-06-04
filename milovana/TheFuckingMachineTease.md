@@ -83,3 +83,88 @@ MENU:
 - 🔥 **The Fucking Machine Tease** — the real thing
 
 [Author note: "Tutorial" doubles as a calibration page — low, steady tempo so the player can confirm the machine reacts before committing to the full tease.]
+
+---
+
+# Application Setup
+
+[Author note: this is the "Application Setup" branch reached from the Page 6 menu. Goal of this whole branch: get the app installed, connected, and **proven to work** — purely a function check. The player should NOT be using the machine on themselves yet; that comes in the Tutorial. UI labels below are quoted exactly as they appear in HismithController so they match what the player sees on screen.]
+
+[Author note: steps 6–7 need a metronome sound for the app to detect. This tease page should play a steady metronome through the same PC the app runs on — the app listens to the system audio, so the beat it hears is the beat coming from this page.]
+
+## Setup Page 1 — What this is
+
+_Before I can take over, let's make sure everything's working — together._
+
+This part is just setup. We'll get the app running, connect your machine, and check that it responds to the beat.
+
+**You won't be using the machine on yourself yet** — for now we're only watching to confirm it all works. The real fun comes later.
+
+Take your time. I'll be right here.
+
+## Setup Page 2 — Get the app & your machine ready
+
+First, a little preparation:
+
+1. **Download HismithController** from the GitHub releases page ([releases link]) and install it on your Windows PC.
+2. **Set up your Hismith Pro 1** — mount it securely, attach your accessory, and **turn it on** so it's ready to pair over Bluetooth.
+
+No need to point it at yourself yet — just have it switched on and within reach.
+
+## Setup Page 3 — Connect over Bluetooth
+
+Now let's introduce them to each other:
+
+1. **Start HismithController** and click **"Get started"**.
+2. On the connection screen, click **"Scan for devices"**.
+3. When your Hismith appears in the list, **tap to select it**, then click **"Connect"**.
+
+[Author note: requires the PC's Bluetooth to be on — covered as a requirement on Page 3 of the intro.]
+
+Once you're connected, you'll land on the main screen with the **Manual** / **Sound** mode toggle at the top.
+
+## Setup Page 4 — Test it in Manual mode
+
+Let's make sure your machine listens to you first.
+
+1. Make sure the **Manual** tab is selected.
+2. Under **Speed control**, either type a value into **SPEED (%)** or tap one of the **PRESETS**.
+3. Watch your machine — it should ramp smoothly up to the speed you set.
+
+Feel free to play with a few values. When you've seen it respond, bring it back down to a stop.
+
+[Author note: keep suggested test values low here — this is a bench test with the machine pointed away from the player.]
+
+## Setup Page 5 — Let the app hear the beat
+
+Now the part that makes this special — letting the metronome drive it.
+
+1. Switch to the **Sound** tab.
+2. Let the metronome on this page play. Within a few seconds you should see:
+   - the **MUSIC** readout showing a live **bpm**, and
+   - the **visualizer bars** moving in time with the beat.
+
+That means the app can hear me. Once you see the beat being picked up, you're ready for the next step.
+
+## Setup Page 6 — Watch it move to the beat
+
+This is the moment everything's been leading to.
+
+1. Press the **play button** in the centre of the visualizer.
+2. Watch your machine fall into rhythm with the metronome — speeding up and easing off exactly with the beat.
+
+That's me, moving it. No hands, no effort from you — just the beat.
+
+When you've seen enough, press the button again to pause. **Remember — still just watching for now.**
+
+## Setup Page 7 — All set
+
+_Perfect. Everything's working._
+
+Your machine connects, it responds, and it moves to the beat. That's all we needed to see.
+
+When you're ready to actually *feel* it, head to the **Tutorial** — I'll guide you through your first real run, gently.
+
+MENU:
+- 🎓 **Continue to the Tutorial**
+- ↩️ **Back to the main menu**
