@@ -187,7 +187,10 @@ When you're ready to actually *feel* it, head to the **Tutorial** — I'll guide
 
 MENU:
 - 🎓 **Continue to the Tutorial**
+- 🔥 **Back to the tease** — if you came here from the tease to get set up
 - ↩️ **Back to the main menu**
+
+[Author note: the "Back to the tease" option exists so a player who detoured here from the tease's "Are you set up?" page (Tease Page 3) returns cleanly to the prep ritual. In the milovana editor this should route back to **Tease Page 4 — Pick your dildo**.]
 
 ---
 
@@ -225,7 +228,7 @@ _Take all the time you want. When it feels good and you're ready to hand control
 
 ## Tutorial Page 3 — The first, slow strokes
 
-[TIMER: 10s anticipation — silence, machine still]
+[PAUSE: ~10s — anticipation, machine still]
 
 _Here we go. Stay just like that for me… let the anticipation build._
 
@@ -301,4 +304,325 @@ So… do you think you can handle some real fucking now?
 
 MENU:
 - 🔥 **Start The Fucking Machine Tease**
+- ↩️ **Back to the main menu**
+
+---
+
+# The Fucking Machine Tease
+
+[Author note: the main event, reached from the Page 6 menu. **Theme A — "You're mine tonight":** she is in full, intimate control; the through-line is the player surrendering and being looked after. Written to **stand alone** — assumes nothing about whether the player did Setup or the Tutorial. ~20 minutes of driven content, then an open-ended climax loop until the player presses a button.]
+
+[Author note: images escalate with intensity — the model using the machine on herself, building from sensual/solo to hard machine-fucking. Partner/machine-on-model imagery is allowed here (unlike the tutorial). Match the picture's intensity to the current BPM.]
+
+[Author note — full pacing legend for the timed branches:
+- `[METRONOME: ~N BPM, ~Ns]` — machine moving at that tempo for that long.
+- `[PAUSE: ~Ns]` — silence, machine still (covers both mid-scene stops and anticipation holds).
+- `[LOOP START]` / `[LOOP END]` — the enclosed blocks repeat until a player button is pressed.
+- `[BUTTON: "label" → target]` — a player-driven branch.
+All BPM/timing values are first-draft and meant to be tested and tuned against the real machine.]
+
+## Tease Page 1 — You came back
+
+_So. You came back for the real thing._
+
+Welcome to **The Fucking Machine Tease** — the one I've been saving for you.
+
+No more gentle introductions, no more easing you in. Tonight I take over completely… and you will let me.
+
+## Tease Page 2 — A little honesty first
+
+Before we begin, here's what you're agreeing to.
+
+This runs about **20 minutes** — and then I don't stop. I keep going until you fall apart for me, however long that takes.
+
+So get everything you need within reach now. Once I start, I really don't like to stop.
+
+MENU:
+- 🔥 **I'm ready — take me**
+- ↩️ **Not yet — back to the menu**
+
+## Tease Page 3 — Is your machine ready for me?
+
+First, tell me — is everything set up?
+
+I need the app **installed, paired, and listening** before I can move you a single inch.
+
+MENU:
+- ✅ **All set up and connected** → continue
+- ⚙️ **I haven't set it up yet** → **Application Setup** (come back here when you're done)
+
+[Author note: the second option routes into the **Application Setup** branch; its "Back to the tease" option returns the player to **Tease Page 4**, so the prep ritual picks up cleanly.]
+
+## Tease Page 4 — Choose well
+
+_Choose carefully — you'll be living with this decision for a while._
+
+- 🍆 **Pick a dildo you completely trust** — familiar, comfortable, and **never bigger than you know you can take**. I don't ease off the way I did in the tutorial; tonight I get rough. The right size is what lets you surrender instead of brace.
+
+## Tease Page 5 — Get ready for me
+
+Now let's get you slick and the app listening.
+
+- 💦 **Lube far more than feels necessary** — then add more. We'll be at this a long while.
+- 🎚️ In the app's **Sound** mode, set **THRUST RHYTHM** to **1 beat per stroke**, then press start so it's listening for me.
+
+## Tease Page 6 — How to stop me
+
+Knowing how to stop me is exactly what lets you let go of everything else.
+
+- 🛑 **Space** halts everything instantly — it works even when the app isn't the window you're looking at.
+- 🆘 At the very end you'll have two buttons: one for when you come, and a **mercy** button for when you simply can't take any more. **Either one is completely okay.**
+- 💧 Keep water and extra lube close.
+
+You're safe with me. That's the whole reason you can give in.
+
+## Tease Page 7 — Ease yourself on
+
+By your own hand now — get yourself onto it.
+
+1. Slowly **ease yourself onto** the dildo.
+2. Gently **move up and down** — just you, no machine — until it feels easy and welcoming.
+3. More lube if you want it. No rush.
+
+_When you're settled, and aching to be taken… turn the page. Once you do that... you're mine._
+
+## Tease Page 8 — Hands off
+
+[PAUSE: ~10s — anticipation, machine still]
+
+_Good. Now hold perfectly still for me._
+
+_Hands off. From this moment you don't move — I do. All you have to do is feel, and obey._
+
+_Here we go._
+
+## Tease Page 9 — Act I · Slow seduction
+
+[METRONOME: ~20 BPM, ~45s]
+
+_There. Feel me take that very first stroke._
+
+_Slow… deliberate… I'm in no hurry with you tonight._
+
+[METRONOME: ~30 BPM, ~45s]
+
+_A little more. Let it open you up. Let your body remember who's in charge._
+
+[PAUSE: ~10s]
+
+_…and still. Feel how much you already miss me?_
+
+[METRONOME: ~45 BPM, ~50s]
+
+_There I am again. Settle into it — this is mine to decide now, not yours._
+
+[METRONOME: ~50 BPM, ~30s]
+
+_Good. You're already learning to just… let go._
+
+## Tease Page 10 — Act II · The first rise
+
+[METRONOME: ~60 BPM, ~40s]
+
+_Now we climb. Stay with me._
+
+[METRONOME: ~80 BPM, ~40s]
+
+_Feel that? I'm not teasing anymore._
+
+[METRONOME: ~100 BPM, ~30s]
+
+_Harder. You can take it — I know exactly what you can take._
+
+[METRONOME: ~125 BPM, ~60s — first hard fucking]
+
+_There it is. This is what you came back for._
+
+_Don't fight it. Let me fuck you exactly as hard as I please._
+
+[PAUSE: ~8s]
+
+_…and breathe. That was only the first time I take you tonight._
+
+## Tease Page 11 — Act III · Catch your breath
+
+[METRONOME: ~40 BPM, ~40s]
+
+_Slow again. Feel your heart pounding? I did that to you._
+
+_You're already mine — we both know it now._
+
+[PAUSE: ~12s]
+
+_Look at you — hips chasing nothing, aching for a rhythm I've taken away._
+
+[METRONOME: ~55 BPM, ~30s]
+
+_Shh. You'll get it back when I decide you've earned it._
+
+[PAUSE: ~10s]
+
+_Not yet. A little wanting is so good for you._
+
+## Tease Page 12 — Act IV · The ladder
+
+[Author note: 4 identical step-up cycles. Each cycle: 60 → 90 → 120 → 150 BPM in quick transitions, then a hard stop. Voice lines rotate per cycle (below) so it escalates rather than repeats.]
+
+[METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
+
+_Up… and up… harder… now take it!_
+
+[PAUSE: ~6s — 0 BPM]
+
+_…and nothing. Again._
+
+[METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
+
+_Climb for me. Faster. Don't you dare come yet._
+
+[PAUSE: ~6s — 0 BPM]
+
+_Stopped again. You hate how much you love this. Again._
+
+[METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
+
+_Yes — all the way up — give it to me._
+
+[PAUSE: ~6s — 0 BPM]
+
+_Breathe. You're trembling for me now. One more._
+
+[METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
+
+_Last climb — everything you have — now!_
+
+[PAUSE: ~6s — 0 BPM]
+
+_…and stop. Good. So good for me._
+
+## Tease Page 13 — Act V · Story interlude
+
+[METRONOME: ~30 BPM, ~40s]
+
+_Now I want you slow. Achingly slow._
+
+_Feel every single inch. There's no rushing what I'm going to do to you._
+
+[METRONOME: ~50 BPM, ~30s — building]
+
+_Closer… let it build… right up to the edge…_
+
+[PAUSE: abrupt stop]
+
+_…and stop. Not yet. Not until I say so._
+
+_Stay right there, trembling on the edge. I love you most like this._
+
+## Tease Page 14 — Act VI · The climb
+
+[METRONOME: ~100 BPM, ~40s]
+
+_No more mercy now. We climb — and this time we don't come back down._
+
+[METRONOME: ~120 BPM, ~50s]
+
+_Harder. Feel me taking what's mine._
+
+[METRONOME: ~140 BPM, ~50s]
+
+_Don't hold back from me — I certainly won't._
+
+[METRONOME: ~160 BPM, ~40s]
+
+_Almost there. Let it build, let it build…_
+
+[METRONOME: ~170 BPM, ~30s]
+
+_Right to the edge now. Hold it for me._
+
+## Tease Page 15 — Act VII · The climax moment
+
+[METRONOME: ~180 BPM, ~40s]
+
+_Now. This is it._
+
+_I'm going to fuck you straight over that edge — don't you dare resist me._
+
+[METRONOME: ~190 BPM, ~40s]
+
+_Come for me. Right now. Give me every last bit of you._
+
+_That's it — let go — **come!**_
+
+[Author note: if the player climaxes here they press the climax button (same one offered in the loop) → **climax outro**. If they don't, the page flows straight into the loop below.]
+
+## Tease Page 16 — The loop · Relentless finish
+
+[LOOP START]
+
+[METRONOME: ~120 BPM, ~15s]
+
+_Still holding on? Mmm. Stubborn thing. I like that._
+
+[METRONOME: ~150 BPM, ~15s]
+
+_Then I won't stop. I'll just keep taking you, and taking you._
+
+[METRONOME: ~180 BPM, ~20s]
+
+_Come on — come for me. Let go. You know you want to give in._
+
+[METRONOME: ~140 BPM, ~15s]
+
+_Catch your breath… but I am nowhere near finished with you._
+
+[METRONOME: ~170 BPM, ~20s]
+
+_Again. Right back to the edge. Fall for me._
+
+[LOOP END]
+
+[Author note: waves oscillate **120 ↔ 180 BPM** and repeat indefinitely. Rotate/vary the encouragement lines on each pass so it never reads repetitive. The loop ends only when the player presses one of the buttons below (Space e-stop always halts the machine regardless).]
+
+[BUTTON: "I'm coming!" → Tease Page 17 (climax outro)]
+[BUTTON: "I can't take any more" → Tease Page 18 (mercy outro)]
+
+## Tease Page 17 — Outro · Afterglow
+
+[METRONOME: ~20 BPM, ~20s — gentle, loving]
+
+_There it is. Good. That's exactly what I wanted from you._
+
+_Shh… I've got you. Just a little more, soft and slow now — feel me ease you down._
+
+[METRONOME: ~15 BPM, ~15s]
+
+_Easy… easy… there's no rush at all._
+
+[PAUSE: machine eases to a full stop]
+
+_And… rest. You were perfect._
+
+_Take all the time you need to come back to me. You did so beautifully — I'm proud of you, and you should be too._
+
+MENU:
+- 🔁 **Again, from the top**
+- ↩️ **Back to the main menu**
+
+## Tease Page 18 — Outro · Gentle aftercare
+
+[METRONOME: easing down → full stop, ~15s]
+
+_Of course. That's all you ever had to say._
+
+_I'm slowing right down for you… there. All stopped. You're safe._
+
+_No disappointment here — none at all. You gave me so much tonight, and I loved every second of it._
+
+_Breathe. Drink some water. Be gentle with yourself, the way I'd be with you._
+
+_You were wonderful. Come back to me whenever you want more._
+
+MENU:
+- 🔁 **Start over**
 - ↩️ **Back to the main menu**
