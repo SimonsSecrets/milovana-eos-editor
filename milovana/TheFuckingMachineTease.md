@@ -321,6 +321,8 @@ MENU:
 - `[BUTTON: "label" → target]` — a player-driven branch.
 All BPM/timing values are first-draft and meant to be tested and tuned against the real machine.]
 
+[Author note — line density: aim for a fresh narrative line roughly every **10–15s** of a timed block (up to ~20s occasionally). A single `[METRONOME]` run can carry several lines (e.g. a 60s run → ~4–5 lines). Keep her talking so the player is never left in silence mid-rhythm.]
+
 ## Tease Page 1 — You came back
 
 _So. You came back for the real thing._
@@ -404,9 +406,17 @@ _There. Feel me take that very first stroke._
 
 _Slow… deliberate… I'm in no hurry with you tonight._
 
+_Breathe out for me. Let your whole body go soft and heavy._
+
 [METRONOME: ~30 BPM, ~45s]
 
-_A little more. Let it open you up. Let your body remember who's in charge._
+_A little more now. Let it open you up._
+
+_Let your body remember who's in charge here._
+
+_Mmm… you're already starting to give in, aren't you._
+
+_That's it. No thinking. Just me, moving you._
 
 [PAUSE: ~10s]
 
@@ -414,11 +424,19 @@ _…and still. Feel how much you already miss me?_
 
 [METRONOME: ~45 BPM, ~50s]
 
-_There I am again. Settle into it — this is mine to decide now, not yours._
+_There I am again._
+
+_Settle into it — this is mine to decide now, not yours._
+
+_Feel how easy it is to stop holding on?_
+
+_Good. Let every stroke pull you a little deeper under._
 
 [METRONOME: ~50 BPM, ~30s]
 
-_Good. You're already learning to just… let go._
+_You're already learning to just… let go._
+
+_See? You don't have to do a single thing but feel._
 
 ## Tease Page 10 — Act II · The first rise
 
@@ -426,19 +444,35 @@ _Good. You're already learning to just… let go._
 
 _Now we climb. Stay with me._
 
+_Feel me pick up the pace, bit by bit._
+
+_No more easing in — I want more of you now._
+
 [METRONOME: ~80 BPM, ~40s]
 
 _Feel that? I'm not teasing anymore._
 
+_This is me starting to take what I want._
+
+_And you're letting me. God, you're letting me._
+
 [METRONOME: ~100 BPM, ~30s]
 
 _Harder. You can take it — I know exactly what you can take._
+
+_Don't tense up — open up, and let me in deeper._
 
 [METRONOME: ~125 BPM, ~60s — first hard fucking]
 
 _There it is. This is what you came back for._
 
 _Don't fight it. Let me fuck you exactly as hard as I please._
+
+_Feel me filling you, over and over._
+
+_Yes — just like that. You're mine now, completely._
+
+_Stay with it… stay right there with me…_
 
 [PAUSE: ~8s]
 
@@ -452,6 +486,8 @@ _Slow again. Feel your heart pounding? I did that to you._
 
 _You're already mine — we both know it now._
 
+_Easy strokes… just enough to keep you simmering for me._
+
 [PAUSE: ~12s]
 
 _Look at you — hips chasing nothing, aching for a rhythm I've taken away._
@@ -459,6 +495,8 @@ _Look at you — hips chasing nothing, aching for a rhythm I've taken away._
 [METRONOME: ~55 BPM, ~30s]
 
 _Shh. You'll get it back when I decide you've earned it._
+
+_There — a little taste. Don't go getting greedy._
 
 [PAUSE: ~10s]
 
@@ -470,7 +508,9 @@ _Not yet. A little wanting is so good for you._
 
 [METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
 
-_Up… and up… harder… now take it!_
+_Up… and up…_
+
+_…harder — all the way — now take it!_
 
 [PAUSE: ~6s — 0 BPM]
 
@@ -478,7 +518,9 @@ _…and nothing. Again._
 
 [METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
 
-_Climb for me. Faster. Don't you dare come yet._
+_Climb for me. Faster._
+
+_Don't you dare come yet — I haven't said you can._
 
 [PAUSE: ~6s — 0 BPM]
 
@@ -486,7 +528,9 @@ _Stopped again. You hate how much you love this. Again._
 
 [METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
 
-_Yes — all the way up — give it to me._
+_Yes — all the way up—_
+
+_—give it to me, don't hold anything back._
 
 [PAUSE: ~6s — 0 BPM]
 
@@ -494,7 +538,9 @@ _Breathe. You're trembling for me now. One more._
 
 [METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
 
-_Last climb — everything you have — now!_
+_Last climb now—_
+
+_—everything you have — give it all to me!_
 
 [PAUSE: ~6s — 0 BPM]
 
@@ -506,11 +552,15 @@ _…and stop. Good. So good for me._
 
 _Now I want you slow. Achingly slow._
 
-_Feel every single inch. There's no rushing what I'm going to do to you._
+_Feel every single inch._
+
+_There's no rushing what I'm going to do to you._
 
 [METRONOME: ~50 BPM, ~30s — building]
 
-_Closer… let it build… right up to the edge…_
+_Closer now… let it build… right up to the edge…_
+
+_Almost — almost — don't you dare tip over without me._
 
 [PAUSE: abrupt stop]
 
@@ -524,21 +574,43 @@ _Stay right there, trembling on the edge. I love you most like this._
 
 _No more mercy now. We climb — and this time we don't come back down._
 
+_Feel me settle into a harder rhythm._
+
+_Match your breath to it… there._
+
 [METRONOME: ~120 BPM, ~50s]
 
 _Harder. Feel me taking what's mine._
+
+_Deeper now, with every single stroke._
+
+_You couldn't stop me even if you wanted to — and you don't._
+
+_Give in to it. Give in to me._
 
 [METRONOME: ~140 BPM, ~50s]
 
 _Don't hold back from me — I certainly won't._
 
+_Faster. Feel just how relentless I can be._
+
+_This is exactly what I promised you._
+
+_Stay with me — we are not slowing down._
+
 [METRONOME: ~160 BPM, ~40s]
 
 _Almost there. Let it build, let it build…_
 
+_Higher. I can feel you trembling around me._
+
+_Don't fight the edge — race toward it._
+
 [METRONOME: ~170 BPM, ~30s]
 
 _Right to the edge now. Hold it for me._
+
+_So close… I want you aching for it._
 
 ## Tease Page 15 — Act VII · The climax moment
 
@@ -548,9 +620,13 @@ _Now. This is it._
 
 _I'm going to fuck you straight over that edge — don't you dare resist me._
 
+_Feel it building, building, nowhere left to hide._
+
 [METRONOME: ~190 BPM, ~40s]
 
 _Come for me. Right now. Give me every last bit of you._
+
+_Let go — completely — I've got you._
 
 _That's it — let go — **come!**_
 
