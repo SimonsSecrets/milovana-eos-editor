@@ -111,6 +111,10 @@ First, a little preparation:
 
 No need to point it at yourself yet — just have it switched on and within reach.
 
+> 💡 **If Windows shows a blue "Windows protected your PC" screen**, that's normal for a small app like this one. Click **"More info"**, then **"Run anyway"** to continue.
+
+[Author note: the published build is self-contained and unsigned, so SmartScreen will flag it on first run. If the app ever gets code-signed, this note can be removed.]
+
 ## Setup Page 3 — Connect over Bluetooth
 
 Now let's introduce them to each other:
@@ -118,6 +122,8 @@ Now let's introduce them to each other:
 1. **Start HismithController** and click **"Get started"**.
 2. On the connection screen, click **"Scan for devices"**.
 3. When your Hismith appears in the list, **tap to select it**, then click **"Connect"**.
+
+> 🔍 **Don't see your device?** Make sure it's switched on, your PC's **Bluetooth is enabled**, and the machine isn't already paired to something else. Click **"Scan for devices"** again to retry.
 
 [Author note: requires the PC's Bluetooth to be on — covered as a requirement on Page 3 of the intro.]
 
@@ -133,11 +139,21 @@ Let's make sure your machine listens to you first.
 
 Feel free to play with a few values. When you've seen it respond, bring it back down to a stop.
 
+> 🔍 **Machine not moving?** Check it's still powered on and connected (the app shows a "Connection lost" banner if it dropped — click **"Reconnect"**). Try a higher value, and make sure it has somewhere to move freely.
+
 [Author note: keep suggested test values low here — this is a bench test with the machine pointed away from the player.]
 
 ## Setup Page 5 — Let the app hear the beat
 
 Now the part that makes this special — letting the metronome drive it.
+
+The app listens to whatever your PC is playing, so first make sure my voice can actually reach it:
+
+- 🔊 Play this tease **on the same Windows PC** the app is running on.
+- 🔉 Turn your **volume up** and make sure you're **not muted**.
+- 🎧 Keep the sound coming out of that PC — if your audio is sent to a separate speaker or a Bluetooth headset, the app may not hear it.
+
+Then:
 
 1. Switch to the **Sound** tab.
 2. Let the metronome on this page play. Within a few seconds you should see:
@@ -145,6 +161,8 @@ Now the part that makes this special — letting the metronome drive it.
    - the **visualizer bars** moving in time with the beat.
 
 That means the app can hear me. Once you see the beat being picked up, you're ready for the next step.
+
+> 🔍 **No bpm, or the bars aren't moving?** Turn the volume up, confirm the tease is playing on this PC, and check the app's audio is started (it shows "Play some music to get started" when it's listening but hearing nothing).
 
 ## Setup Page 6 — Watch it move to the beat
 
@@ -154,6 +172,8 @@ This is the moment everything's been leading to.
 2. Watch your machine fall into rhythm with the metronome — speeding up and easing off exactly with the beat.
 
 That's me, moving it. No hands, no effort from you — just the beat.
+
+While it's running, find the **emergency stop** — just press the **Space bar** and everything halts instantly. Try it once now, so your fingers know exactly where it is before you ever need it. It works even when the app isn't the window you're looking at.
 
 When you've seen enough, press the button again to pause. **Remember — still just watching for now.**
 
@@ -167,4 +187,118 @@ When you're ready to actually *feel* it, head to the **Tutorial** — I'll guide
 
 MENU:
 - 🎓 **Continue to the Tutorial**
+- ↩️ **Back to the main menu**
+
+---
+
+# Tutorial
+
+[Author note: this is the "Tutorial" branch reached from the Page 6 menu. Purpose: the player's **first time letting the machine work on them** — a gentle, relaxed, ~5-minute taste. Mostly *teasing*, not hard fucking: low BPMs with deliberate pauses (silence = the machine stops). It ends on a **cliffhanger** — a slightly faster tempo and extra-seductive lines — to entice the player into the full tease next.]
+
+[Author note: images here are the model **alone**, playing with a dildo and/or masturbating — no partner, no machine-on-a-partner shots. Those are saved for the real tease.]
+
+[Author note — pacing: timed blocks are marked `[METRONOME: ~N BPM, ~Ns]` (machine moving) and `[PAUSE: ~Ns]` (silence, machine stops). BPM values are gentle starting suggestions — tune against the real machine. Whole tutorial should stay at or under ~5 minutes.]
+
+## Tutorial Page 1 — Get comfortable
+
+_No rush now. This first time is all about you getting comfortable with me._
+
+Before we start, let's set the scene:
+
+- 🍆 **Choose a dildo you're completely comfortable with** — for your first time, go smaller and familiar, never bigger. Too much and this becomes far too intense; the right size lets you relax and enjoy.
+- 💦 **Lube generously** — far more than feels necessary. Then add a little more.
+- 🛋️ Get into a relaxed, comfortable position with the machine settled where you want it.
+- 🎚️ In the app's **Sound** mode, set **THRUST RHYTHM** to **1 beat per stroke** — so every tick of the metronome is one full, deliberate stroke.
+- 🛑 Emergency stop is still just the **Space bar**, any time you want it.
+
+Take a slow breath. When you're ready, and not a moment before, we'll begin.
+
+## Tutorial Page 2 — Ease yourself onto it
+
+Before I take over, let's get you settled onto it — at your own pace, by your own hand.
+
+1. Position yourself against the dildo and, slowly, **ease yourself onto it**.
+2. Gently **move up and down** along its length — no machine yet, just you — until it feels easy and comfortable.
+3. Add more lube if you need it. There's no rush at all.
+
+_Take all the time you want. When it feels good and you're ready to hand control to me… turn the page._
+
+## Tutorial Page 3 — The first, slow strokes
+
+[TIMER: 10s anticipation — silence, machine still]
+
+_Here we go. Stay just like that for me… let the anticipation build._
+
+[METRONOME: ~20 BPM, ~45s]
+
+_There it is. Feel me start to move._
+
+_Slow… easy… there's nowhere to be but right here._
+
+_Don't tense up. Let it glide. Let me do all the work._
+
+[PAUSE: ~12s]
+
+_…and stop. Feel that sudden emptiness? Hold onto that wanting for me._
+
+## Tutorial Page 4 — Settling into a rhythm
+
+[METRONOME: ~35 BPM, ~50s]
+
+_Here I come again — a little more sure of myself this time._
+
+_Breathe with it. In… and out… let every stroke sink in a little deeper._
+
+_See how easy this is? You don't have to do a thing. Just feel._
+
+[PAUSE: ~12s]
+
+_Quiet again. I love leaving you like this — wanting just a little more than I'm giving._
+
+## Tutorial Page 5 — Teasing you
+
+[METRONOME: ~45 BPM, ~30s]
+
+_Mmm, there. Just enough to keep you needing it._
+
+[PAUSE: ~15s]
+
+_And gone again. Patience. I decide when you get more._
+
+[METRONOME: ~45 BPM, ~30s]
+
+_Back so soon? You're starting to crave the beat now, aren't you._
+
+[PAUSE: ~15s]
+
+_Feel how much you miss it the instant it stops. That ache is the whole point._
+
+## Tutorial Page 6 — A taste of what's coming
+
+[METRONOME: ~60 BPM, ~40s]
+
+_Now… let me show you just a little more._
+
+_Feel me quicken? A hint of how relentless I can be when I really want you._
+
+_That's it — let go, let it build…_
+
+[METRONOME: ~80 BPM, ~8s — short, sharp burst]
+
+_…faster — feel that? That's barely the beginning._
+
+[PAUSE: abrupt stop]
+
+_…and that's where I'll leave you._
+
+_Aching, wet, and wanting — exactly how you should be before the real thing._
+
+_Everything you just felt? That was me being gentle. If you dare, come find out what happens when I'm not._
+
+## Tutorial Page 7 — Ready for the real thing
+
+So… do you think you can handle some real fucking now?
+
+MENU:
+- 🔥 **Start The Fucking Machine Tease**
 - ↩️ **Back to the main menu**
