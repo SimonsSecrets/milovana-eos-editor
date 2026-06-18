@@ -28,6 +28,11 @@ Keep all edits and additions consistent with the style below.
 
 ---
 
+## Model
+
+The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/pornstars/leah-gotti/
+
+
 ## Page 1 — Title / Hook
 
 _You've followed the metronome a hundred times._
