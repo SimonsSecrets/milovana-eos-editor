@@ -58,13 +58,13 @@ referenced below are detailed in §5.)
 |---|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1 | user       | **Local folder** — create `milovana/Teases/<TeaseName>/`.                                                                                                                                                                                                                                                                                                                          |
 | 2 | both       | **Script** — write `script.md`: tone, pages, pacing, `[METRONOME]`/`[PAUSE]` markers, author notes.                                                                                                                                                                                                                                                                                |
-| 3 | **Claude** | **Asset plan** — read the script and propose **(a)** the **themed gallery buckets** it needs (one gallery per mood/intensity, e.g. `solo-sensual`, `machine-soft`, `machine-hard`, `climax`) plus any hard constraints (e.g. *tutorial = solo only*), and **(b)** the metronome/audio files the `[METRONOME]` markers call for. **Raise the themed-buckets approach here** (§5.3). |
+| 3 | **Claude** | **Asset plan** — read the script and propose **(a)** the **themed gallery buckets** it needs (one gallery per mood/pace, e.g. `solo-sensual`, `machine-soft`, `machine-hard`, `climax`) plus any hard constraints (e.g. *tutorial = solo only*), and **(b)** the metronome/audio files the `[METRONOME]` markers call for. **Raise the themed-buckets approach here** (§5.3). |
 | 4 | user       | **Asset setup** — create local `Gallery/<bucket>/` folders + `Files/`, add exact-byte sources; in the editor create matching galleries (folder name = gallery name) and upload **images *and* audio**.                                                                                                                                                                             |
 | 5 | user       | **Export stub** — export the (stub) tease JSON into `tease.json`; it carries the `galleries`/`files` manifest.                                                                                                                                                                                                                                                                     |
 | 6 | **Claude** | **Build map** — generate `asset-map.json` (SHA-1 join; §5.2).                                                                                                                                                                                                                                                                                                                      |
 | 7 | **Claude** | **Vision tagging** — view each image, write `asset-content.json` (§5.3).                                                                                                                                                                                                                                                                                                           |
 | 8 | user       | **Verify tags** — review/adjust the tags.                                                                                                                                                                                                                                                                                                                                          |
-| 9 | **Claude** | **Generate tease** — author the full `tease.json` from the script: select images by joining `asset-content` tags ↔ `asset-map` locators (match intensity to BPM), declare the `audio` module, add `audio.play` for `[METRONOME]` blocks.                                                                                                                                           |
+| 9 | **Claude** | **Generate tease** — author the full `tease.json` from the script: select images by joining `asset-content` tags ↔ `asset-map` locators (match pace to BPM), declare the `audio` module, add `audio.play` for `[METRONOME]` blocks.                                                                                                                                           |
 | 10 | user       | **Upload & verify** — upload `tease.json`, play through.                                                                                                                                                                                                                                                                                                                           |
 | 11 | both       | **Iterate** — refine on feedback until the result is right.                                                                                                                                                                                                                                                                                                                        |
 
@@ -489,25 +489,34 @@ if the same source image appears in a later tease.)
 
 ### Tag vocabulary (controlled, for consistency)
 
+`pace` and `explicitness` are **two independent axes** — `explicitness` = how much is *shown*;
+`pace` = how *energetic/fast* the scene is, ignoring nudity. They do **not** combine into one
+score (a calm nude pose is more exposed but lower-paced than an active clothed shot). Keeping them
+separate lets a tease's tempo arc (BPM) and exposure arc escalate independently.
+
 | Tag | Values | Purpose |
 |-----|--------|---------|
 | `subject` | `solo` / `machine` / `partner` | Enforce constraints (e.g. tutorial = `solo` only). |
-| `intensity` | `1`–`5`, **anchored to BPM bands** (≈ 1:≤40, 2:40–70, 3:70–110, 4:110–150, 5:150+) | "Match the picture's intensity to the current BPM" becomes a lookup. |
-| `explicitness` | `clothed` / `topless` / `nude` / `explicit` | Sensual → hard escalation. |
+| `pace` | `1`–`5`, energy/tempo **only** (ignores nudity), **anchored to BPM bands** (≈ 1:≤40, 2:40–70, 3:70–110, 4:110–150, 5:150+) | "Match the picture's pace to the current BPM" becomes a lookup. |
+| `explicitness` | `clothed` / `underwear` / `partial-nudity` / `nude` / `explicit` | Exposure **only**, independent of pace. (clothed = nothing bared; underwear = bra/panties/thong as worn; partial-nudity = one region bared; nude = fully exposed/undressed; explicit = explicit act.) |
 | `orientation` | `portrait` / `landscape` | Known from dimensions; affects display. |
 | `notes` | free text | Pose/setting cue for a specific beat. |
 
 ```json
 {
   "tease": "TheFuckingMachine",
-  "vocabulary": { "subject": ["solo","machine","partner"], "intensity": "1-5 (BPM-banded)",
-                  "explicitness": ["clothed","topless","nude","explicit"], "orientation": ["portrait","landscape"] },
+  "vocabulary": {
+    "subject": ["solo","machine","partner"],
+    "explicitness": ["clothed","underwear","partial-nudity","nude","explicit"],
+    "pace": "Energy/tempo only, independent of explicitness. 1 (still/posed) to 5 (frantic/hard); BPM-banded.",
+    "orientation": ["portrait","landscape"]
+  },
   "galleries": {
     "LeahGotti_001": {
       "theme": "solo-sensual",
       "images": {
-        "80877276_032_1886.jpg": { "subject": "solo", "intensity": 1, "explicitness": "nude",
-                                    "orientation": "portrait", "notes": "standing, daylight window, direct gaze" }
+        "80877276_032_1886.jpg": { "subject": "solo", "pace": 1, "explicitness": "partial-nudity",
+                                    "orientation": "portrait", "notes": "standing, daylight window, direct gaze; still/posed" }
       }
     }
   }
@@ -519,7 +528,7 @@ per gallery, re-run only when images change.
 
 ### Themed gallery buckets (raise this at step 3)
 
-Organize galleries so **each gallery ≈ one script section/intensity** (e.g. `solo-sensual`,
+Organize galleries so **each gallery ≈ one script section** (mood/pace) (e.g. `solo-sensual`,
 `machine-soft`, `machine-hard`, `climax`). Two payoffs:
 
 - **Random locators stay on-theme:** `gallery:<machine-hard-uuid>/*` on a high-BPM page auto-picks
