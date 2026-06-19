@@ -47,6 +47,27 @@ The EOS editor is at <https://milovana.com/eos/editor/teases>. Upload a JSON via
 **backup/restore** function. To inspect an existing published tease, change `showtease` to
 `geteosscript` in its URL to download its JSON. (See [`Instructions.md`](Instructions.md).)
 
+### 🔔 End-to-end workflow for a new (asset-backed) tease
+
+This is the agreed process for building a real, script-driven tease. **Claude must surface this
+when a new tease starts** — especially the **themed-gallery-buckets** recommendation in step 3 and
+the fact that no `image`/`audio.play` locator resolves until steps 4–6 are done. (Asset mechanics
+referenced below are detailed in §5.)
+
+| # | Who        | Step                                                                                                                                                                                                                                                                                                                                                                               |
+|---|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1 | user       | **Local folder** — create `milovana/Teases/<TeaseName>/`.                                                                                                                                                                                                                                                                                                                          |
+| 2 | both       | **Script** — write `script.md`: tone, pages, pacing, `[METRONOME]`/`[PAUSE]` markers, author notes.                                                                                                                                                                                                                                                                                |
+| 3 | **Claude** | **Asset plan** — read the script and propose **(a)** the **themed gallery buckets** it needs (one gallery per mood/intensity, e.g. `solo-sensual`, `machine-soft`, `machine-hard`, `climax`) plus any hard constraints (e.g. *tutorial = solo only*), and **(b)** the metronome/audio files the `[METRONOME]` markers call for. **Raise the themed-buckets approach here** (§5.3). |
+| 4 | user       | **Asset setup** — create local `Gallery/<bucket>/` folders + `Files/`, add exact-byte sources; in the editor create matching galleries (folder name = gallery name) and upload **images *and* audio**.                                                                                                                                                                             |
+| 5 | user       | **Export stub** — export the (stub) tease JSON into `tease.json`; it carries the `galleries`/`files` manifest.                                                                                                                                                                                                                                                                     |
+| 6 | **Claude** | **Build map** — generate `asset-map.json` (SHA-1 join; §5.2).                                                                                                                                                                                                                                                                                                                      |
+| 7 | **Claude** | **Vision tagging** — view each image, write `asset-content.json` (§5.3).                                                                                                                                                                                                                                                                                                           |
+| 8 | user       | **Verify tags** — review/adjust the tags.                                                                                                                                                                                                                                                                                                                                          |
+| 9 | **Claude** | **Generate tease** — author the full `tease.json` from the script: select images by joining `asset-content` tags ↔ `asset-map` locators (match intensity to BPM), declare the `audio` module, add `audio.play` for `[METRONOME]` blocks.                                                                                                                                           |
+| 10 | user       | **Upload & verify** — upload `tease.json`, play through.                                                                                                                                                                                                                                                                                                                           |
+| 11 | both       | **Iterate** — refine on feedback until the result is right.                                                                                                                                                                                                                                                                                                                        |
+
 ---
 
 ## 2. Pages & flow model
@@ -64,7 +85,8 @@ The EOS editor is at <https://milovana.com/eos/editor/teases>. Upload a JSON via
 From the example's own narration (`002-Timers`):
 
 - The **last image shown persists** onto the next page until replaced.
-- The **on-screen text is cleared** when the page switches.
+- The **on-screen text is cleared** when the page switches — and **only** then. Within a page,
+  successive `say` actions **append** (each is a new line below the last); see §3.1.
 
 (Audio persistence across pages is controllable per `audio.play` action — see §3.6.)
 
@@ -102,8 +124,18 @@ if a page opens with a `say` before any `image`, the text shows on a black scree
 `<span style="color: #1e88e5">…</span>`. Note that literal quotes/apostrophes are HTML-entity
 encoded in the source (`&#39;` for `'`).
 
+**Do not use `<code>`** — it does **not** render correctly on Milovana (confirmed). Use
+`<strong>`/`<em>` for emphasis instead. Stick to the tags listed above; only those are known to
+render.
+
 **Non-blocking after media:** a `say` placed after an `image` or `audio.play` runs immediately
 — it does not wait for the image transition or audio clip to finish.
+
+**Text accumulates (append, not replace):** successive `say` actions on the **same page** each add
+a **new line below** the previous text — they do **not** replace it. The on-screen text is only
+cleared by a **page switch** (§2). This is the intended behavior for narrating over a timed block
+(e.g. a metronome segment that reveals a new line every few seconds via `say` → `timer` pairs); if
+you instead want a single line shown at a time, put each on its **own page**.
 
 ```json
 { "say": { "label": "<p>Hello <strong>there</strong></p>", "align": "left" } }
@@ -229,6 +261,28 @@ Plays an audio file from the `files` manifest. **Requires the `audio` module** t
 { "audio.play": { "locator": "file:metronome-120bpm.mp3", "loops": 2, "background": true, "volume": 0.8 } }
 ```
 
+#### Clips **layer**, they do not replace (confirmed)
+
+A second `audio.play` **does not stop the first** — both clips play **simultaneously**. There is
+**no `audio.stop` action**. The only way to stop a playing clip is to **switch to another page**,
+and that only stops clips that are *not* `background: true` (a `background` clip keeps playing
+across the switch by design). Practical consequences:
+
+- **Overlapping the same clip doubles it** (e.g. starting the next metronome before the previous
+  one finishes produces audible doubled beats at the join).
+- A **`background: true` clip can only be stopped by ending the tease / navigating away** — there
+  is no per-action stop, so use it sparingly.
+
+#### Pattern: timed tempo sequence (one tempo per page)
+
+To play a sequence of tempo segments (as in a metronome-driven tease), give **each segment its own
+page**: `audio.play` (loops sized to cover the segment) → a `say` label → a `timer` for the
+segment length → `goto` the next segment's page. The page switch stops the previous (non-
+`background`) clip, so the next tempo starts clean with **no doubled beats**. Because the page
+switch trims the tail, size `loops` to **cover** the timer (round up); the exact overrun is cut on
+exit. *Do not* put two tempo segments on the same page (they would stack). See
+`VerificationTease` pages `033-Metronome-1..3`.
+
 ### 3.7 `end` — end the tease
 
 Ends the tease and prompts the user to rate it. No actions run after it.
@@ -313,18 +367,168 @@ Keyed by **filename** (the same string used in `file:<filename>` locators).
 
 Each file entry: `id` (integer), `hash`, `size` (bytes), `type` (MIME type).
 
-### ⚠️ Asset IDs are server-assigned (offline caveat)
+### ⚠️ Asset IDs are server-assigned
 
 The `id`, `hash`, and `size` values are **assigned by Milovana when the asset is uploaded**.
-They **cannot be derived offline**: the local files under
-[`milovana/Galleries/`](../Galleries/) have unrelated filenames (e.g. `80877276_032_1886.jpg`)
-and carry no Milovana ID or hash. Therefore a hand-written tease cannot invent valid
-`galleries`/`files` entries from local files alone.
+They **cannot be derived offline**: the local source images have unrelated filenames
+(e.g. `80877276_032_1886.jpg`) and carry no Milovana ID. Therefore a hand-written tease cannot
+invent valid `galleries`/`files` entries from local files alone — the real manifest must always
+be obtained from an editor export.
 
-**The concrete offline authoring workflow for assets is deferred / not yet decided.** Until
-then, treat real `galleries`/`files` manifests as something obtained from the editor (upload
-assets there, export the JSON, copy the manifests). When drafting without real IDs, use clearly
-fake placeholder values and flag that they must be replaced before upload.
+The workflow below resolves how we author asset-backed teases offline despite this.
+
+---
+
+## 5.1 Asset workflow (local → upload → resolve)
+
+This is the **confirmed, end-to-end process** for using local galleries/audio in a tease. It was
+validated on `VerificationTease` (2 galleries, 12 images, 2 audio files).
+
+### Per-tease, by design
+
+Milovana **re-uploads and re-IDs assets for every tease** — the same picture used in two teases
+gets two different UUIDs/image-IDs and two stored server copies. We mirror that locally: **each
+tease owns its own asset folders and its own `asset-map.json`.** Assets are *not* shared in a
+repo-level pool.
+
+### Local folder layout
+
+Each tease lives in `milovana/Teases/<TeaseName>/` and holds its own assets:
+
+```
+milovana/Teases/<TeaseName>/
+├── tease.json          ← the tease (also the editor-export target — see below)
+├── asset-map.json      ← generated: local file ↔ Milovana locator map
+├── Gallery/
+│   ├── <GalleryNameA>/ ← one folder per gallery; images inside
+│   └── <GalleryNameB>/
+└── Files/              ← audio (and other non-image) files
+```
+
+**Naming convention (required for resolution):** name each `Gallery/<GalleryName>/` folder
+**identically** to the gallery's `name` in the editor. That folder-name = gallery-name link is
+how the resolver pairs a UUID to a local folder (image *entries* carry no name — see below).
+
+### The three steps
+
+1. **Author locally.** Create the `Gallery/<name>/` and `Files/` folders and drop the source
+   files in. Bytes must be **exactly** what you upload — no re-encoding/recompression in between,
+   or the hash/size match breaks.
+2. **Upload & export.** In the EOS editor, create one gallery per local folder (same name) and
+   upload its images; upload the audio files. Export the tease JSON (backup/restore, or the
+   `showtease`→`geteosscript` URL trick) **into `tease.json`**. The export carries the real
+   `galleries` and `files` manifests.
+3. **Resolve to a map.** Build `asset-map.json` by joining the manifest in `tease.json` to the
+   local files (see §5.2). After this, author `image`/`audio.play` actions using the `locator`
+   strings the map provides.
+
+### How resolution actually pairs IDs to local files
+
+- **Audio / `files`:** trivial — the `files` manifest is **keyed by the original filename**, so
+  `metronome-120bpm.mp3` maps straight to `Files/metronome-120bpm.mp3`. (Filename is the key even
+  when two files share an identical byte `size`.)
+- **Gallery images:** an image entry has **no filename** — only `id`/`hash`/`size`/`width`/
+  `height`. Pair them by **exact content hash**: the manifest `hash` is **SHA-1** of the file
+  bytes, so compute each local file's SHA-1 and match it to the manifest entry. This is exact and
+  collision-free.
+
+> **⚠️ Do not match gallery images on `width`/`height`.** Milovana's manifest dimensions are
+> **unreliable** — observed reporting `100×100` for images that are actually `853×1280`. `size`
+> is a usable secondary signal, but **SHA-1 hash is the source of truth.** (Files keyed by name,
+> images keyed by SHA-1.)
+
+## 5.2 `asset-map.json` (the generated map)
+
+One per tease, beside `tease.json`. Maps each local file to its Milovana `id`/`hash`/`size`, true
+local dimensions, and a ready-to-paste `locator`. Generate it (don't hand-write it) by joining the
+export manifest to on-disk SHA-1 hashes, so there is no transcription error. Shape:
+
+```json
+{
+  "tease": "VerificationTease",
+  "hashAlgorithm": "sha1",
+  "galleries": {
+    "LeahGotti_001": {
+      "uuid": "c6929b12-b8e1-4f54-a3f7-877650f258aa",
+      "localFolder": "Gallery/LeahGotti_001",
+      "images": {
+        "80877276_032_1886.jpg": {
+          "id": 4124446, "hash": "079a82ee…", "size": 199040, "width": 853, "height": 1280,
+          "locator": "gallery:c6929b12-b8e1-4f54-a3f7-877650f258aa/4124446"
+        }
+      }
+    }
+  },
+  "files": {
+    "metronome-120bpm.mp3": {
+      "id": 4124459, "hash": "7a7baf76…", "size": 96431, "type": "audio/mpeg",
+      "localPath": "Files/metronome-120bpm.mp3", "locator": "file:metronome-120bpm.mp3"
+    }
+  }
+}
+```
+
+A PowerShell generator (Windows; no Python on this machine) reads `tease.json`, builds a
+`SHA-1 → local file` index with `Get-FileHash -Algorithm SHA1`, then emits the map. Validate by
+confirming **every** manifest entry resolved (zero unmatched).
+
+## 5.3 Image selection: vision tagging & themed galleries
+
+Gallery image filenames are opaque (`80877276_032_1886.jpg`), so to pick images that fit a script
+beat, Claude must know **what each image depicts**. Claude can view local image files directly, so
+after the map is built it does a **content-tagging pass**.
+
+### Storage: `asset-content.json`
+
+Per tease, **sibling to `asset-map.json`**, **keyed by `<GalleryName>/<filename>`** (the stable
+local-content identity — *not* Milovana IDs, which change on every re-upload). Kept **separate**
+from `asset-map.json` so regenerating the mechanical map never clobbers hand-verified tags. At
+authoring time the two are **joined on the filename key**: `asset-content` = *what's in the
+picture*, `asset-map` = *how to reference it*. (Tags are content-intrinsic, so they can be reused
+if the same source image appears in a later tease.)
+
+### Tag vocabulary (controlled, for consistency)
+
+| Tag | Values | Purpose |
+|-----|--------|---------|
+| `subject` | `solo` / `machine` / `partner` | Enforce constraints (e.g. tutorial = `solo` only). |
+| `intensity` | `1`–`5`, **anchored to BPM bands** (≈ 1:≤40, 2:40–70, 3:70–110, 4:110–150, 5:150+) | "Match the picture's intensity to the current BPM" becomes a lookup. |
+| `explicitness` | `clothed` / `topless` / `nude` / `explicit` | Sensual → hard escalation. |
+| `orientation` | `portrait` / `landscape` | Known from dimensions; affects display. |
+| `notes` | free text | Pose/setting cue for a specific beat. |
+
+```json
+{
+  "tease": "TheFuckingMachine",
+  "vocabulary": { "subject": ["solo","machine","partner"], "intensity": "1-5 (BPM-banded)",
+                  "explicitness": ["clothed","topless","nude","explicit"], "orientation": ["portrait","landscape"] },
+  "galleries": {
+    "LeahGotti_001": {
+      "theme": "solo-sensual",
+      "images": {
+        "80877276_032_1886.jpg": { "subject": "solo", "intensity": 1, "explicitness": "nude",
+                                    "orientation": "portrait", "notes": "standing, daylight window, direct gaze" }
+      }
+    }
+  }
+}
+```
+
+Tags are **Claude's visual judgement** — the user verifies them (step 8). It's a **one-time pass**
+per gallery, re-run only when images change.
+
+### Themed gallery buckets (raise this at step 3)
+
+Organize galleries so **each gallery ≈ one script section/intensity** (e.g. `solo-sensual`,
+`machine-soft`, `machine-hard`, `climax`). Two payoffs:
+
+- **Random locators stay on-theme:** `gallery:<machine-hard-uuid>/*` on a high-BPM page auto-picks
+  something fitting, no per-image selection needed.
+- **Hard constraints become structural:** tutorial pages draw only from `solo`-themed galleries,
+  satisfying author-note rules like "model alone" automatically.
+
+Specific (tagged) locators are then reserved for precise moments (e.g. the climax shot); themed
+random locators cover "any fitting image here."
 
 ---
 
@@ -337,8 +541,12 @@ fake placeholder values and flag that they must be replaced before upload.
 - **Every locator must resolve:** each `gallery:<uuid>/<id>` and `file:<name>` needs a matching
   entry in `galleries` / `files`.
 - **HTML-encode `say` text:** wrap in `<p>…</p>`; entity-encode apostrophes/quotes (`&#39;`).
+  Use only `<strong>`/`<em>`/`<u>`/`<span style="color:…">` — **`<code>` does not render** (§3.1).
 - **Remember cross-page state:** the last image persists; text clears (§2).
 - **`editor` is optional** for playback; `id`/`hash` in manifests are server-assigned (§5).
+- **Asset-backed teases:** prep local assets, upload, export, and resolve to `asset-map.json`
+  **before** authoring any `image`/`audio.play` locators (§5.1–§5.3). Gallery images resolve by
+  **SHA-1 hash**, audio by **filename** — never by `width`/`height` (manifest dims are unreliable).
 
 ---
 
@@ -406,6 +614,15 @@ The following were open in earlier drafts and are now confirmed from
 - **`audio.play.volume`** → key `volume`, a `0.0`–`1.0` fraction (`0.8` = 80%). (§3.6)
 - **Audio continue-across-pages key** → `background` (boolean). (§3.6)
 - **`audio.play.loops` semantics** → total play count starting at 1 (`2` = play twice). (§3.6)
+- **Multiple `audio.play` clips** → **layer/stack** (a new clip does *not* stop the previous); no
+  `audio.stop` action exists; the only stop for a non-`background` clip is a page switch. Timed
+  tempo sequences therefore use **one tempo per page**. (§3.6)
+- **Multiple `say` actions on one page** → **append** (each adds a new line below; text is cleared
+  only by a page switch). (§3.1, §2)
 - **`timer.duration` range syntax** → `"min-max"`, e.g. `"1s-5s"`. (§3.4)
 - **`timer.duration` units** → seconds only, with at most one decimal place (e.g. `"2.5s"`). (§3.4)
-```
+- **Offline asset authoring workflow** → resolved: per-tease local folders, upload+export, then
+  resolve to `asset-map.json` by SHA-1 hash (images) / filename (audio). (§5.1–§5.3)
+- **Manifest `hash` algorithm** → **SHA-1** of the file bytes. (§5.1)
+- **Manifest image `width`/`height`** → **unreliable** (can report `100×100` for a `853×1280`
+  image); do not key on them. (§5.1)

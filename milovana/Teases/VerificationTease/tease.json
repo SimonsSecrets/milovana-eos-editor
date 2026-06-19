@@ -1,0 +1,580 @@
+{
+  "pages": {
+    "start": [
+      {
+        "say": {
+          "label": "<p>Welcome to the <strong>verification tease</strong>. This line is <em>left-aligned</em> and uses a <span style=\"color: #1e88e5\">colored span</span>. It&#39;s here to confirm HTML formatting renders.</p>",
+          "align": "left"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>This line uses the default alignment (center) and Auto timing.</p>"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Click to continue &mdash; this one waits for you.</p>",
+          "mode": "pause"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>This line shows for exactly three seconds, then moves on.</p>",
+          "mode": "custom",
+          "duration": "3s"
+        }
+      },
+      {
+        "goto": {
+          "target": "030-Audio"
+        }
+      }
+    ],
+    "030-Audio": [
+      {
+        "say": {
+          "label": "<p><strong>Audio.</strong> The next clip is a 120&nbsp;BPM metronome at <em>80% volume</em>, played <em>twice</em> (loops&nbsp;2). It is non-background, so it stops when we leave this page.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "audio.play": {
+          "locator": "file:metronome-120bpm.mp3",
+          "volume": 0.8,
+          "loops": 2
+        }
+      },
+      {
+        "say": {
+          "label": "<p>This text appeared <em>instantly</em> &mdash; <strong>audio.play</strong> is non-blocking. Click when ready.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "goto": {
+          "target": "033-Metronome-1"
+        }
+      }
+    ],
+    "033-Metronome-1": [
+      {
+        "say": {
+          "label": "<p><strong>Timed metronome sequence.</strong> Because audio clips <em>layer</em> (a new clip does not stop the old one), each tempo segment lives on its <strong>own page</strong> &mdash; the page switch stops the previous clip, so there are no doubled beats at a transition. Sequence: <em>60&nbsp;BPM for 10s, then 120&nbsp;BPM for 5s, then 60&nbsp;BPM for 5s</em>. Click to begin.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "audio.play": {
+          "locator": "file:metronome-060bpm.mp3",
+          "volume": 0.8,
+          "loops": 2
+        }
+      },
+      {
+        "say": {
+          "label": "<p>&#9834; <strong>60 BPM</strong> &mdash; 10 seconds</p>",
+          "align": "center",
+          "mode": "instant"
+        }
+      },
+      {
+        "timer": {
+          "duration": "10s",
+          "style": "normal"
+        }
+      },
+      {
+        "goto": {
+          "target": "033-Metronome-2"
+        }
+      }
+    ],
+    "033-Metronome-2": [
+      {
+        "audio.play": {
+          "locator": "file:metronome-120bpm.mp3",
+          "volume": 0.8,
+          "loops": 1
+        }
+      },
+      {
+        "say": {
+          "label": "<p>&#9834; <strong>120 BPM</strong> &mdash; 5 seconds</p>",
+          "align": "center",
+          "mode": "instant"
+        }
+      },
+      {
+        "timer": {
+          "duration": "5s",
+          "style": "normal"
+        }
+      },
+      {
+        "goto": {
+          "target": "033-Metronome-3"
+        }
+      }
+    ],
+    "033-Metronome-3": [
+      {
+        "audio.play": {
+          "locator": "file:metronome-060bpm.mp3",
+          "volume": 0.8,
+          "loops": 1
+        }
+      },
+      {
+        "say": {
+          "label": "<p>&#9834; <strong>60 BPM</strong> &mdash; 5 seconds</p>",
+          "align": "center",
+          "mode": "instant"
+        }
+      },
+      {
+        "timer": {
+          "duration": "5s",
+          "style": "normal"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Sequence complete &mdash; three tempo segments, no doubled beats at the joins. Click to continue.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "goto": {
+          "target": "034-MetronomeLines"
+        }
+      }
+    ],
+    "034-MetronomeLines": [
+      {
+        "say": {
+          "label": "<p><strong>Text paced over a metronome.</strong> A single 60&nbsp;BPM clip runs for 10&nbsp;seconds while a new line of text appears <em>every 2&nbsp;seconds</em> (5 lines). One <strong>audio.play</strong> underneath, then <strong>say</strong>&nbsp;&rarr;&nbsp;<strong>timer</strong> pairs drive the cadence. Click to begin.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "audio.play": {
+          "locator": "file:metronome-060bpm.mp3",
+          "volume": 0.8,
+          "loops": 2
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Feel the first beat settle in&hellip;</p>",
+          "align": "center",
+          "mode": "instant"
+        }
+      },
+      {
+        "timer": {
+          "duration": "2s",
+          "style": "hidden"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Breathe with it &mdash; slow and steady.</p>",
+          "align": "center",
+          "mode": "instant"
+        }
+      },
+      {
+        "timer": {
+          "duration": "2s",
+          "style": "hidden"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Halfway now. Let the rhythm carry you.</p>",
+          "align": "center",
+          "mode": "instant"
+        }
+      },
+      {
+        "timer": {
+          "duration": "2s",
+          "style": "hidden"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Stay with me &mdash; don&#39;t drift.</p>",
+          "align": "center",
+          "mode": "instant"
+        }
+      },
+      {
+        "timer": {
+          "duration": "2s",
+          "style": "hidden"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>And&hellip; ease off.</p>",
+          "align": "center",
+          "mode": "instant"
+        }
+      },
+      {
+        "timer": {
+          "duration": "2s",
+          "style": "hidden"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Ten seconds, five lines &mdash; text paced over a continuous metronome. Click to continue.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "goto": {
+          "target": "035-AudioBackground"
+        }
+      }
+    ],
+    "035-AudioBackground": [
+      {
+        "say": {
+          "label": "<p>Now a 60&nbsp;BPM metronome at <em>50% volume</em>, looping <em>3&times;</em>, with <strong>background: true</strong> &mdash; it keeps playing across the next page switch.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "audio.play": {
+          "locator": "file:metronome-060bpm.mp3",
+          "volume": 0.5,
+          "loops": 3,
+          "background": true
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Click to move on &mdash; keep listening.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "goto": {
+          "target": "037-AudioPersist"
+        }
+      }
+    ],
+    "037-AudioPersist": [
+      {
+        "say": {
+          "label": "<p>Still hearing the 60&nbsp;BPM metronome? It carried over from the previous page because that clip set <strong>background: true</strong>. Click to continue to images.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "goto": {
+          "target": "040-Images"
+        }
+      }
+    ],
+    "040-Images": [
+      {
+        "say": {
+          "label": "<p><strong>Images.</strong> Below is a <em>specific</em> image (a fixed locator). Click to continue.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "image": {
+          "locator": "gallery:c6929b12-b8e1-4f54-a3f7-877650f258aa/4124446"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>That image is pinned to one ID. Next, the same spot will be <em>replaced</em> by another specific image.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "image": {
+          "locator": "gallery:c6929b12-b8e1-4f54-a3f7-877650f258aa/4124448"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>The previous image was replaced. Now a <strong>random</strong> image from the second gallery&hellip;</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "image": {
+          "locator": "gallery:1d20983d-d63d-4ead-8888-d70427f2c284/*"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>This random image will <em>persist</em> onto the next page (timers) until something replaces it.</p>",
+          "align": "center",
+          "mode": "pause"
+        }
+      },
+      {
+        "goto": {
+          "target": "050-Timers"
+        }
+      }
+    ],
+    "050-Timers": [
+      {
+        "say": {
+          "label": "<p><strong>Timers.</strong> Next is a <em>normal</em> timer: 5 seconds with a visible countdown.</p>",
+          "align": "center"
+        }
+      },
+      {
+        "timer": {
+          "duration": "5s",
+          "style": "normal"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>This <em>secret</em> timer shows a timer with no countdown number. It runs a random 2&ndash;4 seconds.</p>",
+          "align": "center"
+        }
+      },
+      {
+        "timer": {
+          "duration": "2s-4s",
+          "style": "secret"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>This <em>hidden</em> timer displays nothing at all. It waits 2.5 seconds (one decimal place).</p>",
+          "align": "center"
+        }
+      },
+      {
+        "timer": {
+          "duration": "2.5s",
+          "style": "hidden"
+        }
+      },
+      {
+        "goto": {
+          "target": "060-Choices"
+        }
+      }
+    ],
+    "060-Choices": [
+      {
+        "say": {
+          "label": "<p><strong>Choices.</strong> Pick a button below &mdash; each one runs its own commands.</p>",
+          "align": "center"
+        }
+      },
+      {
+        "choice": {
+          "options": [
+            {
+              "label": "Replay the timers",
+              "commands": [
+                {
+                  "goto": {
+                    "target": "050-Timers"
+                  }
+                }
+              ],
+              "color": "#1976d2"
+            },
+            {
+              "label": "Tell me more first",
+              "commands": [
+                {
+                  "say": {
+                    "label": "<p>This button ran <strong>two</strong> commands: this line&hellip;</p>",
+                    "align": "center",
+                    "mode": "pause"
+                  }
+                },
+                {
+                  "say": {
+                    "label": "<p>&hellip;then this one, before sending you back to the choices.</p>",
+                    "align": "center",
+                    "mode": "pause"
+                  }
+                },
+                {
+                  "goto": {
+                    "target": "060-Choices"
+                  }
+                }
+              ],
+              "color": "#43a047"
+            },
+            {
+              "label": "Finish the tease",
+              "commands": [
+                {
+                  "goto": {
+                    "target": "099-End"
+                  }
+                }
+              ],
+              "color": "#e53935"
+            }
+          ]
+        }
+      }
+    ],
+    "099-End": [
+      {
+        "say": {
+          "label": "<p>Second page reached. The previous page&#39;s text was cleared on the switch.</p>",
+          "align": "center"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>This line continues instantly into the end.</p>",
+          "mode": "instant"
+        }
+      },
+      {
+        "end": {}
+      }
+    ]
+  },
+  "init": "",
+  "modules": { "audio": {} },
+  "files": {
+    "metronome-060bpm.mp3": {
+      "id": 4124458,
+      "hash": "9ee9acf22c84d80d524d0a842dea22292ab1a63c",
+      "size": 96431,
+      "type": "audio/mpeg"
+    },
+    "metronome-120bpm.mp3": {
+      "id": 4124459,
+      "hash": "7a7baf7632e9cacc504f3fb85d8bdf9674f96329",
+      "size": 96431,
+      "type": "audio/mpeg"
+    }
+  },
+  "galleries": {
+    "c6929b12-b8e1-4f54-a3f7-877650f258aa": {
+      "name": "LeahGotti_001",
+      "images": [
+        {
+          "id": 4124446,
+          "hash": "079a82ee4bc9f934bf1412725cd070dcc542f891",
+          "size": 199040,
+          "width": 853,
+          "height": 1280
+        },
+        {
+          "id": 4124447,
+          "hash": "f1dd0d5c308ecfa939b1d86adc540fec49b7687b",
+          "size": 183234,
+          "width": 853,
+          "height": 1280
+        },
+        {
+          "id": 4124448,
+          "hash": "d825cb209c8b61518c3a19a6e6c56e68d14f70f1",
+          "size": 228845,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": 4124449,
+          "hash": "3d188bb097eb3068a27a74365385e0cc6fafb9fb",
+          "size": 204815,
+          "width": 1280,
+          "height": 853
+        },
+        {
+          "id": 4124450,
+          "hash": "24ae6c590d0ec5704f420a75b8f52c7f9cd8150f",
+          "size": 220213,
+          "width": 1280,
+          "height": 853
+        }
+      ]
+    },
+    "1d20983d-d63d-4ead-8888-d70427f2c284": {
+      "name": "LeahGotti_002",
+      "images": [
+        {
+          "id": 4124451,
+          "hash": "775d9d7bad835661043f8a4ec9610ba8204fffbd",
+          "size": 192900,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "id": 4124452,
+          "hash": "34767f6f6aa0387f24008dd25bf257db49c63ca8",
+          "size": 176614,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "id": 4124453,
+          "hash": "44e8f95ce5ae61b60c4efd6b26009bb1d2d38070",
+          "size": 165431,
+          "width": 853,
+          "height": 1280
+        },
+        {
+          "id": 4124454,
+          "hash": "3e29aa352f8f4b683155c1918d331bc02f861f65",
+          "size": 191018,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "id": 4124455,
+          "hash": "165132b9358f9dd419b54b2ca055ddb75e23b94f",
+          "size": 205485,
+          "width": 853,
+          "height": 1280
+        },
+        {
+          "id": 4124456,
+          "hash": "2800541af92ed14925ea4d7b3519ae710d93d012",
+          "size": 194231,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "id": 4124457,
+          "hash": "ec49088badd38ddfa9f1c313ddcbdfb33efd5cc0",
+          "size": 181676,
+          "width": 853,
+          "height": 1280
+        }
+      ]
+    }
+  },
+  "editor": {
+    "recentImages": []
+  }
+}

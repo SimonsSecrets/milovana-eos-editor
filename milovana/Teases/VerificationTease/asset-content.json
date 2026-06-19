@@ -1,0 +1,36 @@
+{
+  "tease": "VerificationTease",
+  "description": "Vision-derived content tags per local image, keyed by <GalleryName>/<filename> (stable local-content identity, independent of Milovana IDs). Used to select images matching a script's subject/intensity. Tags are Claude's visual judgement and should be user-verified. Join with asset-map.json on the filename key to get the playable locator. See EOS-Tease-Authoring-Guide.md §5.3.",
+  "vocabulary": {
+    "subject": ["solo", "machine", "partner"],
+    "intensity": "1-5, anchored to BPM bands (1: <=40, 2: 40-70, 3: 70-110, 4: 110-150, 5: 150+)",
+    "explicitness": ["clothed", "topless", "nude", "explicit"],
+    "orientation": ["portrait", "landscape"]
+  },
+  "galleries": {
+    "LeahGotti_001": {
+      "theme": "mixed-solo-to-partner",
+      "themeNote": "NOT a clean bucket: opens with two solo sensual shots then escalates to explicit partner sex. Illustrates why a real tease should split these into separate themed galleries (the partner shots are unusable anywhere a 'model alone' constraint applies, e.g. a tutorial).",
+      "images": {
+        "80877276_032_1886.jpg": { "subject": "solo", "intensity": 1, "explicitness": "topless", "orientation": "portrait", "notes": "standing topless, bright daylight window, direct gaze; sensual/posed" },
+        "80877276_036_0d39.jpg": { "subject": "solo", "intensity": 1, "explicitness": "topless", "orientation": "portrait", "notes": "standing topless side profile, daylight window, looking to camera; sensual/posed" },
+        "80877276_047_f913.jpg": { "subject": "partner", "intensity": 4, "explicitness": "explicit", "orientation": "landscape", "notes": "male partner performing oral from behind, woman on all fours on white bed; hard/active" },
+        "80877276_050_0956.jpg": { "subject": "partner", "intensity": 3, "explicitness": "explicit", "orientation": "landscape", "notes": "couple kissing while intertwined on bed during sex; intimate, mid-intensity" },
+        "80877276_057_a4c7.jpg": { "subject": "partner", "intensity": 4, "explicitness": "explicit", "orientation": "landscape", "notes": "active penetration, woman astride partner gripping, looking to camera; hard" }
+      }
+    },
+    "LeahGotti_002": {
+      "theme": "solo-tease",
+      "themeNote": "Clean solo set throughout (model alone, warm indoor villa, white tank-top striptease). Tutorial-safe under a 'model alone / no partner' constraint. Gentle escalation across the set.",
+      "images": {
+        "31517085_002_66ac.jpg": { "subject": "solo", "intensity": 1, "explicitness": "clothed", "orientation": "portrait", "notes": "kneeling on bed in sheer white tank + patterned shorts, playful smile; teasing/clothed" },
+        "31517085_003_c04f.jpg": { "subject": "solo", "intensity": 2, "explicitness": "clothed", "orientation": "portrait", "notes": "kneeling rear view over shoulder, tank + white thong; teasing" },
+        "31517085_004_ca6a.jpg": { "subject": "solo", "intensity": 2, "explicitness": "nude", "orientation": "portrait", "notes": "kneeling rear view, bottomless (bare rear), tank still on, glancing back" },
+        "31517085_005_17db.jpg": { "subject": "solo", "intensity": 2, "explicitness": "topless", "orientation": "portrait", "notes": "standing, tank lifted to expose breasts, white panties, window light" },
+        "31517085_006_40b3.jpg": { "subject": "solo", "intensity": 2, "explicitness": "nude", "orientation": "portrait", "notes": "squatting rear view, panties pulled down, bare rear; tile floor" },
+        "31517085_007_884f.jpg": { "subject": "solo", "intensity": 3, "explicitness": "nude", "orientation": "portrait", "notes": "squatting front view, tank up + panties aside, fully exposed, eyes closed; most intense of the solo set" },
+        "31517085_008_c316.jpg": { "subject": "solo", "intensity": 2, "explicitness": "nude", "orientation": "portrait", "notes": "standing, pulling tank off overhead, fully nude, smiling to camera" }
+      }
+    }
+  }
+}

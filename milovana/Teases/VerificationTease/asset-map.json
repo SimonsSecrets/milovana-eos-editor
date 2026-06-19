@@ -1,0 +1,133 @@
+﻿{
+    "tease":  "VerificationTease",
+    "description":  "Per-tease mapping from Milovana server asset IDs (uuid/image id, file name) to the local source files under this folder. Milovana re-uploads and re-IDs assets per tease, so this map is tease-local. Built by matching each local file\u0027s SHA-1 to the manifest \u0027hash\u0027 field in tease.json (exact content match). Note: Milovana manifest width/height are unreliable (some report 100x100); width/height here are the true local dimensions.",
+    "hashAlgorithm":  "sha1",
+    "galleries":  {
+                      "LeahGotti_001":  {
+                                            "uuid":  "c6929b12-b8e1-4f54-a3f7-877650f258aa",
+                                            "localFolder":  "Gallery/LeahGotti_001",
+                                            "images":  {
+                                                           "80877276_032_1886.jpg":  {
+                                                                                         "id":  4124446,
+                                                                                         "hash":  "079a82ee4bc9f934bf1412725cd070dcc542f891",
+                                                                                         "size":  199040,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:c6929b12-b8e1-4f54-a3f7-877650f258aa/4124446"
+                                                                                     },
+                                                           "80877276_036_0d39.jpg":  {
+                                                                                         "id":  4124447,
+                                                                                         "hash":  "f1dd0d5c308ecfa939b1d86adc540fec49b7687b",
+                                                                                         "size":  183234,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:c6929b12-b8e1-4f54-a3f7-877650f258aa/4124447"
+                                                                                     },
+                                                           "80877276_047_f913.jpg":  {
+                                                                                         "id":  4124448,
+                                                                                         "hash":  "d825cb209c8b61518c3a19a6e6c56e68d14f70f1",
+                                                                                         "size":  228845,
+                                                                                         "width":  1280,
+                                                                                         "height":  853,
+                                                                                         "locator":  "gallery:c6929b12-b8e1-4f54-a3f7-877650f258aa/4124448"
+                                                                                     },
+                                                           "80877276_050_0956.jpg":  {
+                                                                                         "id":  4124449,
+                                                                                         "hash":  "3d188bb097eb3068a27a74365385e0cc6fafb9fb",
+                                                                                         "size":  204815,
+                                                                                         "width":  1280,
+                                                                                         "height":  853,
+                                                                                         "locator":  "gallery:c6929b12-b8e1-4f54-a3f7-877650f258aa/4124449"
+                                                                                     },
+                                                           "80877276_057_a4c7.jpg":  {
+                                                                                         "id":  4124450,
+                                                                                         "hash":  "24ae6c590d0ec5704f420a75b8f52c7f9cd8150f",
+                                                                                         "size":  220213,
+                                                                                         "width":  1280,
+                                                                                         "height":  853,
+                                                                                         "locator":  "gallery:c6929b12-b8e1-4f54-a3f7-877650f258aa/4124450"
+                                                                                     }
+                                                       }
+                                        },
+                      "LeahGotti_002":  {
+                                            "uuid":  "1d20983d-d63d-4ead-8888-d70427f2c284",
+                                            "localFolder":  "Gallery/LeahGotti_002",
+                                            "images":  {
+                                                           "31517085_002_66ac.jpg":  {
+                                                                                         "id":  4124451,
+                                                                                         "hash":  "775d9d7bad835661043f8a4ec9610ba8204fffbd",
+                                                                                         "size":  192900,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:1d20983d-d63d-4ead-8888-d70427f2c284/4124451"
+                                                                                     },
+                                                           "31517085_003_c04f.jpg":  {
+                                                                                         "id":  4124452,
+                                                                                         "hash":  "34767f6f6aa0387f24008dd25bf257db49c63ca8",
+                                                                                         "size":  176614,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:1d20983d-d63d-4ead-8888-d70427f2c284/4124452"
+                                                                                     },
+                                                           "31517085_004_ca6a.jpg":  {
+                                                                                         "id":  4124453,
+                                                                                         "hash":  "44e8f95ce5ae61b60c4efd6b26009bb1d2d38070",
+                                                                                         "size":  165431,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:1d20983d-d63d-4ead-8888-d70427f2c284/4124453"
+                                                                                     },
+                                                           "31517085_005_17db.jpg":  {
+                                                                                         "id":  4124454,
+                                                                                         "hash":  "3e29aa352f8f4b683155c1918d331bc02f861f65",
+                                                                                         "size":  191018,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:1d20983d-d63d-4ead-8888-d70427f2c284/4124454"
+                                                                                     },
+                                                           "31517085_006_40b3.jpg":  {
+                                                                                         "id":  4124455,
+                                                                                         "hash":  "165132b9358f9dd419b54b2ca055ddb75e23b94f",
+                                                                                         "size":  205485,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:1d20983d-d63d-4ead-8888-d70427f2c284/4124455"
+                                                                                     },
+                                                           "31517085_007_884f.jpg":  {
+                                                                                         "id":  4124456,
+                                                                                         "hash":  "2800541af92ed14925ea4d7b3519ae710d93d012",
+                                                                                         "size":  194231,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:1d20983d-d63d-4ead-8888-d70427f2c284/4124456"
+                                                                                     },
+                                                           "31517085_008_c316.jpg":  {
+                                                                                         "id":  4124457,
+                                                                                         "hash":  "ec49088badd38ddfa9f1c313ddcbdfb33efd5cc0",
+                                                                                         "size":  181676,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:1d20983d-d63d-4ead-8888-d70427f2c284/4124457"
+                                                                                     }
+                                                       }
+                                        }
+                  },
+    "files":  {
+                  "metronome-060bpm.mp3":  {
+                                               "id":  4124458,
+                                               "hash":  "9ee9acf22c84d80d524d0a842dea22292ab1a63c",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-060bpm.mp3",
+                                               "locator":  "file:metronome-060bpm.mp3"
+                                           },
+                  "metronome-120bpm.mp3":  {
+                                               "id":  4124459,
+                                               "hash":  "7a7baf7632e9cacc504f3fb85d8bdf9674f96329",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-120bpm.mp3",
+                                               "locator":  "file:metronome-120bpm.mp3"
+                                           }
+              }
+}
