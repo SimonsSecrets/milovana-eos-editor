@@ -57,7 +57,7 @@ referenced below are detailed in §5.)
 | # | Who        | Step                                                                                                                                                                                                                                                                                                                                                                               |
 |---|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1 | user       | **Local folder** — create `milovana/Teases/<TeaseName>/`.                                                                                                                                                                                                                                                                                                                          |
-| 2 | both       | **Script** — write `script.md`: tone, pages, pacing, `[METRONOME]`/`[PAUSE]` markers, author notes.                                                                                                                                                                                                                                                                                |
+| 2 | both       | **Script** — write `script.md`: tone, pages, pacing, `[METRONOME]`/`[PAUSE]` markers, `[IMAGE: …]` image-placement markers (see below), author notes.                                                                                                                                                                                                                              |
 | 3 | **Claude** | **Asset plan** — read the script and propose **(a)** the **themed gallery buckets** it needs (one gallery per mood/pace, e.g. `solo-sensual`, `machine-soft`, `machine-hard`, `climax`) plus any hard constraints (e.g. *tutorial = solo only*), and **(b)** the metronome/audio files the `[METRONOME]` markers call for. **Raise the themed-buckets approach here** (§5.3). |
 | 4 | user       | **Asset setup** — create local `Gallery/<bucket>/` folders + `Files/`, add exact-byte sources; in the editor create matching galleries (folder name = gallery name) and upload **images *and* audio**.                                                                                                                                                                             |
 | 5 | user       | **Export stub** — export the (stub) tease JSON into `tease.json`; it carries the `galleries`/`files` manifest.                                                                                                                                                                                                                                                                     |
@@ -67,6 +67,23 @@ referenced below are detailed in §5.)
 | 9 | **Claude** | **Generate tease** — author the full `tease.json` from the script: select images by joining `asset-content` tags ↔ `asset-map` locators (match pace to BPM), declare the `audio` module, add `audio.play` for `[METRONOME]` blocks.                                                                                                                                           |
 | 10 | user       | **Upload & verify** — upload `tease.json`, play through.                                                                                                                                                                                                                                                                                                                           |
 | 11 | both       | **Iterate** — refine on feedback until the result is right.                                                                                                                                                                                                                                                                                                                        |
+
+### Script markers (`script.md`)
+
+`script.md` is the human-readable source the tease is generated from. Bracketed markers carry
+authoring intent and are **never shown to the player**:
+
+| Marker | Meaning |
+|--------|---------|
+| `[METRONOME: ~N BPM, ~Ns]` | A timed block where the machine moves at ~N BPM for ~N seconds. Becomes a one-tempo-per-page `audio.play` + `timer` (§3.6). Keep N a multiple of 10 so it maps to a pre-generated metronome file. |
+| `[PAUSE: ~Ns]` | Silence — the machine is still (a `timer` with no audio). Covers both mid-scene stops and anticipation holds. |
+| `[IMAGE: <bucket>/*]` | Show a **random** image from themed gallery bucket `<bucket>`; intensity follows the page's BPM band. The default for most pages — leans on themed buckets (§5.3) instead of per-image picks. |
+| `[IMAGE: <bucket>/hero — desc]` | A **specific** hero shot for a key beat (e.g. the climax). Pinned to a real image `id` after tagging (steps 7–9); `desc` tells the tagger which shot. ⚠️ ids are reassigned on every re-upload, so a pinned id breaks if that gallery is re-uploaded. **Robust alternative:** give the guaranteed shot its own **single-image bucket** so `gallery:<bucket>/*` always returns it — deterministic, no id pinning, survives re-uploads. (This is what `climax-hero` does in The Fucking Machine tease.) |
+| `[IMAGE: hold]` | Keep the previously shown image (it persists across pages until replaced — §2). Used on practical/menu pages so a sensual backdrop carries over without competing with the copy. |
+| `[LOOP START]` / `[LOOP END]`, `[BUTTON: "label" → target]` | Repeat-until-button blocks and player branches. |
+
+> **First page of a branch needs a real `[IMAGE: <bucket>/*]`, not `hold`** — a branch can be
+> entered fresh (e.g. from a menu), so there may be no prior image to hold.
 
 ---
 

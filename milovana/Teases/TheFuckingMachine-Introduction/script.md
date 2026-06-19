@@ -25,6 +25,7 @@ Keep all edits and additions consistent with the style below.
 - Each `## Page N` heading marks a new page in the tease.
 - Lines in _italics_ are mood/voice text shown over the image.
 - `[ ... ]` are author notes, not shown to the player.
+- `[IMAGE: <bucket>/*]` is an image-placement note (not shown to the player): show a random image from that themed gallery bucket. `[IMAGE: <bucket>/hero — desc]` marks a specific hero shot to pin to an image ID after upload; `[IMAGE: hold]` keeps the previously shown image (it persists across pages until replaced).
 
 ---
 
@@ -35,11 +36,15 @@ The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/
 
 ## Page 1 — Title / Hook
 
+[IMAGE: intro-solo-sensual/* — title shot, alluring direct gaze]
+
 _You've followed the metronome a hundred times._
 
 _Tonight, you don't have to move at all. I'll take it from here._
 
 ## Page 2 — The pitch
+
+[IMAGE: intro-solo-sensual/*]
 
 Welcome to **The Fucking Machine Tease**. I'm so glad you're here.
 
@@ -49,6 +54,8 @@ Truly hands-free. Slow and teasing, or relentless — tonight every rhythm is mi
 
 ## Page 3 — What you'll need
 
+[IMAGE: hold]
+
 Before we begin, there are a few things I need you to have ready:
 
 - 🔌 **A compatible machine** — currently the **Hismith Pro 1** (model AK-01)
@@ -57,6 +64,8 @@ Before we begin, there are a few things I need you to have ready:
 - 💦 **Plenty of lube** — more than you think
 
 ## Page 4 — How it works (30 seconds)
+
+[IMAGE: hold]
 
 Don't worry — it's simple. Here's how it will work:
 
@@ -70,6 +79,8 @@ That's all there will be to it. Once we've begun there'll be nothing for you to 
 
 ## Page 5 — Consent & safety [recommended]
 
+[IMAGE: hold]
+
 Before I take over, let's make sure you're safe.
 
 - Set your machine's stroke length and position **before** you start — I only control the *speed*.
@@ -79,6 +90,8 @@ Before I take over, let's make sure you're safe.
 Now settle in, get comfortable, and let me take over ;)
 
 ## Page 6 — Menu
+
+[IMAGE: intro-solo-sensual/*]
 
 So… shall we begin?
 
@@ -99,6 +112,8 @@ MENU:
 
 ## Setup Page 1 — What this is
 
+[IMAGE: intro-solo-sensual/*]
+
 _Before I can take over, let's make sure everything's working — together._
 
 This part is just setup. We'll get the app running, connect your machine, and check that it responds to the beat.
@@ -108,6 +123,8 @@ This part is just setup. We'll get the app running, connect your machine, and ch
 Take your time. I'll be right here.
 
 ## Setup Page 2 — Get the app & your machine ready
+
+[IMAGE: hold]
 
 First, a little preparation:
 
@@ -121,6 +138,8 @@ No need to point it at yourself yet — just have it switched on and within reac
 [Author note: the published build is self-contained and unsigned, so SmartScreen will flag it on first run. If the app ever gets code-signed, this note can be removed.]
 
 ## Setup Page 3 — Connect over Bluetooth
+
+[IMAGE: hold]
 
 Now let's introduce them to each other:
 
@@ -136,6 +155,8 @@ Once you're connected, you'll land on the main screen with the **Manual** / **So
 
 ## Setup Page 4 — Test it in Manual mode
 
+[IMAGE: hold]
+
 Let's make sure your machine listens to you first.
 
 1. Make sure the **Manual** tab is selected.
@@ -149,6 +170,8 @@ Feel free to play with a few values. When you've seen it respond, bring it back 
 [Author note: keep suggested test values low here — this is a bench test with the machine pointed away from the player.]
 
 ## Setup Page 5 — Let the app hear the beat
+
+[IMAGE: hold]
 
 Now the part that makes this special — letting the metronome drive it.
 
@@ -171,6 +194,8 @@ That means the app can hear me. Once you see the beat being picked up, you're re
 
 ## Setup Page 6 — Watch it move to the beat
 
+[IMAGE: hold]
+
 This is the moment everything's been leading to.
 
 1. Press the **play button** in the centre of the visualizer.
@@ -183,6 +208,8 @@ While it's running, find the **emergency stop** — just press the **Space bar**
 When you've seen enough, press the button again to pause. **Remember — still just watching for now.**
 
 ## Setup Page 7 — All set
+
+[IMAGE: intro-solo-sensual/*]
 
 _Perfect. Everything's working._
 
@@ -205,9 +232,11 @@ MENU:
 
 [Author note: images here are the model **alone**, playing with a dildo and/or masturbating — no partner, no machine-on-a-partner shots. Those are saved for the real tease.]
 
-[Author note — pacing: timed blocks are marked `[METRONOME: ~N BPM, ~Ns]` (machine moving) and `[PAUSE: ~Ns]` (silence, machine stops). BPM values are gentle starting suggestions — tune against the real machine. Whole tutorial should stay at or under ~5 minutes.]
+[Author note — pacing: timed blocks are marked `[METRONOME: ~N BPM, ~Ns]` (machine moving) and `[PAUSE: ~Ns]` (silence, machine stops). **Every `[METRONOME]` block opens with its own `[IMAGE]` marker — the displayed image changes on each tempo step.** BPM values are gentle starting suggestions — tune against the real machine. Whole tutorial should stay at or under ~5 minutes.]
 
 ## Tutorial Page 1 — Get comfortable
+
+[IMAGE: tutorial-solo/*]
 
 _No rush now. This first time is all about you getting comfortable with me._
 
@@ -223,6 +252,8 @@ Take a slow breath. When you're ready, and not a moment before, we'll begin.
 
 ## Tutorial Page 2 — Ease yourself onto it
 
+[IMAGE: tutorial-solo/*]
+
 Before I take over, let's get you settled onto it — at your own pace, by your own hand.
 
 1. Position yourself against the dildo and, slowly, **ease yourself onto it**.
@@ -232,6 +263,8 @@ Before I take over, let's get you settled onto it — at your own pace, by your 
 _Take all the time you want. When it feels good and you're ready to hand control to me… turn the page._
 
 ## Tutorial Page 3 — The first, slow strokes
+
+[IMAGE: tutorial-solo/*]
 
 [PAUSE: ~10s — anticipation, machine still]
 
@@ -251,6 +284,8 @@ _…and stop. Feel that sudden emptiness? Hold onto that wanting for me._
 
 ## Tutorial Page 4 — Settling into a rhythm
 
+[IMAGE: tutorial-solo/*]
+
 [METRONOME: ~40 BPM, ~50s]
 
 _Here I come again — a little more sure of myself this time._
@@ -265,6 +300,8 @@ _Quiet again. I love leaving you like this — wanting just a little more than I
 
 ## Tutorial Page 5 — Teasing you
 
+[IMAGE: tutorial-solo/*]
+
 [METRONOME: ~50 BPM, ~30s]
 
 _Mmm, there. Just enough to keep you needing it._
@@ -272,6 +309,8 @@ _Mmm, there. Just enough to keep you needing it._
 [PAUSE: ~15s]
 
 _And gone again. Patience. I decide when you get more._
+
+[IMAGE: tutorial-solo/*]
 
 [METRONOME: ~50 BPM, ~30s]
 
@@ -283,6 +322,8 @@ _Feel how much you miss it the instant it stops. That ache is the whole point._
 
 ## Tutorial Page 6 — A taste of what's coming
 
+[IMAGE: tutorial-solo/*]
+
 [METRONOME: ~60 BPM, ~40s]
 
 _Now… let me show you just a little more._
@@ -290,6 +331,8 @@ _Now… let me show you just a little more._
 _Feel me quicken? A hint of how relentless I can be when I really want you._
 
 _That's it — let go, let it build…_
+
+[IMAGE: tutorial-solo/*]
 
 [METRONOME: ~80 BPM, ~8s — short, sharp burst]
 
@@ -305,6 +348,8 @@ _Everything you just felt? That was me being gentle. If you dare, come find out 
 
 ## Tutorial Page 7 — Ready for the real thing
 
+[IMAGE: tutorial-solo/*]
+
 So… do you think you can handle some real fucking now?
 
 MENU:
@@ -317,18 +362,22 @@ MENU:
 
 [Author note: the main event, reached from the Page 6 menu. **Theme A — "You're mine tonight":** she is in full, intimate control; the through-line is the player surrendering and being looked after. Written to **stand alone** — assumes nothing about whether the player did Setup or the Tutorial. ~20 minutes of driven content, then an open-ended climax loop until the player presses a button.]
 
-[Author note: images escalate with intensity — the model using the machine on herself, building from sensual/solo to hard machine-fucking. Partner/machine-on-model imagery is allowed here (unlike the tutorial). Match the picture's intensity to the current BPM.]
+[Author note: images escalate with intensity — building from sensual/solo through partner imagery to hard partner-fucking. Partner imagery is used here (unlike the tutorial, which stays solo). Match the picture's intensity to the current BPM via the themed buckets: `tease-solo-build` (slow, solo) → `partner-tender` (slow/tender partner — catch-breath & interludes) → `partner-build` (≈60–110 BPM) → `partner-hard` (≈120+ BPM) → `climax` (the peak; plus the single-image `climax-hero` bucket for the money shot) → `afterglow` (wind-down).]
 
 [Author note — full pacing legend for the timed branches:
 - `[METRONOME: ~N BPM, ~Ns]` — machine moving at that tempo for that long.
 - `[PAUSE: ~Ns]` — silence, machine still (covers both mid-scene stops and anticipation holds).
 - `[LOOP START]` / `[LOOP END]` — the enclosed blocks repeat until a player button is pressed.
 - `[BUTTON: "label" → target]` — a player-driven branch.
+- `[IMAGE: <bucket>/*]` — show a random image from that themed gallery bucket (intensity follows the BPM band); `[IMAGE: <bucket>/hero — desc]` pins a specific shot; `[IMAGE: hold]` keeps the current image.
+- **Image cadence:** every `[METRONOME]` block opens with its own `[IMAGE]` — the displayed image changes on each tempo step (each block becomes its own page; random `/*` keeps successive images varied).
 All BPM/timing values are first-draft and meant to be tested and tuned against the real machine.]
 
 [Author note — line density: aim for a fresh narrative line roughly every **10–15s** of a timed block (up to ~20s occasionally). A single `[METRONOME]` run can carry several lines (e.g. a 60s run → ~4–5 lines). Keep her talking so the player is never left in silence mid-rhythm.]
 
 ## Tease Page 1 — You came back
+
+[IMAGE: tease-solo-build/*]
 
 _So. You came back for the real thing._
 
@@ -337,6 +386,8 @@ Welcome to **The Fucking Machine Tease** — the one I've been saving for you.
 No more gentle introductions, no more easing you in. Tonight I take over completely… and you will let me.
 
 ## Tease Page 2 — A little honesty first
+
+[IMAGE: hold]
 
 Before we begin, here's what you're agreeing to.
 
@@ -350,6 +401,8 @@ MENU:
 
 ## Tease Page 3 — Is your machine ready for me?
 
+[IMAGE: hold]
+
 First, tell me — is everything set up?
 
 I need the app **installed, paired, and listening** before I can move you a single inch.
@@ -362,11 +415,15 @@ MENU:
 
 ## Tease Page 4 — Choose well
 
+[IMAGE: hold]
+
 _Choose carefully — you'll be living with this decision for a while._
 
 - 🍆 **Pick a dildo you completely trust** — familiar, comfortable, and **never bigger than you know you can take**. I don't ease off the way I did in the tutorial; tonight I get rough. The right size is what lets you surrender instead of brace.
 
 ## Tease Page 5 — Get ready for me
+
+[IMAGE: hold]
 
 Now let's get you slick and the app listening.
 
@@ -374,6 +431,8 @@ Now let's get you slick and the app listening.
 - 🎚️ In the app's **Sound** mode, set **THRUST RHYTHM** to **1 beat per stroke**, then press start so it's listening for me.
 
 ## Tease Page 6 — How to stop me
+
+[IMAGE: hold]
 
 Knowing how to stop me is exactly what lets you let go of everything else.
 
@@ -385,6 +444,8 @@ You're safe with me. That's the whole reason you can give in.
 
 ## Tease Page 7 — Ease yourself on
 
+[IMAGE: tease-solo-build/*]
+
 By your own hand now — get yourself onto it.
 
 1. Slowly **ease yourself onto** the dildo.
@@ -394,6 +455,8 @@ By your own hand now — get yourself onto it.
 _When you're settled, and aching to be taken… turn the page. Once you do that... you're mine._
 
 ## Tease Page 8 — Hands off
+
+[IMAGE: tease-solo-build/*]
 
 [PAUSE: ~10s — anticipation, machine still]
 
@@ -405,6 +468,8 @@ _Here we go._
 
 ## Tease Page 9 — Act I · Slow seduction
 
+[IMAGE: tease-solo-build/*]
+
 [METRONOME: ~20 BPM, ~45s]
 
 _There. Feel me take that very first stroke._
@@ -412,6 +477,8 @@ _There. Feel me take that very first stroke._
 _Slow… deliberate… I'm in no hurry with you tonight._
 
 _Breathe out for me. Let your whole body go soft and heavy._
+
+[IMAGE: tease-solo-build/*]
 
 [METRONOME: ~30 BPM, ~45s]
 
@@ -427,6 +494,8 @@ _That's it. No thinking. Just me, moving you._
 
 _…and still. Feel how much you already miss me?_
 
+[IMAGE: tease-solo-build/*]
+
 [METRONOME: ~50 BPM, ~50s]
 
 _There I am again._
@@ -437,6 +506,8 @@ _Feel how easy it is to stop holding on?_
 
 _Good. Let every stroke pull you a little deeper under._
 
+[IMAGE: tease-solo-build/*]
+
 [METRONOME: ~50 BPM, ~30s]
 
 _You're already learning to just… let go._
@@ -444,6 +515,8 @@ _You're already learning to just… let go._
 _See? You don't have to do a single thing but feel._
 
 ## Tease Page 10 — Act II · The first rise
+
+[IMAGE: partner-build/*]
 
 [METRONOME: ~60 BPM, ~40s]
 
@@ -453,6 +526,8 @@ _Feel me pick up the pace, bit by bit._
 
 _No more easing in — I want more of you now._
 
+[IMAGE: partner-build/*]
+
 [METRONOME: ~80 BPM, ~40s]
 
 _Feel that? I'm not teasing anymore._
@@ -461,11 +536,15 @@ _This is me starting to take what I want._
 
 _And you're letting me. God, you're letting me._
 
+[IMAGE: partner-build/*]
+
 [METRONOME: ~100 BPM, ~30s]
 
 _Harder. You can take it — I know exactly what you can take._
 
 _Don't tense up — open up, and let me in deeper._
+
+[IMAGE: partner-hard/*]
 
 [METRONOME: ~120 BPM, ~60s — first hard fucking]
 
@@ -485,6 +564,8 @@ _…and breathe. That was only the first time I take you tonight._
 
 ## Tease Page 11 — Act III · Catch your breath
 
+[IMAGE: partner-tender/*]
+
 [METRONOME: ~40 BPM, ~40s]
 
 _Slow again. Feel your heart pounding? I did that to you._
@@ -496,6 +577,8 @@ _Easy strokes… just enough to keep you simmering for me._
 [PAUSE: ~12s]
 
 _Look at you — hips chasing nothing, aching for a rhythm I've taken away._
+
+[IMAGE: partner-tender/*]
 
 [METRONOME: ~50 BPM, ~30s]
 
@@ -509,9 +592,9 @@ _Not yet. A little wanting is so good for you._
 
 ## Tease Page 12 — Act IV · The ladder
 
-[Author note: 4 identical step-up cycles. Each cycle: 60 → 90 → 120 → 150 BPM in quick transitions, then a hard stop. Voice lines rotate per cycle (below) so it escalates rather than repeats.]
+[Author note: 4 identical step-up cycles. Each cycle: 60 → 90 → 120 → 150 BPM in quick transitions, then a hard stop. Each rung is its own page, so each gets a fresh `[IMAGE: partner-hard/*]` (image changes on every tempo step). Voice lines rotate per cycle (below) so it escalates rather than repeats.]
 
-[METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
+[IMAGE: partner-hard/*] [METRONOME: 60 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 90 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 120 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 150 BPM, ~10s]
 
 _Up… and up…_
 
@@ -521,7 +604,7 @@ _…harder — all the way — now take it!_
 
 _…and nothing. Again._
 
-[METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
+[IMAGE: partner-hard/*] [METRONOME: 60 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 90 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 120 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 150 BPM, ~10s]
 
 _Climb for me. Faster._
 
@@ -531,7 +614,7 @@ _Don't you dare come yet — I haven't said you can._
 
 _Stopped again. You hate how much you love this. Again._
 
-[METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
+[IMAGE: partner-hard/*] [METRONOME: 60 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 90 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 120 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 150 BPM, ~10s]
 
 _Yes — all the way up—_
 
@@ -541,7 +624,7 @@ _—give it to me, don't hold anything back._
 
 _Breathe. You're trembling for me now. One more._
 
-[METRONOME: 60 BPM, ~8s] · [METRONOME: 90 BPM, ~8s] · [METRONOME: 120 BPM, ~8s] · [METRONOME: 150 BPM, ~10s]
+[IMAGE: partner-hard/*] [METRONOME: 60 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 90 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 120 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 150 BPM, ~10s]
 
 _Last climb now—_
 
@@ -553,6 +636,8 @@ _…and stop. Good. So good for me._
 
 ## Tease Page 13 — Act V · Story interlude
 
+[IMAGE: partner-tender/*]
+
 [METRONOME: ~30 BPM, ~40s]
 
 _Now I want you slow. Achingly slow._
@@ -560,6 +645,8 @@ _Now I want you slow. Achingly slow._
 _Feel every single inch._
 
 _There's no rushing what I'm going to do to you._
+
+[IMAGE: partner-tender/*]
 
 [METRONOME: ~50 BPM, ~30s — building]
 
@@ -575,6 +662,8 @@ _Stay right there, trembling on the edge. I love you most like this._
 
 ## Tease Page 14 — Act VI · The climb
 
+[IMAGE: partner-build/*]
+
 [METRONOME: ~100 BPM, ~40s]
 
 _No more mercy now. We climb — and this time we don't come back down._
@@ -582,6 +671,8 @@ _No more mercy now. We climb — and this time we don't come back down._
 _Feel me settle into a harder rhythm._
 
 _Match your breath to it… there._
+
+[IMAGE: partner-hard/*]
 
 [METRONOME: ~120 BPM, ~50s]
 
@@ -593,6 +684,8 @@ _You couldn't stop me even if you wanted to — and you don't._
 
 _Give in to it. Give in to me._
 
+[IMAGE: partner-hard/*]
+
 [METRONOME: ~140 BPM, ~50s]
 
 _Don't hold back from me — I certainly won't._
@@ -603,6 +696,8 @@ _This is exactly what I promised you._
 
 _Stay with me — we are not slowing down._
 
+[IMAGE: partner-hard/*]
+
 [METRONOME: ~160 BPM, ~40s]
 
 _Almost there. Let it build, let it build…_
@@ -610,6 +705,8 @@ _Almost there. Let it build, let it build…_
 _Higher. I can feel you trembling around me._
 
 _Don't fight the edge — race toward it._
+
+[IMAGE: partner-hard/*]
 
 [METRONOME: ~170 BPM, ~30s]
 
@@ -619,6 +716,8 @@ _So close… I want you aching for it._
 
 ## Tease Page 15 — Act VII · The climax moment
 
+[IMAGE: climax/*]
+
 [METRONOME: ~180 BPM, ~40s]
 
 _Now. This is it._
@@ -626,6 +725,8 @@ _Now. This is it._
 _I'm going to fuck you straight over that edge — don't you dare resist me._
 
 _Feel it building, building, nowhere left to hide._
+
+[IMAGE: climax-hero/* — the one money shot; this bucket holds only that image]
 
 [METRONOME: ~190 BPM, ~40s]
 
@@ -641,21 +742,31 @@ _That's it — let go — **come!**_
 
 [LOOP START]
 
+[IMAGE: partner-hard/*]
+
 [METRONOME: ~120 BPM, ~15s]
 
 _Still holding on? Mmm. Stubborn thing. I like that._
+
+[IMAGE: partner-hard/*]
 
 [METRONOME: ~150 BPM, ~15s]
 
 _Then I won't stop. I'll just keep taking you, and taking you._
 
+[IMAGE: partner-hard/*]
+
 [METRONOME: ~180 BPM, ~20s]
 
 _Come on — come for me. Let go. You know you want to give in._
 
+[IMAGE: partner-hard/*]
+
 [METRONOME: ~140 BPM, ~15s]
 
 _Catch your breath… but I am nowhere near finished with you._
+
+[IMAGE: partner-hard/*]
 
 [METRONOME: ~170 BPM, ~20s]
 
@@ -670,11 +781,15 @@ _Again. Right back to the edge. Fall for me._
 
 ## Tease Page 17 — Outro · Afterglow
 
+[IMAGE: afterglow/*]
+
 [METRONOME: ~30 BPM, ~20s — gentle, loving]
 
 _There it is. Good. That's exactly what I wanted from you._
 
 _Shh… I've got you. Just a little more, soft and slow now — feel me ease you down._
+
+[IMAGE: afterglow/*]
 
 [METRONOME: ~20 BPM, ~15s]
 
@@ -691,6 +806,8 @@ MENU:
 - ↩️ **Back to the main menu**
 
 ## Tease Page 18 — Outro · Gentle aftercare
+
+[IMAGE: afterglow/*]
 
 [METRONOME: easing down → full stop, ~15s]
 
