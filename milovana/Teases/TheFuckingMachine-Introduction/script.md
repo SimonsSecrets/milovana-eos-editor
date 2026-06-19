@@ -36,7 +36,7 @@ The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/
 
 ## Page 1 — Title / Hook
 
-[IMAGE: intro-solo-sensual/* — title shot, alluring direct gaze]
+[IMAGE: title-hero/* — the title shot (alluring direct gaze); this bucket holds only that image]
 
 _You've followed the metronome a hundred times._
 
