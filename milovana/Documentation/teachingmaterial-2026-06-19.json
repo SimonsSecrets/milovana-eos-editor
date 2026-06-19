@@ -1,0 +1,255 @@
+{
+  "pages": {
+    "start": [
+      {
+        "say": {
+          "label": "<p>Let first start with the &#39;Say&#39; action. Parameters are &#39;Alignment&#39; (Left/Center/Right) and &#39;Timing&#39; (Auto/Pause/Instant/Auto-Play/Custom). This action is using alignment Left and Timing Auto. Alignment options are straightforward, Timing options mean the following: 1) Auto = Automatically choose the correct behavior based on the next action. 2) Pause = Tease will pause and wait for user interaction. 3) Instant = Tease will continue instantly. 4) Auto-Play = Tease will pause for approximate reading time (but allows the user to skip the wait by clicking). 5) Custom = Tease will pause for a custom amount of time. In this case there is an extra Duration parameter (see next &#39;Say&#39; action for an example usage).</p>",
+          "align": "left"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>This is a say action with Timing &#39;Custom&#39; and Duration 3s</p>",
+          "mode": "custom",
+          "duration": "3s"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Text in Say actions can be formatted: <strong>bold, </strong><em>italic, </em><u>underscore</u><em>, </em><span style=\"color: #1e88e5\">colored</span></p>",
+          "mode": "autoplay"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>From now on, i will use a &#39;Say&#39; action before every new action to explain that action to you.</p>",
+          "mode": "instant"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>The next action is &#39;Goto&#39;. This action allows switching pages. Pages are references by name (only letters, numbers and a hyphen are allowed in the name). The Goto action that follows moves to page &#39;001-Images&#39;. You can also specify to go to a random page by using wildcards to select which pages qualify. For instance, if we specify &#39;00*&#39;, any page with a name that starts with &#39;00&#39; will be a possible goto target (a random page is chosen from the pool of applicable pages).</p>",
+          "mode": "pause"
+        }
+      },
+      {
+        "goto": {
+          "target": "001-Images"
+        }
+      }
+    ],
+    "001-Images": [
+      {
+        "say": {
+          "label": "<p>We now are on the images page. The next action to explain is the &#39;Image&#39; action. This action has a locator to specify which image to display. Locators reference images in the Galleries folder. Images are shown in the center of the screen, with text from &#39;Say&#39; actions displayed below it. When a new page is loaded and the first action is a &#39;Say&#39; action, the text is displayed without an image (black screen).</p>"
+        }
+      },
+      {
+        "image": {
+          "locator": "gallery:c150a13b-1d79-412d-8fbe-6f609b77962c/4124308"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Issueing a Say action after an image action does not clear the image. Issueing a second Image action replaces the current image with the new image. The image in the next action is taken from the same folder in the gallery as the prvious image.</p>"
+        }
+      },
+      {
+        "image": {
+          "locator": "gallery:c150a13b-1d79-412d-8fbe-6f609b77962c/4124309"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>The image action also has the option to choose a random image from a folder in the gallery (see next image action for example)</p>"
+        }
+      },
+      {
+        "image": {
+          "locator": "gallery:c150a13b-1d79-412d-8fbe-6f609b77962c/*"
+        }
+      },
+      {
+        "goto": {
+          "target": "002-Timers"
+        }
+      }
+    ],
+    "002-Timers": [
+      {
+        "say": {
+          "label": "<p>Next up is the Timer action. Keep in mind that although we switched pages, the last image from the previous page is still shown. Text from the previous page is cleared. The timer action has following parameters: 1) Duration (time in seconds the timer lasts, can either be a single number or random taken from a range) 2) Visual Style (can be Normal, Secret or Hidden. Normal displays the remaining time, secret show a timer without a countdown time, hidden does not display a timer).</p>"
+        }
+      },
+      {
+        "timer": {
+          "duration": "10s",
+          "style": "normal"
+        }
+      },
+      {
+        "timer": {
+          "duration": "1s-5s",
+          "style": "secret"
+        }
+      },
+      {
+        "goto": {
+          "target": "003-Choices"
+        }
+      }
+    ],
+    "003-Choices": [
+      {
+        "say": {
+          "label": "<p>The following action is the &#39;Choice&#39; action. This action presents the user with a number of clickable buttons. Each button is tied to either a &#39;Goto&#39; action (see Option#1), or a custom set of actions (see Option#2). Every option button can have a custom color.</p>"
+        }
+      },
+      {
+        "choice": {
+          "options": [
+            {
+              "label": "Option#1 Display label",
+              "commands": [
+                {
+                  "goto": {
+                    "target": "start"
+                  }
+                }
+              ],
+              "color": "#1976d2"
+            },
+            {
+              "label": "Option#2 Display label",
+              "commands": [
+                {
+                  "say": {
+                    "label": "<p>A say action triggered by picking option 2</p>"
+                  }
+                },
+                {
+                  "say": {
+                    "label": "<p>Options can define multiple actions</p>"
+                  }
+                }
+              ],
+              "color": "#f44336"
+            }
+          ]
+        }
+      },
+      {
+        "goto": {
+          "target": "004-Audio"
+        }
+      }
+    ],
+    "004-Audio": [
+      {
+        "say": {
+          "label": "<p>The Audio action allows us to play audio files. These are picked from the Files folder (alike to galleries, but can contain any file format instead of just images). Parameters are: 1) Locator (the sound file to play). 2) Volume 0..100% 3) Loops (an integer specifying how many times the audio clip should be looped before playback is stopped). 4) Continue accros pages (a boolean controlling whether audio should keep playing on a page switch, or stop playing when the page is switched).</p>"
+        }
+      },
+      {
+        "audio.play": {
+          "locator": "file:metronome-120bpm.mp3",
+          "loops": 2,
+          "background": true,
+          "volume": 0.8
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Say actions executed after an audio action are executed immediately once the audio starts playing (the say action will not wait for the audio clip to be finished before executing)</p>"
+        }
+      },
+      {
+        "goto": {
+          "target": "099-End"
+        }
+      }
+    ],
+    "099-End": [
+      {
+        "say": {
+          "label": "<p>The End action marks the end of the tease. The End action ends the tease and asks the user to rate the experience. No other actions can be execcuted once the End action has triggered.</p>"
+        }
+      },
+      {
+        "end": {}
+      }
+    ]
+  },
+  "modules": {
+    "audio": {}
+  },
+  "galleries": {
+    "c150a13b-1d79-412d-8fbe-6f609b77962c": {
+      "name": "PictureSet001",
+      "images": [
+        {
+          "id": 4124308,
+          "hash": "775d9d7bad835661043f8a4ec9610ba8204fffbd",
+          "size": 192900,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "id": 4124309,
+          "hash": "34767f6f6aa0387f24008dd25bf257db49c63ca8",
+          "size": 176614,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "id": 4124310,
+          "hash": "44e8f95ce5ae61b60c4efd6b26009bb1d2d38070",
+          "size": 165431,
+          "width": 853,
+          "height": 1280
+        },
+        {
+          "id": 4124311,
+          "hash": "3e29aa352f8f4b683155c1918d331bc02f861f65",
+          "size": 191018,
+          "width": 100,
+          "height": 100
+        },
+        {
+          "id": 4124312,
+          "hash": "165132b9358f9dd419b54b2ca055ddb75e23b94f",
+          "size": 205485,
+          "width": 853,
+          "height": 1280
+        },
+        {
+          "id": 4124313,
+          "hash": "2800541af92ed14925ea4d7b3519ae710d93d012",
+          "size": 194231,
+          "width": 100,
+          "height": 100
+        }
+      ]
+    }
+  },
+  "editor": {
+    "recentImages": [
+      {
+        "type": "gallery",
+        "mimeType": "image/jpeg",
+        "galleryId": "c150a13b-1d79-412d-8fbe-6f609b77962c",
+        "url": "gallery:c150a13b-1d79-412d-8fbe-6f609b77962c/4124309",
+        "imageId": 4124309
+      }
+    ]
+  },
+  "files": {
+    "metronome-120bpm.mp3": {
+      "id": 4124314,
+      "hash": "7a7baf7632e9cacc504f3fb85d8bdf9674f96329",
+      "size": 96431,
+      "type": "audio/mpeg"
+    }
+  },
+  "init": ""
+}
