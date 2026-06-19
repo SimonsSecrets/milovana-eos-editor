@@ -3,8 +3,8 @@ using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
-using System.Windows.Media.Imaging;
 
 namespace AssetTagViewer;
 
@@ -47,7 +47,6 @@ public partial class MainWindow : Window
         if (args.Length > 1 && !string.IsNullOrWhiteSpace(args[1]))
         {
             string p = args[1];
-            // Accept either the file itself or the tease folder containing it.
             if (Directory.Exists(p)) return Path.Combine(p, "asset-content.json");
             return p;
         }
@@ -83,10 +82,16 @@ public partial class MainWindow : Window
             ExplicitBox.ItemsSource = VocabArray("explicitness", "clothed", "underwear", "partial-nudity", "nude", "explicit");
             OrientationBox.ItemsSource = VocabArray("orientation", "portrait", "landscape");
 
-            BuildItems();
+            Tree.ItemsSource = BuildTree();
             _dirty = false;
             UpdateStatus();
-            if (ImageList.Items.Count > 0) ImageList.SelectedIndex = 0;
+
+            // Land on the first gallery so the theme + thumbnails are visible immediately.
+            if (Tree.Items.Count > 0 && Tree.Items[0] is GalleryNode first)
+            {
+                first.IsSelected = true;
+                ShowGallery(first);
+            }
         }
         catch (Exception ex)
         {
@@ -106,24 +111,27 @@ public partial class MainWindow : Window
         return fallback;
     }
 
-    private void BuildItems()
+    private List<GalleryNode> BuildTree()
     {
-        var items = new List<ImageItem>();
-        if (_content is not null && _jsonPath is not null)
+        var nodes = new List<GalleryNode>();
+        if (_content is null || _jsonPath is null) return nodes;
+
+        string teaseDir = Path.GetDirectoryName(_jsonPath)!;
+        foreach ((string galleryName, GalleryTags gallery) in _content.Galleries)
         {
-            string teaseDir = Path.GetDirectoryName(_jsonPath)!;
-            foreach ((string galleryName, GalleryTags gallery) in _content.Galleries)
+            var images = new List<ImageItem>();
+            foreach ((string fileName, ImageTags tags) in gallery.Images)
             {
-                foreach ((string fileName, ImageTags tags) in gallery.Images)
-                {
-                    string? imagePath = ResolveImagePath(teaseDir, galleryName, fileName);
-                    var item = new ImageItem(galleryName, fileName, imagePath, tags, gallery.Theme, gallery.ThemeNote);
-                    item.Edited += MarkDirty;
-                    items.Add(item);
-                }
+                string? imagePath = ResolveImagePath(teaseDir, galleryName, fileName);
+                var item = new ImageItem(galleryName, fileName, imagePath, tags);
+                item.Edited += MarkDirty;
+                images.Add(item);
             }
+            var node = new GalleryNode(galleryName, gallery, images);
+            node.Edited += MarkDirty;
+            nodes.Add(node);
         }
-        ImageList.ItemsSource = items;
+        return nodes;
     }
 
     /// <summary>
@@ -144,36 +152,47 @@ public partial class MainWindow : Window
         }
     }
 
-    private void OnSelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+    private void OnTreeSelected(object sender, RoutedPropertyChangedEventArgs<object> e)
     {
-        var item = ImageList.SelectedItem as ImageItem;
-        Preview.Source = LoadBitmap(item?.ImagePath);
-        NoImageText.Visibility = Preview.Source is null ? Visibility.Visible : Visibility.Collapsed;
-
-        if (item is null)
+        switch (e.NewValue)
         {
-            WhichText.Text = string.Empty;
-            ThemeText.Text = string.Empty;
-            return;
+            case GalleryNode gallery:
+                ShowGallery(gallery);
+                break;
+            case ImageItem image:
+                ShowImage(image);
+                break;
         }
-
-        WhichText.Text = item.Display + (item.ImagePath is null ? "   ⚠ image file not found" : string.Empty);
-        ThemeText.Text = string.IsNullOrWhiteSpace(item.ThemeNote)
-            ? item.Theme
-            : $"{item.Theme}\n{item.ThemeNote}";
     }
 
-    // OnLoad + Freeze: read the whole file now so it is not left locked (the user keeps the originals).
-    private static BitmapImage? LoadBitmap(string? path)
+    private void ShowGallery(GalleryNode gallery)
     {
-        if (string.IsNullOrEmpty(path) || !File.Exists(path)) return null;
-        var bmp = new BitmapImage();
-        bmp.BeginInit();
-        bmp.CacheOption = BitmapCacheOption.OnLoad;
-        bmp.UriSource = new Uri(path);
-        bmp.EndInit();
-        bmp.Freeze();
-        return bmp;
+        EmptyHint.Visibility = Visibility.Collapsed;
+        ImageView.Visibility = Visibility.Collapsed;
+        GalleryView.Visibility = Visibility.Visible;
+
+        GalleryView.DataContext = gallery;
+        GalleryNameText.Text = gallery.Name;
+        Thumbs.SelectedItem = null; // so clicking a thumbnail (even the same one) re-fires selection
+    }
+
+    private void ShowImage(ImageItem image)
+    {
+        EmptyHint.Visibility = Visibility.Collapsed;
+        GalleryView.Visibility = Visibility.Collapsed;
+        ImageView.Visibility = Visibility.Visible;
+
+        ImageView.DataContext = image;
+        Preview.Source = ImageLoader.Load(image.ImagePath);
+        NoImageText.Visibility = Preview.Source is null ? Visibility.Visible : Visibility.Collapsed;
+        WhichText.Text = image.Display + (image.ImagePath is null ? "   ⚠ image file not found" : string.Empty);
+    }
+
+    // Clicking a thumbnail selects that image in the tree, which switches to the image (tags) view.
+    private void OnThumbSelected(object sender, SelectionChangedEventArgs e)
+    {
+        if (Thumbs.SelectedItem is ImageItem image)
+            image.IsSelected = true;
     }
 
     private void MarkDirty()
@@ -196,9 +215,9 @@ public partial class MainWindow : Window
         try
         {
             // Commit any pending edit still focused in an editable combo (LostFocus hasn't fired yet).
-            SubjectBox.GetBindingExpression(System.Windows.Controls.ComboBox.TextProperty)?.UpdateSource();
-            ExplicitBox.GetBindingExpression(System.Windows.Controls.ComboBox.TextProperty)?.UpdateSource();
-            OrientationBox.GetBindingExpression(System.Windows.Controls.ComboBox.TextProperty)?.UpdateSource();
+            SubjectBox.GetBindingExpression(ComboBox.TextProperty)?.UpdateSource();
+            ExplicitBox.GetBindingExpression(ComboBox.TextProperty)?.UpdateSource();
+            OrientationBox.GetBindingExpression(ComboBox.TextProperty)?.UpdateSource();
 
             File.WriteAllText(_jsonPath, JsonSerializer.Serialize(_content, WriteOptions) + "\n");
             _dirty = false;
@@ -227,16 +246,6 @@ public partial class MainWindow : Window
     private void OnSave(object sender, RoutedEventArgs e) => Save();
 
     private void OnSaveCommand(object sender, ExecutedRoutedEventArgs e) => Save();
-
-    private void OnPrev(object sender, RoutedEventArgs e)
-    {
-        if (ImageList.SelectedIndex > 0) ImageList.SelectedIndex--;
-    }
-
-    private void OnNext(object sender, RoutedEventArgs e)
-    {
-        if (ImageList.SelectedIndex < ImageList.Items.Count - 1) ImageList.SelectedIndex++;
-    }
 
     private void OnClosing(object sender, System.ComponentModel.CancelEventArgs e)
     {
