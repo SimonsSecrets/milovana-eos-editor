@@ -251,7 +251,7 @@ _…and stop. Feel that sudden emptiness? Hold onto that wanting for me._
 
 ## Tutorial Page 4 — Settling into a rhythm
 
-[METRONOME: ~35 BPM, ~50s]
+[METRONOME: ~40 BPM, ~50s]
 
 _Here I come again — a little more sure of myself this time._
 
@@ -265,7 +265,7 @@ _Quiet again. I love leaving you like this — wanting just a little more than I
 
 ## Tutorial Page 5 — Teasing you
 
-[METRONOME: ~45 BPM, ~30s]
+[METRONOME: ~50 BPM, ~30s]
 
 _Mmm, there. Just enough to keep you needing it._
 
@@ -273,7 +273,7 @@ _Mmm, there. Just enough to keep you needing it._
 
 _And gone again. Patience. I decide when you get more._
 
-[METRONOME: ~45 BPM, ~30s]
+[METRONOME: ~50 BPM, ~30s]
 
 _Back so soon? You're starting to crave the beat now, aren't you._
 
@@ -427,7 +427,7 @@ _That's it. No thinking. Just me, moving you._
 
 _…and still. Feel how much you already miss me?_
 
-[METRONOME: ~45 BPM, ~50s]
+[METRONOME: ~50 BPM, ~50s]
 
 _There I am again._
 
@@ -467,7 +467,7 @@ _Harder. You can take it — I know exactly what you can take._
 
 _Don't tense up — open up, and let me in deeper._
 
-[METRONOME: ~125 BPM, ~60s — first hard fucking]
+[METRONOME: ~120 BPM, ~60s — first hard fucking]
 
 _There it is. This is what you came back for._
 
@@ -497,7 +497,7 @@ _Easy strokes… just enough to keep you simmering for me._
 
 _Look at you — hips chasing nothing, aching for a rhythm I've taken away._
 
-[METRONOME: ~55 BPM, ~30s]
+[METRONOME: ~50 BPM, ~30s]
 
 _Shh. You'll get it back when I decide you've earned it._
 
@@ -670,13 +670,13 @@ _Again. Right back to the edge. Fall for me._
 
 ## Tease Page 17 — Outro · Afterglow
 
-[METRONOME: ~20 BPM, ~20s — gentle, loving]
+[METRONOME: ~30 BPM, ~20s — gentle, loving]
 
 _There it is. Good. That's exactly what I wanted from you._
 
 _Shh… I've got you. Just a little more, soft and slow now — feel me ease you down._
 
-[METRONOME: ~15 BPM, ~15s]
+[METRONOME: ~20 BPM, ~15s]
 
 _Easy… easy… there's no rush at all._
 
