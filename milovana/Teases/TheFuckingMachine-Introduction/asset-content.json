@@ -1,0 +1,909 @@
+{
+  "tease": "TheFuckingMachine-Introduction",
+  "description": "Per-image content tags (Claude's visual judgement, user-verified). Keyed by <bucket>/<filename> — the stable local-content identity. Joined to asset-map.json on the filename key at authoring time: this file says what's in the picture, asset-map says how to reference it. Tags are content-intrinsic and independent of Milovana IDs.",
+  "vocabulary": {
+    "subject": [
+      "solo",
+      "machine",
+      "partner"
+    ],
+    "explicitness": [
+      "clothed",
+      "underwear",
+      "partial-nudity",
+      "nude",
+      "explicit"
+    ],
+    "pace": "Energy/tempo only, independent of explicitness. 1 (still/posed) to 5 (frantic/hard); BPM-banded (1:<=40, 2:40-70, 3:70-110, 4:110-150, 5:150+).",
+    "orientation": [
+      "portrait",
+      "landscape"
+    ]
+  },
+  "galleries": {
+    "title-hero": {
+      "theme": "title shot - single alluring hero portrait, solo/sensual",
+      "themeNote": null,
+      "images": {
+        "97162788_004_9e2c_cropped.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "underwear",
+          "orientation": "portrait",
+          "notes": "head-and-shoulders portrait, pale pink striped bralette, direct sultry gaze to camera, lips slightly parted, still/posed against a pale wall. Ideal title image."
+        }
+      }
+    },
+    "intro-solo-sensual": {
+      "theme": "intro/pitch/menu - solo, sensual, warm sunlit room; progressive undress",
+      "themeNote": null,
+      "images": {
+        "31517085_004_ca6a.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "kneeling on a bed, glancing back over her shoulder, white tank top, bare bottom exposed; warm cabin/daylight setting."
+        },
+        "31517085_005_17db.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "standing at french windows, tank top lifted to bare both breasts, white panties on, arm crossing under bust; soft daylight."
+        },
+        "31517085_006_40b3.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "crouched beside an armchair, peeling white panties down, glancing back over shoulder; bare bottom, tank top on."
+        },
+        "31517085_007_884f.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "squatting on tiled floor, shirt pushed up over breasts, white panties stretched at the thighs, eyes closed, head tilted - sensual."
+        },
+        "31517085_008_c316.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "standing, pulling the shirt up over her head/face, fully nude and smiling/playful; FLAG - full nudity, more explicit than a tame intro/menu image."
+        },
+        "31517085_009_a065.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "kneeling side-on by the window, fully nude, breast in profile, sultry gaze to camera; FLAG - full nudity, more explicit than a tame intro/menu image."
+        }
+      }
+    },
+    "setup-solo": {
+      "theme": "application-setup function check - solo, tasteful, non-distracting. Two sets: urban street (66348606, tamest) + beach (92231232, more revealing).",
+      "themeNote": null,
+      "images": {
+        "66348606_009_5a77.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "clothed",
+          "orientation": "portrait",
+          "notes": "full-length on a city sidewalk, graphic crop tank + ripped light jeans + white heels, smiling; fully clothed, casual. Tamest setup imagery."
+        },
+        "66348606_015_4d51.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "clothed",
+          "orientation": "portrait",
+          "notes": "three-quarter standing on street, graphic crop tank, bare midriff, holding a teal purse, smiling; fully clothed."
+        },
+        "66348606_022_5905.jpg": {
+          "subject": "solo",
+          "pace": 3,
+          "explicitness": "clothed",
+          "orientation": "portrait",
+          "notes": "sitting on a stone ledge, tongue out playfully, crop tank + ripped jeans + heels; fully clothed."
+        },
+        "66348606_028_5c9e.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "clothed",
+          "orientation": "landscape",
+          "notes": "lying on stomach along a ledge, looking back, crop tank + ripped jeans + heels; fully clothed."
+        },
+        "66348606_036_3ae4.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "landscape",
+          "notes": "reclining on a ledge, crop tank lifted to bare one breast, ripped jeans on; FLAG - bared breast, more exposed than the rest of this tame street set / the setup context."
+        },
+        "92231232_025_172c.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "clothed",
+          "orientation": "portrait",
+          "notes": "kneeling on the beach, striped tank dress, arms raised over head, big smile; fully clothed, wholesome."
+        },
+        "92231232_040_1eaa.jpg": {
+          "subject": "solo",
+          "pace": 3,
+          "explicitness": "underwear",
+          "orientation": "portrait",
+          "notes": "standing on the beach, cropped sweater + blue thong, arms out, playful/laughing; front thong visible, no nudity."
+        },
+        "92231232_010_7166.jpg": {
+          "subject": "solo",
+          "pace": 3,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "on a beach swing seen from behind, striped dress riding up, bare bottom exposed, feet up; dynamic/in-motion."
+        },
+        "92231232_013_111b.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "underwear",
+          "orientation": "landscape",
+          "notes": "on hands and knees in the sand, striped tank dress, rear/side view, bare bottom with blue thong; smiling back at camera."
+        },
+        "92231232_032_968c.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "underwear",
+          "orientation": "portrait",
+          "notes": "standing at a beach fence, rear view, cropped sweater + blue thong, bare bottom, glancing back."
+        },
+        "92231232_054_b7dd.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "wading in the surf, rear view, cropped sweater, peeling thong down, bare bottom, looking back."
+        },
+        "92231232_018_b8f5.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "underwear",
+          "orientation": "portrait",
+          "notes": "tight crotch-level close-up, legs spread, blue thong covering the crotch, striped top above; FLAG - explicit framing, too crotch-focused for a tame setup/function-check page."
+        },
+        "92231232_037_24db.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "underwear",
+          "orientation": "portrait",
+          "notes": "low upward angle, cropped sweater, pulling the blue thong aside/down at the hip, crotch-focused; FLAG - suggestive crotch framing, off-theme for the tame setup context."
+        }
+      }
+    },
+    "tutorial-solo": {
+      "theme": "tutorial - SOLO ONLY (hard constraint): the model alone, nude/self-touch, low pace for the gentle first run. Two sets: lamp-lit room (31517085) + kilim/Spanish room with sheer white shirt (73573492). No partner, no machine present in any image.",
+      "themeNote": null,
+      "images": {
+        "31517085_010_482d.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "seated on a wooden dresser edge, fully nude, looking down/aside, breasts and shaved vulva visible; soft lamp-lit room, posed/still."
+        },
+        "31517085_011_b47f.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "close-up from behind/below, hand reaching between her legs touching her vulva; FLAG - graphic genital close-up, quite explicit for the gentle 'first taste' tutorial tone."
+        },
+        "31517085_012_d5b4.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "reclining against a couch, fully nude, eyes lowered, legs slightly parted, relaxed and sensual."
+        },
+        "31517085_013_2836.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "rear view on all fours, genitals exposed from behind, face in profile; FLAG - graphic genital close-up, explicit for the gentle tutorial tone."
+        },
+        "31517085_014_7a54.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "kneeling on a couch, rear three-quarter, glancing back at camera over the shoulder, bottom bared."
+        },
+        "31517085_015_7eac.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "kneeling up on the couch back, rear view, bottom bared, looking back over the shoulder."
+        },
+        "73573492_001_6304.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "underwear",
+          "orientation": "landscape",
+          "notes": "bent over by a window, sheer white shirt draped over her back, white thong, bare bottom, smiling back at camera."
+        },
+        "73573492_002_8fd7.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "standing, sheer white shirt slipping off the shoulders, both breasts bared, hands at chest, gazing at camera."
+        },
+        "73573492_003_bc6d.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "reclining on a kilim couch, shirt open, breasts bared, pink lace panties on, legs raised and parted, hand on thigh."
+        },
+        "73573492_004_55a3.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "kneeling on the couch by the window, sheer shirt slipping off, rear view, bottom bared, looking back."
+        },
+        "73573492_005_aeda.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "seated, shirt at the elbows, breasts bared, pulling the pink panties aside at the crotch (vulva exposed), looking down."
+        },
+        "73573492_006_aeda.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "standing, breasts bared, peeling pink lace panties down past the hips (pubic area visible), gazing at camera; near-variant of 005."
+        },
+        "73573492_007_abf5.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "macro close-up of fingers parting/stroking her vulva, panties pushed aside; FLAG - very graphic genital macro, explicit for the gentle tutorial tone."
+        },
+        "73573492_008_e504.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "seated, sheer shirt bunched around the forearms, breasts bared, white lace panties on, looking aside."
+        },
+        "73573492_009_194b.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "nude on a kilim chair, breasts bared, hand between her legs touching her vulva, gaze to camera."
+        },
+        "73573492_010_a1a9.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "standing fully nude by the window, peeling panties down, full-body, artwork behind."
+        },
+        "73573492_011_1402.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "bent over a chair, rear view, fully nude, genitals visible from behind, looking back."
+        },
+        "73573492_012_e643.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "seated nude on a striped chair, legs spread, hand parting her vulva, gaze to camera."
+        },
+        "73573492_013_e643.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "extreme macro close-up, two hands spreading the labia; FLAG - very graphic genital macro, explicit for the gentle tutorial tone."
+        },
+        "73573492_014_0767.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "seated nude, head back, eyes closed, hand between her legs masturbating, breasts bared - dreamy/sensual."
+        },
+        "73573492_015_c217.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "standing bent forward, rear view, fully nude, bottom and vulva from behind, looking down."
+        }
+      }
+    },
+    "tease-solo-build": {
+      "theme": "early-tease solo build (Tease pages 1/7/8/9, slow seduction, low BPM) - solo, sensual, mostly the pale-pink loft shoot (same as title-hero) plus two nude loft/fur-rug sets. All solo; explicitness ranges underwear -> explicit, pace stays low.",
+      "themeNote": null,
+      "images": {
+        "62413076_001_35c5.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "clothed",
+          "orientation": "portrait",
+          "notes": "standing in a bright window nook, pale pink bodysuit + denim cutoffs, hand on the rail, sultry gaze; tamest shot in the bucket - good for the 'you came back' opener."
+        },
+        "97162788_016_afda.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "clothed",
+          "orientation": "landscape",
+          "notes": "low-angle rear, pink cami + denim cutoffs riding up, glancing back over shoulder; clothed, playful."
+        },
+        "97162788_039_a0e2.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "underwear",
+          "orientation": "portrait",
+          "notes": "standing in the pale pink striped bodysuit, peeling the denim cutoffs down, sultry."
+        },
+        "97162788_025_5fc9.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "topless, cupping/holding her breasts, looking down; pink waistband at hips - soft and sensual."
+        },
+        "97162788_030_aa99.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "leaning against the wall, pink bodysuit pulled down to bare both breasts, denim shorts, eyes closed."
+        },
+        "97162788_048_88f1.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "low angle, topless, pink bodysuit pushed to the hips, legs slightly apart, direct gaze."
+        },
+        "97162788_083_d64f.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "standing side/rear by the window, breast in profile, holding a cloth at the crotch, gaze to camera; tasteful nude."
+        },
+        "97162788_065_bfb3.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "standing fully nude, peeling the pink bottom down, breasts bared, cityscape window behind."
+        },
+        "97162788_111_d82d.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "standing nude against the wall, rear three-quarter, looking back over the shoulder, bottom bared."
+        },
+        "97162788_113_dce9.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "standing nude in the window nook, rear view, bottom bared, glancing back."
+        },
+        "97162788_126_1fb3.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "standing nude front-on, peeling the pink bottoms down, breasts bared, gaze to camera."
+        },
+        "97162788_076_5e12.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "squatting nude in the window nook, braced on the rails, breasts bared, gaze to camera."
+        },
+        "47702997_026_963c.jpg": {
+          "subject": "solo",
+          "pace": 3,
+          "explicitness": "nude",
+          "orientation": "landscape",
+          "notes": "overhead, reclining on a white fur rug, nude torso/breasts, looking up at camera."
+        },
+        "47702997_005_7cb7.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "landscape",
+          "notes": "standing nude braced between the window frames, full body, hazy cityscape behind."
+        },
+        "97162788_095_4836.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "seated nude in the corner, arms braced on the walls, legs spread, vulva exposed, direct gaze; explicit - more exposed than the gentle opener, place later in the build."
+        },
+        "47702997_003_52ce.jpg": {
+          "subject": "solo",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "low angle, nude, legs spread wide between the window frames, vulva exposed, direct gaze; explicit - place later in the build."
+        },
+        "47702997_025_8748.jpg": {
+          "subject": "solo",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "overhead on the white fur rug, nude, legs spread, vulva exposed, mouth open; explicit - place later in the build."
+        }
+      }
+    },
+    "partner-tender": {
+      "theme": "slow/intimate partner shots for catch-breath (Page 11, ~40-50 BPM) and the interlude (Page 13, ~30-50 BPM). All show a male partner; foreplay/oral/kissing rather than hard fucking. Kiss/embrace shots are the most tender; oral shots are slightly higher energy.",
+      "themeNote": null,
+      "images": {
+        "80877276_041_7888.jpg": {
+          "subject": "partner",
+          "pace": 1,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "standing tender embrace, white thong, topless, partner peeling her thong strap, arms around each other - genuinely tender; best for the slowest beats."
+        },
+        "80877276_050_0956.jpg": {
+          "subject": "partner",
+          "pace": 2,
+          "explicitness": "nude",
+          "orientation": "landscape",
+          "notes": "lying on a bed, partner on top kissing her deeply (gentle, loving) - intimate; ideal for the interlude."
+        },
+        "62413076_006_7919.jpg": {
+          "subject": "partner",
+          "pace": 2,
+          "explicitness": "partial-nudity",
+          "orientation": "landscape",
+          "notes": "intimate embrace, denim cutoffs + open pink top (breasts bared), partner nuzzling her chest, his hand on her bottom, laughing."
+        },
+        "25952977_043_5cbb.jpg": {
+          "subject": "partner",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "POV close-up, lying down giving oral, looking up at camera; soft intimate eye contact."
+        },
+        "47702997_010_e1f2.jpg": {
+          "subject": "partner",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "low angle, legs spread wide and held open by the partner's hands, pink bodysuit pulled aside, vulva exposed, smiling down."
+        },
+        "62413076_009_a501.jpg": {
+          "subject": "partner",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "low angle, partner kneeling performing oral on her, pink bodysuit pulled aside, vulva exposed."
+        },
+        "47702997_007_8b36.jpg": {
+          "subject": "partner",
+          "pace": 3,
+          "explicitness": "partial-nudity",
+          "orientation": "landscape",
+          "notes": "standing in a bright loft, topless, leg raised on the rail, partner kneeling performing oral on her."
+        },
+        "80877276_047_f913.jpg": {
+          "subject": "partner",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "on all fours on a bed, partner performing oral on her from behind."
+        }
+      }
+    },
+    "partner-build": {
+      "theme": "building partner sex (Page 10 first rise, Page 14 lower climb; ~60-110 BPM) - male partner, penetration/oral, escalating energy. All partner, all explicit. Lower-pace oral for ~60-80, vigorous riding for ~100+.",
+      "themeNote": null,
+      "images": {
+        "47702997_018_cf95.jpg": {
+          "subject": "partner",
+          "pace": 2,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "POV on the white fur rug, on all fours giving oral, gazing up; lower-energy build (good for ~60-80 BPM)."
+        },
+        "80877276_092_08c1.jpg": {
+          "subject": "partner",
+          "pace": 2,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "POV, bent over in a white thong, licking/sucking the tip, bright windows; lower-energy build."
+        },
+        "80877276_101_894b.jpg": {
+          "subject": "partner",
+          "pace": 1,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "lying back, legs held open by the partner beside her, vulva exposed; intimate but exposed, mid build."
+        },
+        "47702997_013_2f18.jpg": {
+          "subject": "partner",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "standing rear-entry against the loft window, pink striped panties pulled aside, penetrated from behind, looking back."
+        },
+        "47702997_019_6af5.jpg": {
+          "subject": "partner",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "low angle, riding reverse on top, penetration visible from below, rear view."
+        },
+        "47702997_020_63ec.jpg": {
+          "subject": "partner",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "riding from behind/below on the fur rug, penetration, hand on her hip, mouth open."
+        },
+        "47702997_023_16d4.jpg": {
+          "subject": "partner",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "side-entry penetration on the fur rug, she smiling at camera."
+        },
+        "47702997_022_a147.jpg": {
+          "subject": "partner",
+          "pace": 3,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "squatting/riding on top facing the partner, penetration, holding herself open."
+        },
+        "47702997_021_a776.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "riding on top facing camera, breasts bared, vigorous - top of the build (~100+ BPM)."
+        },
+        "47702997_024_cb99.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "side/leg-up penetration on the fur rug, vigorous, mouth open - top of the build (~100+ BPM)."
+        }
+      }
+    },
+    "partner-hard": {
+      "theme": "hard partner fucking (ladder, Act VI climb, loop; ~120-190 BPM) - male partner, vigorous penetration, pace 4-5, all explicit. Sets: loft (47702997), Vixen bedroom (25952977), New Sensations dim room w/ pink nails (88033482), POVD white bed (14017489), TINY4K couch (48437305). All Leah (the 48437305 set is Leah with different makeup/hair).",
+      "themeNote": null,
+      "images": {
+        "47702997_014_214e.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "standing in the loft, one leg up on the rail, penetrated standing, eyes closed."
+        },
+        "47702997_015_7bd9.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "bent over with a leg up, panties pulled aside, penetrated from behind, mouth open."
+        },
+        "47702997_012_0a5f.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "POV deep-throat, head tipped back, large breasts in frame; intense."
+        },
+        "47702997_016_b65e.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "low angle, riding with legs spread wide braced on the rails, penetration visible; very athletic/frantic."
+        },
+        "47702997_017_948c.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "standing splits, legs spread wide on the window rails, penetrated; frantic peak energy."
+        },
+        "25952977_049_5587.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "side-lying on a bed, bald partner over her, penetration, gazing up at him."
+        },
+        "25952977_070_cc29.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "rear/side penetration on the bed, hand on her hip, looking back."
+        },
+        "25952977_075_9bee.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "doggy from behind/above on the bed, deep penetration."
+        },
+        "88033482_047_5ad6.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "dim room, rear/side penetration from below, anus visible, pink nails on her cheek, partner's face behind."
+        },
+        "88033482_052_09cb.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "cowgirl riding on a couch facing camera, fingers at her clit, penetration, mouth open."
+        },
+        "88033482_055_41db.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "close side penetration, pink nails holding herself open, shaft stretching her."
+        },
+        "88033482_060_eaf4.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "doggy from behind, hand spreading her cheek, deep hard penetration, pink nails."
+        },
+        "88033482_063_da8c.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "rear view, looking back over her shoulder, penetration, pink nails on her cheek."
+        },
+        "88033482_068_c567.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "close rear penetration, pink nails gripping her cheek, shaft buried."
+        },
+        "88033482_070_b7c5.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "side, leg raised, penetration, breasts bared, eyes closed."
+        },
+        "88033482_076_8630.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "low angle, riding, vulva penetration close-up, mouth open; frantic."
+        },
+        "88033482_081_d8bc.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "portrait",
+          "notes": "lying back, fingers at her clit, penetration, breasts bared, mouth open."
+        },
+        "88033482_082_6803.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "side penetration, pink nails spreading herself open, shaft stretching her."
+        },
+        "14017489_003_560e.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "POVD white bed, POV legs held open, vulva penetration close-up, coral nails; same shoot as climax-hero."
+        },
+        "14017489_006_c7f9.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "POVD white bed, riding rear/cowgirl, bottom to camera, penetration, hand on her cheek."
+        },
+        "14017489_009_8e8c.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "POVD white bed, POV close penetration, vulva stretched."
+        },
+        "48437305_008_ece4.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "TINY4K couch, legs up, penetration; Leah with different makeup/hair (tan, beaded bracelets)."
+        },
+        "48437305_038_e870.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "TINY4K couch, POV legs up, penetration; Leah, different makeup/hair shoot."
+        },
+        "48437305_041_5738.jpg": {
+          "subject": "partner",
+          "pace": 4,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "TINY4K couch, close penetration, beaded bracelets; Leah, different makeup/hair shoot."
+        },
+        "48437305_054_ed4c.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "TINY4K couch, leg held high, hard penetration; Leah, different makeup/hair shoot."
+        },
+        "48437305_069_68d4.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "TINY4K couch, doggy, hands spreading her cheeks, hard penetration; Leah, different makeup/hair shoot."
+        },
+        "48437305_087_f74f.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "TINY4K couch, low angle, riding reverse, penetration; Leah, different makeup/hair shoot."
+        },
+        "48437305_113_a7cc.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "TINY4K couch, low angle, riding with legs spread, penetration; Leah, different makeup/hair shoot."
+        }
+      }
+    },
+    "climax": {
+      "theme": "climax-moment peak (Page 15, ~180-190 BPM) - partner, hard penetration at peak intensity, overwhelmed/climax expressions. All from the POVD white-bed shoot (same as climax-hero), all Leah, all explicit, pace 5.",
+      "themeNote": null,
+      "images": {
+        "14017489_008_ba5f.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "cowgirl facing camera, riding on top, breasts bared, anguished climax expression, mouth open - strong climax-moment shot."
+        },
+        "14017489_002_0d3a.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "reclined on her back, legs held wide by the partner, penetration from below, breasts bared, overwhelmed expression."
+        },
+        "14017489_005_a0b8.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "riding rear/cowgirl, bottom to camera, hands gripping her cheeks, deep penetration, head down."
+        },
+        "14017489_004_e15b.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "doggy, partner's hands spreading her cheeks, deep penetration from behind."
+        }
+      }
+    },
+    "climax-hero": {
+      "theme": "the single money shot (Page 15 hero, ~190 BPM 'come!'). One image only. POVD shoot (same as climax), Leah.",
+      "themeNote": null,
+      "images": {
+        "14017489_012_173f.jpg": {
+          "subject": "partner",
+          "pace": 5,
+          "explicitness": "explicit",
+          "orientation": "landscape",
+          "notes": "POV finish - kneeling on the floor, facial cumshot, holding the partner's shaft, beaming up at camera, joyful/satisfied. The climax money shot."
+        }
+      }
+    },
+    "afterglow": {
+      "theme": "calm wind-down / aftercare (Pages 17-18, ~20-30 BPM easing to stop) - solo, warm candlelit library/den set (54365525), relaxed and intimate. All solo, all Leah, pace 1.",
+      "themeNote": null,
+      "images": {
+        "54365525_016_0261.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "clothed",
+          "orientation": "portrait",
+          "notes": "sitting by a window in warm candlelight, red knit cami slipping off one breast, sheer skirt, soft contented smile - gentlest afterglow shot."
+        },
+        "54365525_044_d62e.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "partial-nudity",
+          "orientation": "landscape",
+          "notes": "reclining against a bookshelf, red top pushed up, brown panties + sheer wrap, legs relaxed and parted, drowsy gaze."
+        },
+        "54365525_101_5ac1.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "sitting nude on a white cloth, knees drawn up, breasts bared, looking down softly, candlelit bookshelf behind - tender."
+        },
+        "54365525_107_1bcd.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "side profile in warm light, nude torso, breast in profile, glancing over her shoulder - intimate, calm."
+        },
+        "54365525_055_cc1b.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "partial-nudity",
+          "orientation": "portrait",
+          "notes": "standing side/rear by the bookshelf, nude, sheer white skirt at the hips, looking back at camera."
+        },
+        "54365525_131_0a4d.jpg": {
+          "subject": "solo",
+          "pace": 1,
+          "explicitness": "nude",
+          "orientation": "portrait",
+          "notes": "reclining in an armchair, fully nude, legs relaxed and parted (vulva visible), navel piercing, soft sated gaze; most exposed of the afterglow set."
+        }
+      }
+    },
+    "about-hero": {
+      "theme": "single hero shot for the out-of-persona About + Supported Devices pages - tasteful, clothed, friendly. One image only. Leah.",
+      "themeNote": null,
+      "images": {
+        "66348606_002_b404.jpg": {
+          "subject": "solo",
+          "pace": 2,
+          "explicitness": "clothed",
+          "orientation": "portrait",
+          "notes": "seated at a table, chin resting on both fists, playful pouty face, graphic tank top, fully clothed; friendly and non-explicit - ideal for the meta About/Supported Devices pages."
+        }
+      }
+    }
+  }
+}
