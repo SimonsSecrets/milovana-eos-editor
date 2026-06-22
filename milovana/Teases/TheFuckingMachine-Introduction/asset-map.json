@@ -1,0 +1,1129 @@
+{
+    "tease":  "TheFuckingMachine-Introduction",
+    "description":  "Per-tease mapping from Milovana server asset IDs (uuid/image id, file name) to local source files. Built by matching each local file\u0027s SHA-1 to the manifest \u0027hash\u0027 in tease.json. Milovana manifest width/height are unreliable; width/height here are true local dimensions.",
+    "hashAlgorithm":  "sha1",
+    "galleries":  {
+                      "about-hero":  {
+                                         "uuid":  "1ffd1296-58dc-4953-b518-13e3f699b0ae",
+                                         "localFolder":  "Gallery/about-hero",
+                                         "images":  {
+                                                        "66348606_002_b404.jpg":  {
+                                                                                      "id":  4128192,
+                                                                                      "hash":  "b33fa7743da7698cda7a4bab786cc8936719a066",
+                                                                                      "size":  335308,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:1ffd1296-58dc-4953-b518-13e3f699b0ae/4128192"
+                                                                                  }
+                                                    }
+                                     },
+                      "afterglow":  {
+                                        "uuid":  "7e61acb0-daaa-45cd-8115-cb926d20f45d",
+                                        "localFolder":  "Gallery/afterglow",
+                                        "images":  {
+                                                       "54365525_016_0261.jpg":  {
+                                                                                     "id":  4128193,
+                                                                                     "hash":  "69396de3e28fcf6ef5d208c2bde1423cd63335c5",
+                                                                                     "size":  238211,
+                                                                                     "width":  853,
+                                                                                     "height":  1280,
+                                                                                     "locator":  "gallery:7e61acb0-daaa-45cd-8115-cb926d20f45d/4128193"
+                                                                                 },
+                                                       "54365525_044_d62e.jpg":  {
+                                                                                     "id":  4128194,
+                                                                                     "hash":  "62df0de4e54a43670e6270b086db7aae129a5e75",
+                                                                                     "size":  211300,
+                                                                                     "width":  1280,
+                                                                                     "height":  853,
+                                                                                     "locator":  "gallery:7e61acb0-daaa-45cd-8115-cb926d20f45d/4128194"
+                                                                                 },
+                                                       "54365525_055_cc1b.jpg":  {
+                                                                                     "id":  4128195,
+                                                                                     "hash":  "6ac4dc9b65e672947a69bd9f75bc59b2a857bc5a",
+                                                                                     "size":  244146,
+                                                                                     "width":  853,
+                                                                                     "height":  1280,
+                                                                                     "locator":  "gallery:7e61acb0-daaa-45cd-8115-cb926d20f45d/4128195"
+                                                                                 },
+                                                       "54365525_101_5ac1.jpg":  {
+                                                                                     "id":  4128196,
+                                                                                     "hash":  "d59343d45360acfae3cc1d321b5b8786e8748555",
+                                                                                     "size":  216679,
+                                                                                     "width":  853,
+                                                                                     "height":  1280,
+                                                                                     "locator":  "gallery:7e61acb0-daaa-45cd-8115-cb926d20f45d/4128196"
+                                                                                 },
+                                                       "54365525_107_1bcd.jpg":  {
+                                                                                     "id":  4128197,
+                                                                                     "hash":  "bf83e6d0104d928ce48164756e5d8e8930fa7be8",
+                                                                                     "size":  220465,
+                                                                                     "width":  853,
+                                                                                     "height":  1280,
+                                                                                     "locator":  "gallery:7e61acb0-daaa-45cd-8115-cb926d20f45d/4128197"
+                                                                                 },
+                                                       "54365525_131_0a4d.jpg":  {
+                                                                                     "id":  4128198,
+                                                                                     "hash":  "848fa76b579591b1552b177a12d9b9b5b88a438a",
+                                                                                     "size":  212555,
+                                                                                     "width":  853,
+                                                                                     "height":  1280,
+                                                                                     "locator":  "gallery:7e61acb0-daaa-45cd-8115-cb926d20f45d/4128198"
+                                                                                 }
+                                                   }
+                                    },
+                      "climax":  {
+                                     "uuid":  "f44b95d4-9c44-4461-b95e-403ada686b9f",
+                                     "localFolder":  "Gallery/climax",
+                                     "images":  {
+                                                    "14017489_002_0d3a.jpg":  {
+                                                                                  "id":  4128199,
+                                                                                  "hash":  "ae88bbdbe08778eba50369f5f8fc63d6f4c22dd7",
+                                                                                  "size":  157088,
+                                                                                  "width":  1024,
+                                                                                  "height":  768,
+                                                                                  "locator":  "gallery:f44b95d4-9c44-4461-b95e-403ada686b9f/4128199"
+                                                                              },
+                                                    "14017489_004_e15b.jpg":  {
+                                                                                  "id":  4128200,
+                                                                                  "hash":  "d86a446428f1d1705d2d743238401e98933b297f",
+                                                                                  "size":  132560,
+                                                                                  "width":  1024,
+                                                                                  "height":  768,
+                                                                                  "locator":  "gallery:f44b95d4-9c44-4461-b95e-403ada686b9f/4128200"
+                                                                              },
+                                                    "14017489_005_a0b8.jpg":  {
+                                                                                  "id":  4128201,
+                                                                                  "hash":  "54b6d1b21eeee51adf680305cff7a212ba224beb",
+                                                                                  "size":  165878,
+                                                                                  "width":  1024,
+                                                                                  "height":  768,
+                                                                                  "locator":  "gallery:f44b95d4-9c44-4461-b95e-403ada686b9f/4128201"
+                                                                              },
+                                                    "14017489_008_ba5f.jpg":  {
+                                                                                  "id":  4128202,
+                                                                                  "hash":  "e4faa013800f30613f6c8e645c749556d0a45218",
+                                                                                  "size":  103957,
+                                                                                  "width":  1024,
+                                                                                  "height":  768,
+                                                                                  "locator":  "gallery:f44b95d4-9c44-4461-b95e-403ada686b9f/4128202"
+                                                                              }
+                                                }
+                                 },
+                      "climax-hero":  {
+                                          "uuid":  "1740ceb7-d07b-4f58-987b-1f0374e921f6",
+                                          "localFolder":  "Gallery/climax-hero",
+                                          "images":  {
+                                                         "14017489_012_173f.jpg":  {
+                                                                                       "id":  4128203,
+                                                                                       "hash":  "efd4f2ac40e98e8beb63ede4afa7701e623c9134",
+                                                                                       "size":  154714,
+                                                                                       "width":  1024,
+                                                                                       "height":  768,
+                                                                                       "locator":  "gallery:1740ceb7-d07b-4f58-987b-1f0374e921f6/4128203"
+                                                                                   }
+                                                     }
+                                      },
+                      "intro-solo-sensual":  {
+                                                 "uuid":  "79280134-6c2b-42cb-89bf-d1a604ab3686",
+                                                 "localFolder":  "Gallery/intro-solo-sensual",
+                                                 "images":  {
+                                                                "31517085_004_ca6a.jpg":  {
+                                                                                              "id":  4128204,
+                                                                                              "hash":  "44e8f95ce5ae61b60c4efd6b26009bb1d2d38070",
+                                                                                              "size":  165431,
+                                                                                              "width":  853,
+                                                                                              "height":  1280,
+                                                                                              "locator":  "gallery:79280134-6c2b-42cb-89bf-d1a604ab3686/4128204"
+                                                                                          },
+                                                                "31517085_005_17db.jpg":  {
+                                                                                              "id":  4128205,
+                                                                                              "hash":  "3e29aa352f8f4b683155c1918d331bc02f861f65",
+                                                                                              "size":  191018,
+                                                                                              "width":  853,
+                                                                                              "height":  1280,
+                                                                                              "locator":  "gallery:79280134-6c2b-42cb-89bf-d1a604ab3686/4128205"
+                                                                                          },
+                                                                "31517085_006_40b3.jpg":  {
+                                                                                              "id":  4128206,
+                                                                                              "hash":  "165132b9358f9dd419b54b2ca055ddb75e23b94f",
+                                                                                              "size":  205485,
+                                                                                              "width":  853,
+                                                                                              "height":  1280,
+                                                                                              "locator":  "gallery:79280134-6c2b-42cb-89bf-d1a604ab3686/4128206"
+                                                                                          },
+                                                                "31517085_007_884f.jpg":  {
+                                                                                              "id":  4128207,
+                                                                                              "hash":  "2800541af92ed14925ea4d7b3519ae710d93d012",
+                                                                                              "size":  194231,
+                                                                                              "width":  853,
+                                                                                              "height":  1280,
+                                                                                              "locator":  "gallery:79280134-6c2b-42cb-89bf-d1a604ab3686/4128207"
+                                                                                          },
+                                                                "31517085_008_c316.jpg":  {
+                                                                                              "id":  4128208,
+                                                                                              "hash":  "ec49088badd38ddfa9f1c313ddcbdfb33efd5cc0",
+                                                                                              "size":  181676,
+                                                                                              "width":  853,
+                                                                                              "height":  1280,
+                                                                                              "locator":  "gallery:79280134-6c2b-42cb-89bf-d1a604ab3686/4128208"
+                                                                                          },
+                                                                "31517085_009_a065.jpg":  {
+                                                                                              "id":  4128209,
+                                                                                              "hash":  "99a1b07bfea650cdbd0c2eb2afb4de025912d67e",
+                                                                                              "size":  175521,
+                                                                                              "width":  853,
+                                                                                              "height":  1280,
+                                                                                              "locator":  "gallery:79280134-6c2b-42cb-89bf-d1a604ab3686/4128209"
+                                                                                          }
+                                                            }
+                                             },
+                      "partner-build":  {
+                                            "uuid":  "9609ac09-4fc6-438b-b021-7e7b606d7ff7",
+                                            "localFolder":  "Gallery/partner-build",
+                                            "images":  {
+                                                           "47702997_013_2f18.jpg":  {
+                                                                                         "id":  4128210,
+                                                                                         "hash":  "5b6085c14aa7ef4d64dcaa9bfc9a1fb23ce96709",
+                                                                                         "size":  212677,
+                                                                                         "width":  1280,
+                                                                                         "height":  960,
+                                                                                         "locator":  "gallery:9609ac09-4fc6-438b-b021-7e7b606d7ff7/4128210"
+                                                                                     },
+                                                           "47702997_018_cf95.jpg":  {
+                                                                                         "id":  4128211,
+                                                                                         "hash":  "b67176ecf13d75f073faa522df8b675b4df4be30",
+                                                                                         "size":  253890,
+                                                                                         "width":  1280,
+                                                                                         "height":  960,
+                                                                                         "locator":  "gallery:9609ac09-4fc6-438b-b021-7e7b606d7ff7/4128211"
+                                                                                     },
+                                                           "47702997_019_6af5.jpg":  {
+                                                                                         "id":  4128212,
+                                                                                         "hash":  "c762e70426af20cc80e39483bc674b7861f9cef9",
+                                                                                         "size":  230353,
+                                                                                         "width":  1280,
+                                                                                         "height":  960,
+                                                                                         "locator":  "gallery:9609ac09-4fc6-438b-b021-7e7b606d7ff7/4128212"
+                                                                                     },
+                                                           "47702997_020_63ec.jpg":  {
+                                                                                         "id":  4128213,
+                                                                                         "hash":  "a67b4df429f9c960abc4ba9723db05703183ae0a",
+                                                                                         "size":  219973,
+                                                                                         "width":  1280,
+                                                                                         "height":  960,
+                                                                                         "locator":  "gallery:9609ac09-4fc6-438b-b021-7e7b606d7ff7/4128213"
+                                                                                     },
+                                                           "47702997_021_a776.jpg":  {
+                                                                                         "id":  4128214,
+                                                                                         "hash":  "8b207e27598e7e9b71359e6ce2959c2f81044cad",
+                                                                                         "size":  232167,
+                                                                                         "width":  1280,
+                                                                                         "height":  960,
+                                                                                         "locator":  "gallery:9609ac09-4fc6-438b-b021-7e7b606d7ff7/4128214"
+                                                                                     },
+                                                           "47702997_022_a147.jpg":  {
+                                                                                         "id":  4128215,
+                                                                                         "hash":  "808ddb0df64210fa552909c878c6c146aed3807b",
+                                                                                         "size":  285279,
+                                                                                         "width":  1280,
+                                                                                         "height":  960,
+                                                                                         "locator":  "gallery:9609ac09-4fc6-438b-b021-7e7b606d7ff7/4128215"
+                                                                                     },
+                                                           "47702997_023_16d4.jpg":  {
+                                                                                         "id":  4128216,
+                                                                                         "hash":  "b0623d329765ad046e09866af0014b88a7e7a8ea",
+                                                                                         "size":  268130,
+                                                                                         "width":  1280,
+                                                                                         "height":  960,
+                                                                                         "locator":  "gallery:9609ac09-4fc6-438b-b021-7e7b606d7ff7/4128216"
+                                                                                     },
+                                                           "47702997_024_cb99.jpg":  {
+                                                                                         "id":  4128217,
+                                                                                         "hash":  "826d9a9ad9ac755f4713f28431ae7ed3595e4eb6",
+                                                                                         "size":  311933,
+                                                                                         "width":  1280,
+                                                                                         "height":  960,
+                                                                                         "locator":  "gallery:9609ac09-4fc6-438b-b021-7e7b606d7ff7/4128217"
+                                                                                     },
+                                                           "80877276_092_08c1.jpg":  {
+                                                                                         "id":  4128218,
+                                                                                         "hash":  "b3651d1374b371ce4933213d30d075bf7d5997a1",
+                                                                                         "size":  216444,
+                                                                                         "width":  1280,
+                                                                                         "height":  853,
+                                                                                         "locator":  "gallery:9609ac09-4fc6-438b-b021-7e7b606d7ff7/4128218"
+                                                                                     },
+                                                           "80877276_101_894b.jpg":  {
+                                                                                         "id":  4128219,
+                                                                                         "hash":  "73bc9560b5666318eae59d632a49bbacfc11cd5f",
+                                                                                         "size":  212550,
+                                                                                         "width":  1280,
+                                                                                         "height":  853,
+                                                                                         "locator":  "gallery:9609ac09-4fc6-438b-b021-7e7b606d7ff7/4128219"
+                                                                                     }
+                                                       }
+                                        },
+                      "partner-hard":  {
+                                           "uuid":  "c293d002-b30a-44ce-84c6-58da385f243c",
+                                           "localFolder":  "Gallery/partner-hard",
+                                           "images":  {
+                                                          "14017489_003_560e.jpg":  {
+                                                                                        "id":  4128220,
+                                                                                        "hash":  "38b852c15c38c6bc7fa87acf8ba95d52269bcebc",
+                                                                                        "size":  125222,
+                                                                                        "width":  1024,
+                                                                                        "height":  768,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128220"
+                                                                                    },
+                                                          "14017489_006_c7f9.jpg":  {
+                                                                                        "id":  4128221,
+                                                                                        "hash":  "8e9751a53cf5f7fadd1e80c41a4a94b07e488c64",
+                                                                                        "size":  117718,
+                                                                                        "width":  1024,
+                                                                                        "height":  768,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128221"
+                                                                                    },
+                                                          "14017489_009_8e8c.jpg":  {
+                                                                                        "id":  4128222,
+                                                                                        "hash":  "489b64828613ca96635489ed1709a9d392e66c22",
+                                                                                        "size":  102627,
+                                                                                        "width":  1024,
+                                                                                        "height":  768,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128222"
+                                                                                    },
+                                                          "25952977_049_5587.jpg":  {
+                                                                                        "id":  4128223,
+                                                                                        "hash":  "2f4964d7514fac7cef8f253e7920d51afab735e7",
+                                                                                        "size":  200794,
+                                                                                        "width":  1280,
+                                                                                        "height":  853,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128223"
+                                                                                    },
+                                                          "25952977_070_cc29.jpg":  {
+                                                                                        "id":  4128224,
+                                                                                        "hash":  "ed55e48868a565e9e1f737ba31cb6aee4fb56916",
+                                                                                        "size":  217958,
+                                                                                        "width":  1280,
+                                                                                        "height":  853,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128224"
+                                                                                    },
+                                                          "25952977_075_9bee.jpg":  {
+                                                                                        "id":  4128225,
+                                                                                        "hash":  "66e86f702b385b8bf7f5aa70f19217b41130a2c0",
+                                                                                        "size":  209440,
+                                                                                        "width":  1280,
+                                                                                        "height":  853,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128225"
+                                                                                    },
+                                                          "47702997_012_0a5f.jpg":  {
+                                                                                        "id":  4128226,
+                                                                                        "hash":  "3f54c53a36c9fbaf4c5c51334087a39541321610",
+                                                                                        "size":  252490,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128226"
+                                                                                    },
+                                                          "47702997_014_214e.jpg":  {
+                                                                                        "id":  4128227,
+                                                                                        "hash":  "c66f667566ebc354934da95f6e2688a0cb689592",
+                                                                                        "size":  323343,
+                                                                                        "width":  960,
+                                                                                        "height":  1280,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128227"
+                                                                                    },
+                                                          "47702997_015_7bd9.jpg":  {
+                                                                                        "id":  4128228,
+                                                                                        "hash":  "10bf5be8bec731ce714143c34dab60c3e98c06a6",
+                                                                                        "size":  296116,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128228"
+                                                                                    },
+                                                          "47702997_016_b65e.jpg":  {
+                                                                                        "id":  4128229,
+                                                                                        "hash":  "6001107c6a9e0a63ce472fa3353d503ec19db8ff",
+                                                                                        "size":  236670,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128229"
+                                                                                    },
+                                                          "47702997_017_948c.jpg":  {
+                                                                                        "id":  4128230,
+                                                                                        "hash":  "3c2a84cb0a336d057a2b9ab25dafbb3534545a05",
+                                                                                        "size":  257355,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128230"
+                                                                                    },
+                                                          "48437305_008_ece4.jpg":  {
+                                                                                        "id":  4128231,
+                                                                                        "hash":  "2fecba821699b53df3aede8d05b35ea017a68fb9",
+                                                                                        "size":  304306,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128231"
+                                                                                    },
+                                                          "48437305_038_e870.jpg":  {
+                                                                                        "id":  4128232,
+                                                                                        "hash":  "60aa335f7b972d0168af79bd9f2e147b67908566",
+                                                                                        "size":  220208,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128232"
+                                                                                    },
+                                                          "48437305_041_5738.jpg":  {
+                                                                                        "id":  4128233,
+                                                                                        "hash":  "e7cf90f0abc893f90dc0f8a44fa2d03d2b676e07",
+                                                                                        "size":  211230,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128233"
+                                                                                    },
+                                                          "48437305_054_ed4c.jpg":  {
+                                                                                        "id":  4128234,
+                                                                                        "hash":  "dfd569c9fe32041c0f5dd9a590066b141a1f4d6e",
+                                                                                        "size":  212536,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128234"
+                                                                                    },
+                                                          "48437305_069_68d4.jpg":  {
+                                                                                        "id":  4128235,
+                                                                                        "hash":  "ec54356dcf8ecba466b4ac12bb3affb0b8cfd423",
+                                                                                        "size":  244805,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128235"
+                                                                                    },
+                                                          "48437305_087_f74f.jpg":  {
+                                                                                        "id":  4128236,
+                                                                                        "hash":  "46f7f73a4d30de44e5d88394dcaa1427f21ca8e6",
+                                                                                        "size":  188124,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128236"
+                                                                                    },
+                                                          "48437305_113_a7cc.jpg":  {
+                                                                                        "id":  4128237,
+                                                                                        "hash":  "b75964a193a355582fed2ccfb191202e01bfce46",
+                                                                                        "size":  183694,
+                                                                                        "width":  1280,
+                                                                                        "height":  960,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128237"
+                                                                                    },
+                                                          "88033482_047_5ad6.jpg":  {
+                                                                                        "id":  4128238,
+                                                                                        "hash":  "0effa84b2e2086d33f3b22747d709104c44c4cd6",
+                                                                                        "size":  186849,
+                                                                                        "width":  853,
+                                                                                        "height":  1280,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128238"
+                                                                                    },
+                                                          "88033482_052_09cb.jpg":  {
+                                                                                        "id":  4128239,
+                                                                                        "hash":  "e7b3604f7368db7773fa64384705ca803a434819",
+                                                                                        "size":  207937,
+                                                                                        "width":  853,
+                                                                                        "height":  1280,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128239"
+                                                                                    },
+                                                          "88033482_055_41db.jpg":  {
+                                                                                        "id":  4128240,
+                                                                                        "hash":  "26bfe6d3b2c854352b0e9ebf83049ad5868f87e1",
+                                                                                        "size":  189518,
+                                                                                        "width":  853,
+                                                                                        "height":  1280,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128240"
+                                                                                    },
+                                                          "88033482_060_eaf4.jpg":  {
+                                                                                        "id":  4128241,
+                                                                                        "hash":  "78db9c5f40638069fea22e3100f097eb7e1afdb3",
+                                                                                        "size":  195263,
+                                                                                        "width":  1280,
+                                                                                        "height":  853,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128241"
+                                                                                    },
+                                                          "88033482_063_da8c.jpg":  {
+                                                                                        "id":  4128242,
+                                                                                        "hash":  "bad288591ee02ec459ac667c124c30295bcf41c0",
+                                                                                        "size":  196975,
+                                                                                        "width":  853,
+                                                                                        "height":  1280,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128242"
+                                                                                    },
+                                                          "88033482_068_c567.jpg":  {
+                                                                                        "id":  4128243,
+                                                                                        "hash":  "9b42269138601033a1c1128831a90ca13a65c949",
+                                                                                        "size":  180604,
+                                                                                        "width":  1280,
+                                                                                        "height":  853,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128243"
+                                                                                    },
+                                                          "88033482_070_b7c5.jpg":  {
+                                                                                        "id":  4128244,
+                                                                                        "hash":  "0f22643a6d1a82daa0074b357882bc9bc6e9868e",
+                                                                                        "size":  202249,
+                                                                                        "width":  1280,
+                                                                                        "height":  853,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128244"
+                                                                                    },
+                                                          "88033482_076_8630.jpg":  {
+                                                                                        "id":  4128245,
+                                                                                        "hash":  "47f5c633c95baeed95c76e419e466a031840dbaa",
+                                                                                        "size":  173911,
+                                                                                        "width":  853,
+                                                                                        "height":  1280,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128245"
+                                                                                    },
+                                                          "88033482_081_d8bc.jpg":  {
+                                                                                        "id":  4128246,
+                                                                                        "hash":  "b22a1af608d6b8cd4da6b133d6bdc8f96be24e6f",
+                                                                                        "size":  182161,
+                                                                                        "width":  853,
+                                                                                        "height":  1280,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128246"
+                                                                                    },
+                                                          "88033482_082_6803.jpg":  {
+                                                                                        "id":  4128247,
+                                                                                        "hash":  "b73130597057d8284df273f9b7c54d856235c4da",
+                                                                                        "size":  176863,
+                                                                                        "width":  1280,
+                                                                                        "height":  853,
+                                                                                        "locator":  "gallery:c293d002-b30a-44ce-84c6-58da385f243c/4128247"
+                                                                                    }
+                                                      }
+                                       },
+                      "partner-tender":  {
+                                             "uuid":  "cd00f999-4e3b-4c4b-8570-6d67f0e0889d",
+                                             "localFolder":  "Gallery/partner-tender",
+                                             "images":  {
+                                                            "25952977_043_5cbb.jpg":  {
+                                                                                          "id":  4128248,
+                                                                                          "hash":  "8a57ca308fcc96cec062cdb23aafd4383698bfb8",
+                                                                                          "size":  204355,
+                                                                                          "width":  1280,
+                                                                                          "height":  853,
+                                                                                          "locator":  "gallery:cd00f999-4e3b-4c4b-8570-6d67f0e0889d/4128248"
+                                                                                      },
+                                                            "47702997_007_8b36.jpg":  {
+                                                                                          "id":  4128249,
+                                                                                          "hash":  "ca72560eba8ad6836198e4bd7a4d187ea4acabdd",
+                                                                                          "size":  248094,
+                                                                                          "width":  1280,
+                                                                                          "height":  960,
+                                                                                          "locator":  "gallery:cd00f999-4e3b-4c4b-8570-6d67f0e0889d/4128249"
+                                                                                      },
+                                                            "47702997_010_e1f2.jpg":  {
+                                                                                          "id":  4128250,
+                                                                                          "hash":  "7a92257d70f41332d1a7f366b2c973f436465a0a",
+                                                                                          "size":  217992,
+                                                                                          "width":  1280,
+                                                                                          "height":  960,
+                                                                                          "locator":  "gallery:cd00f999-4e3b-4c4b-8570-6d67f0e0889d/4128250"
+                                                                                      },
+                                                            "62413076_006_7919.jpg":  {
+                                                                                          "id":  4128251,
+                                                                                          "hash":  "d65314313a4cbda0f196c45227b6d620f95ffe36",
+                                                                                          "size":  302765,
+                                                                                          "width":  1280,
+                                                                                          "height":  960,
+                                                                                          "locator":  "gallery:cd00f999-4e3b-4c4b-8570-6d67f0e0889d/4128251"
+                                                                                      },
+                                                            "62413076_009_a501.jpg":  {
+                                                                                          "id":  4128252,
+                                                                                          "hash":  "88812d28a6ce9a6f4254d6ccf5b68e1bcc6fdc2a",
+                                                                                          "size":  263832,
+                                                                                          "width":  1280,
+                                                                                          "height":  960,
+                                                                                          "locator":  "gallery:cd00f999-4e3b-4c4b-8570-6d67f0e0889d/4128252"
+                                                                                      },
+                                                            "80877276_041_7888.jpg":  {
+                                                                                          "id":  4128253,
+                                                                                          "hash":  "c3c6090b40ecf844b0b24cb83e36e91a37ea45fe",
+                                                                                          "size":  244611,
+                                                                                          "width":  853,
+                                                                                          "height":  1280,
+                                                                                          "locator":  "gallery:cd00f999-4e3b-4c4b-8570-6d67f0e0889d/4128253"
+                                                                                      },
+                                                            "80877276_047_f913.jpg":  {
+                                                                                          "id":  4128254,
+                                                                                          "hash":  "d825cb209c8b61518c3a19a6e6c56e68d14f70f1",
+                                                                                          "size":  228845,
+                                                                                          "width":  1280,
+                                                                                          "height":  853,
+                                                                                          "locator":  "gallery:cd00f999-4e3b-4c4b-8570-6d67f0e0889d/4128254"
+                                                                                      },
+                                                            "80877276_050_0956.jpg":  {
+                                                                                          "id":  4128255,
+                                                                                          "hash":  "3d188bb097eb3068a27a74365385e0cc6fafb9fb",
+                                                                                          "size":  204815,
+                                                                                          "width":  1280,
+                                                                                          "height":  853,
+                                                                                          "locator":  "gallery:cd00f999-4e3b-4c4b-8570-6d67f0e0889d/4128255"
+                                                                                      }
+                                                        }
+                                         },
+                      "setup-solo":  {
+                                         "uuid":  "5945b7cf-29c4-4f02-a352-8dbcca55ffa7",
+                                         "localFolder":  "Gallery/setup-solo",
+                                         "images":  {
+                                                        "66348606_009_5a77.jpg":  {
+                                                                                      "id":  4128256,
+                                                                                      "hash":  "ec05057b18f68adcb560d490291d88a0895243f1",
+                                                                                      "size":  256069,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128256"
+                                                                                  },
+                                                        "66348606_015_4d51.jpg":  {
+                                                                                      "id":  4128257,
+                                                                                      "hash":  "9f838e0cdd014b15e21cec68f09a668a997e789c",
+                                                                                      "size":  240657,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128257"
+                                                                                  },
+                                                        "66348606_022_5905.jpg":  {
+                                                                                      "id":  4128258,
+                                                                                      "hash":  "6300ec00a99e58f348fb4b5bfa04420979c66ce7",
+                                                                                      "size":  273610,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128258"
+                                                                                  },
+                                                        "66348606_028_5c9e.jpg":  {
+                                                                                      "id":  4128259,
+                                                                                      "hash":  "11d9586293744f8e4d33c42017d528b79aea2aad",
+                                                                                      "size":  337413,
+                                                                                      "width":  1280,
+                                                                                      "height":  853,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128259"
+                                                                                  },
+                                                        "66348606_036_3ae4.jpg":  {
+                                                                                      "id":  4128260,
+                                                                                      "hash":  "e658db02653fb8b272635c93b16587fce068eda1",
+                                                                                      "size":  319841,
+                                                                                      "width":  1280,
+                                                                                      "height":  853,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128260"
+                                                                                  },
+                                                        "92231232_010_7166.jpg":  {
+                                                                                      "id":  4128261,
+                                                                                      "hash":  "0be8c284fc279d7793fd67e88d9f64ab8240496a",
+                                                                                      "size":  289829,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128261"
+                                                                                  },
+                                                        "92231232_013_111b.jpg":  {
+                                                                                      "id":  4128262,
+                                                                                      "hash":  "2b035324ce8b36aba28a71bdf392e1dc2b5f5866",
+                                                                                      "size":  293636,
+                                                                                      "width":  1280,
+                                                                                      "height":  853,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128262"
+                                                                                  },
+                                                        "92231232_018_b8f5.jpg":  {
+                                                                                      "id":  4128263,
+                                                                                      "hash":  "dd303cf06991a6b658caace28dadd3b6712cc834",
+                                                                                      "size":  297928,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128263"
+                                                                                  },
+                                                        "92231232_025_172c.jpg":  {
+                                                                                      "id":  4128264,
+                                                                                      "hash":  "1f5a8d34b42fbf21b0cf92120fb81a22b1e628dc",
+                                                                                      "size":  367565,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128264"
+                                                                                  },
+                                                        "92231232_032_968c.jpg":  {
+                                                                                      "id":  4128265,
+                                                                                      "hash":  "ee68615b141b8becaa596ac84291732313411f9f",
+                                                                                      "size":  315157,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128265"
+                                                                                  },
+                                                        "92231232_037_24db.jpg":  {
+                                                                                      "id":  4128266,
+                                                                                      "hash":  "d30c822ee9f66f0d8137751f23271176f22c4913",
+                                                                                      "size":  251084,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128266"
+                                                                                  },
+                                                        "92231232_040_1eaa.jpg":  {
+                                                                                      "id":  4128267,
+                                                                                      "hash":  "6f32e9aa98f32b2412f0df2d0f34a26dad4dde24",
+                                                                                      "size":  268285,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128267"
+                                                                                  },
+                                                        "92231232_054_b7dd.jpg":  {
+                                                                                      "id":  4128268,
+                                                                                      "hash":  "667e67a0f5f20ab850193e3e5db3f21400546850",
+                                                                                      "size":  282143,
+                                                                                      "width":  853,
+                                                                                      "height":  1280,
+                                                                                      "locator":  "gallery:5945b7cf-29c4-4f02-a352-8dbcca55ffa7/4128268"
+                                                                                  }
+                                                    }
+                                     },
+                      "tease-solo-build":  {
+                                               "uuid":  "a3226203-f4be-4ac3-8a43-42987ec33844",
+                                               "localFolder":  "Gallery/tease-solo-build",
+                                               "images":  {
+                                                              "47702997_003_52ce.jpg":  {
+                                                                                            "id":  4128269,
+                                                                                            "hash":  "b4978b98b92cc20eb52ef3a84a5a1e7e4ed9da5e",
+                                                                                            "size":  218712,
+                                                                                            "width":  1280,
+                                                                                            "height":  960,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128269"
+                                                                                        },
+                                                              "47702997_005_7cb7.jpg":  {
+                                                                                            "id":  4128270,
+                                                                                            "hash":  "5cc59579ad3f3f6d6b8baece255bb1357f5e6155",
+                                                                                            "size":  279528,
+                                                                                            "width":  1280,
+                                                                                            "height":  960,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128270"
+                                                                                        },
+                                                              "47702997_025_8748.jpg":  {
+                                                                                            "id":  4128271,
+                                                                                            "hash":  "d13140d3ad1508d65b272352a736bba5361b2839",
+                                                                                            "size":  361247,
+                                                                                            "width":  1280,
+                                                                                            "height":  960,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128271"
+                                                                                        },
+                                                              "47702997_026_963c.jpg":  {
+                                                                                            "id":  4128272,
+                                                                                            "hash":  "79b983bdbd325b77dba75b2405014629fa0bc613",
+                                                                                            "size":  248231,
+                                                                                            "width":  1280,
+                                                                                            "height":  960,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128272"
+                                                                                        },
+                                                              "62413076_001_35c5.jpg":  {
+                                                                                            "id":  4128273,
+                                                                                            "hash":  "442ad5d31811338e1b62d5ebb70818f2d1091ab6",
+                                                                                            "size":  274622,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128273"
+                                                                                        },
+                                                              "97162788_016_afda.jpg":  {
+                                                                                            "id":  4128274,
+                                                                                            "hash":  "43de4096b936240db6d4d1ea4af24252dac44200",
+                                                                                            "size":  231955,
+                                                                                            "width":  1280,
+                                                                                            "height":  960,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128274"
+                                                                                        },
+                                                              "97162788_025_5fc9.jpg":  {
+                                                                                            "id":  4128275,
+                                                                                            "hash":  "d3163bf76a83d83e5fcd0bd420e24cb8b43928ab",
+                                                                                            "size":  246787,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128275"
+                                                                                        },
+                                                              "97162788_030_aa99.jpg":  {
+                                                                                            "id":  4128276,
+                                                                                            "hash":  "e26925bae9a2ac39076350a926713011ce84e28c",
+                                                                                            "size":  223874,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128276"
+                                                                                        },
+                                                              "97162788_039_a0e2.jpg":  {
+                                                                                            "id":  4128277,
+                                                                                            "hash":  "7a6fbcee281b8cd75d26f2eff59f8a803a07008c",
+                                                                                            "size":  225885,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128277"
+                                                                                        },
+                                                              "97162788_048_88f1.jpg":  {
+                                                                                            "id":  4128278,
+                                                                                            "hash":  "7e1db4da1523c0a55642cd6e88ebc96b587c67e4",
+                                                                                            "size":  222447,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128278"
+                                                                                        },
+                                                              "97162788_065_bfb3.jpg":  {
+                                                                                            "id":  4128279,
+                                                                                            "hash":  "85e5ea894d1ec1c8e92f86a3e7be1ee2df504b29",
+                                                                                            "size":  208045,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128279"
+                                                                                        },
+                                                              "97162788_076_5e12.jpg":  {
+                                                                                            "id":  4128280,
+                                                                                            "hash":  "05e0030cda7da05d0386bde25e6311a2b794054e",
+                                                                                            "size":  192092,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128280"
+                                                                                        },
+                                                              "97162788_083_d64f.jpg":  {
+                                                                                            "id":  4128281,
+                                                                                            "hash":  "2e8fa67bf3a16c69edc1284ca0bf8a0ce806e4b4",
+                                                                                            "size":  217173,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128281"
+                                                                                        },
+                                                              "97162788_095_4836.jpg":  {
+                                                                                            "id":  4128282,
+                                                                                            "hash":  "c217b4306b1e0bcedea665425929a7c20070c9a0",
+                                                                                            "size":  216234,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128282"
+                                                                                        },
+                                                              "97162788_111_d82d.jpg":  {
+                                                                                            "id":  4128283,
+                                                                                            "hash":  "59c56218a8c390491cb8df7b7fa760392747b4ee",
+                                                                                            "size":  210187,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128283"
+                                                                                        },
+                                                              "97162788_113_dce9.jpg":  {
+                                                                                            "id":  4128284,
+                                                                                            "hash":  "d45fb7e690c49263dffc53099a9cb6e7e3bc62c6",
+                                                                                            "size":  210774,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128284"
+                                                                                        },
+                                                              "97162788_126_1fb3.jpg":  {
+                                                                                            "id":  4128285,
+                                                                                            "hash":  "e6aa942d9c51e500cd205b24ed833f8fc58cb6bc",
+                                                                                            "size":  165324,
+                                                                                            "width":  960,
+                                                                                            "height":  1280,
+                                                                                            "locator":  "gallery:a3226203-f4be-4ac3-8a43-42987ec33844/4128285"
+                                                                                        }
+                                                          }
+                                           },
+                      "title-hero":  {
+                                         "uuid":  "a52edbe9-7a60-4cb2-8a55-c0b0347560a7",
+                                         "localFolder":  "Gallery/title-hero",
+                                         "images":  {
+                                                        "97162788_004_9e2c_cropped.jpg":  {
+                                                                                              "id":  4128286,
+                                                                                              "hash":  "37ff61bac8785bab07a7fbc73f1e2f9789f8ac8b",
+                                                                                              "size":  255319,
+                                                                                              "width":  960,
+                                                                                              "height":  1162,
+                                                                                              "locator":  "gallery:a52edbe9-7a60-4cb2-8a55-c0b0347560a7/4128286"
+                                                                                          }
+                                                    }
+                                     },
+                      "tutorial-solo":  {
+                                            "uuid":  "a28d3683-800f-4092-a296-1d6bc58d56fa",
+                                            "localFolder":  "Gallery/tutorial-solo",
+                                            "images":  {
+                                                           "31517085_010_482d.jpg":  {
+                                                                                         "id":  4128287,
+                                                                                         "hash":  "478ec0d121d241d645df43b38ebc043c4d360e00",
+                                                                                         "size":  168586,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128287"
+                                                                                     },
+                                                           "31517085_011_b47f.jpg":  {
+                                                                                         "id":  4128288,
+                                                                                         "hash":  "2dea7f58185de776fc1c4bc17066760500f494a4",
+                                                                                         "size":  112840,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128288"
+                                                                                     },
+                                                           "31517085_012_d5b4.jpg":  {
+                                                                                         "id":  4128289,
+                                                                                         "hash":  "9302896f2b7b1241568e0b5aabc68a1ecc2204ad",
+                                                                                         "size":  166443,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128289"
+                                                                                     },
+                                                           "31517085_013_2836.jpg":  {
+                                                                                         "id":  4128290,
+                                                                                         "hash":  "7786eaaca8c96ea9981a1924682fa07999654256",
+                                                                                         "size":  143582,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128290"
+                                                                                     },
+                                                           "31517085_014_7a54.jpg":  {
+                                                                                         "id":  4128291,
+                                                                                         "hash":  "95ce606490d74f71aa326309787cee667def12cf",
+                                                                                         "size":  113324,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128291"
+                                                                                     },
+                                                           "31517085_015_7eac.jpg":  {
+                                                                                         "id":  4128292,
+                                                                                         "hash":  "e1a3d3db89f6da627214828e3c3c00bf029cfe80",
+                                                                                         "size":  161494,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128292"
+                                                                                     },
+                                                           "73573492_001_6304.jpg":  {
+                                                                                         "id":  4128293,
+                                                                                         "hash":  "a3a4a040db146e7806f43e0c883c24b73ffa5a1a",
+                                                                                         "size":  102904,
+                                                                                         "width":  1024,
+                                                                                         "height":  682,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128293"
+                                                                                     },
+                                                           "73573492_002_8fd7.jpg":  {
+                                                                                         "id":  4128294,
+                                                                                         "hash":  "5767cd774707971e2b8c13313bf4232a6e56ca50",
+                                                                                         "size":  132634,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128294"
+                                                                                     },
+                                                           "73573492_003_bc6d.jpg":  {
+                                                                                         "id":  4128295,
+                                                                                         "hash":  "573652a97b1c63b95a955ceac297082bbef907f1",
+                                                                                         "size":  177507,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128295"
+                                                                                     },
+                                                           "73573492_004_55a3.jpg":  {
+                                                                                         "id":  4128296,
+                                                                                         "hash":  "96e2cffe4920fd167719c774235857d1d7340ebc",
+                                                                                         "size":  149519,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128296"
+                                                                                     },
+                                                           "73573492_005_aeda.jpg":  {
+                                                                                         "id":  4128297,
+                                                                                         "hash":  "4b4ee6a3b352bd3f1091d7a72417db1848e630f1",
+                                                                                         "size":  148707,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128297"
+                                                                                     },
+                                                           "73573492_006_aeda.jpg":  {
+                                                                                         "id":  4128298,
+                                                                                         "hash":  "f1fa9bab8c2d44be3c4f37a9c39a8a867f93e6f3",
+                                                                                         "size":  211180,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128298"
+                                                                                     },
+                                                           "73573492_007_abf5.jpg":  {
+                                                                                         "id":  4128299,
+                                                                                         "hash":  "b3cdb921e5d440e8e38479272772ae15e155af9d",
+                                                                                         "size":  163833,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128299"
+                                                                                     },
+                                                           "73573492_008_e504.jpg":  {
+                                                                                         "id":  4128300,
+                                                                                         "hash":  "da7212b6c37e76f4b485be048a346a7e91de63e4",
+                                                                                         "size":  159651,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128300"
+                                                                                     },
+                                                           "73573492_009_194b.jpg":  {
+                                                                                         "id":  4128301,
+                                                                                         "hash":  "8077976b8886466cce1ef69fe509aa50cf4fe308",
+                                                                                         "size":  178301,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128301"
+                                                                                     },
+                                                           "73573492_010_a1a9.jpg":  {
+                                                                                         "id":  4128302,
+                                                                                         "hash":  "4f48fbe77eb537c2b43379a6741f3cb9ffd4f22a",
+                                                                                         "size":  191614,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128302"
+                                                                                     },
+                                                           "73573492_011_1402.jpg":  {
+                                                                                         "id":  4128303,
+                                                                                         "hash":  "480fb38676f5dbd1d5186ee98d935088f46deb98",
+                                                                                         "size":  201664,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128303"
+                                                                                     },
+                                                           "73573492_012_e643.jpg":  {
+                                                                                         "id":  4128304,
+                                                                                         "hash":  "25f20525873bea156dcdb6d0217f3067d55e7473",
+                                                                                         "size":  123448,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128304"
+                                                                                     },
+                                                           "73573492_013_e643.jpg":  {
+                                                                                         "id":  4128305,
+                                                                                         "hash":  "7a833a4ec82725b50565c87ac557786d539eeae9",
+                                                                                         "size":  165677,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128305"
+                                                                                     },
+                                                           "73573492_014_0767.jpg":  {
+                                                                                         "id":  4128306,
+                                                                                         "hash":  "61af880a70a9b7109a447a46bcb1d3afc667b9eb",
+                                                                                         "size":  142888,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128306"
+                                                                                     },
+                                                           "73573492_015_c217.jpg":  {
+                                                                                         "id":  4128307,
+                                                                                         "hash":  "b0184c3da7793eb8e2473509cd95a982f5d60046",
+                                                                                         "size":  173594,
+                                                                                         "width":  853,
+                                                                                         "height":  1280,
+                                                                                         "locator":  "gallery:a28d3683-800f-4092-a296-1d6bc58d56fa/4128307"
+                                                                                     }
+                                                       }
+                                        }
+                  },
+    "files":  {
+                  "metronome-020bpm.mp3":  {
+                                               "id":  4128177,
+                                               "hash":  "fc4075cbdd4c8f14a88c46f07b4ace658d0fbf50",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-020bpm.mp3",
+                                               "locator":  "file:metronome-020bpm.mp3"
+                                           },
+                  "metronome-030bpm.mp3":  {
+                                               "id":  4128178,
+                                               "hash":  "902a57fbe0aeb2758c5390c6180f91cee4d17691",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-030bpm.mp3",
+                                               "locator":  "file:metronome-030bpm.mp3"
+                                           },
+                  "metronome-040bpm.mp3":  {
+                                               "id":  4128179,
+                                               "hash":  "cd67b67f54dcb9e521ee2fdabfb42be2325001e6",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-040bpm.mp3",
+                                               "locator":  "file:metronome-040bpm.mp3"
+                                           },
+                  "metronome-050bpm.mp3":  {
+                                               "id":  4128180,
+                                               "hash":  "718484261cb9ed4e47b589acdc478ac69449f8fc",
+                                               "size":  77231,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-050bpm.mp3",
+                                               "locator":  "file:metronome-050bpm.mp3"
+                                           },
+                  "metronome-060bpm.mp3":  {
+                                               "id":  4128181,
+                                               "hash":  "9ee9acf22c84d80d524d0a842dea22292ab1a63c",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-060bpm.mp3",
+                                               "locator":  "file:metronome-060bpm.mp3"
+                                           },
+                  "metronome-080bpm.mp3":  {
+                                               "id":  4128182,
+                                               "hash":  "ffbcbbc69f48493c8834fa265416040abb4163ff",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-080bpm.mp3",
+                                               "locator":  "file:metronome-080bpm.mp3"
+                                           },
+                  "metronome-090bpm.mp3":  {
+                                               "id":  4128183,
+                                               "hash":  "32b8cefc41a1b6fb40aef45ba94ccf282c7de4a7",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-090bpm.mp3",
+                                               "locator":  "file:metronome-090bpm.mp3"
+                                           },
+                  "metronome-100bpm.mp3":  {
+                                               "id":  4128184,
+                                               "hash":  "9cdc6f1daa0042b3eb17fc4316a8d0f659a49b69",
+                                               "size":  77231,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-100bpm.mp3",
+                                               "locator":  "file:metronome-100bpm.mp3"
+                                           },
+                  "metronome-120bpm.mp3":  {
+                                               "id":  4128185,
+                                               "hash":  "7a7baf7632e9cacc504f3fb85d8bdf9674f96329",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-120bpm.mp3",
+                                               "locator":  "file:metronome-120bpm.mp3"
+                                           },
+                  "metronome-140bpm.mp3":  {
+                                               "id":  4128186,
+                                               "hash":  "b0c544b73f7cb191577021f49908021d726a8a91",
+                                               "size":  82607,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-140bpm.mp3",
+                                               "locator":  "file:metronome-140bpm.mp3"
+                                           },
+                  "metronome-150bpm.mp3":  {
+                                               "id":  4128187,
+                                               "hash":  "29e63c9e06a74f864d70a9174899a3ad62dcd70c",
+                                               "size":  77231,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-150bpm.mp3",
+                                               "locator":  "file:metronome-150bpm.mp3"
+                                           },
+                  "metronome-160bpm.mp3":  {
+                                               "id":  4128188,
+                                               "hash":  "c5d9afb0196beb99761719e533b23dbf785ded1f",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-160bpm.mp3",
+                                               "locator":  "file:metronome-160bpm.mp3"
+                                           },
+                  "metronome-170bpm.mp3":  {
+                                               "id":  4128189,
+                                               "hash":  "51ca5554b822623443993a4ac509d965188bf776",
+                                               "size":  90671,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-170bpm.mp3",
+                                               "locator":  "file:metronome-170bpm.mp3"
+                                           },
+                  "metronome-180bpm.mp3":  {
+                                               "id":  4128190,
+                                               "hash":  "b4152feb75f969a87435f9304c271cbc8f661edc",
+                                               "size":  96431,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-180bpm.mp3",
+                                               "locator":  "file:metronome-180bpm.mp3"
+                                           },
+                  "metronome-190bpm.mp3":  {
+                                               "id":  4128191,
+                                               "hash":  "f00b8cc6f0f083a1913df35c17d2f139ceec509f",
+                                               "size":  91439,
+                                               "type":  "audio/mpeg",
+                                               "localPath":  "Files/metronome-190bpm.mp3",
+                                               "locator":  "file:metronome-190bpm.mp3"
+                                           }
+              }
+}
