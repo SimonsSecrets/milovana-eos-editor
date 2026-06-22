@@ -338,7 +338,7 @@ MENU:
 
 # The Fucking Machine Tease
 
-[Author note: the main event, reached from the Page 6 menu. **Theme A — "You're mine tonight":** she is in full, intimate control; the through-line is the player surrendering and being looked after. Written to **stand alone** — assumes nothing about whether the player did Setup or the Tutorial. ~20 minutes of driven content, then an open-ended climax loop until the player presses a button.]
+[Author note: the main event, reached from the Page 6 menu. **Theme A — "You're mine tonight":** she is in full, intimate control; the through-line is the player surrendering and being looked after. Written to **stand alone** — assumes nothing about whether the player did Setup or the Tutorial. ~20 minutes of driven content, then an open-ended climax loop until the player presses a button. From the second half of Page 9 she also voices **her own pleasure**: first how much she loves watching the player surrender, then — once the partner imagery begins on Page 10 — her own physical pleasure too, while still turning back to address the player throughout (it never becomes only about her).]
 
 [Author note: images escalate with intensity — building from sensual/solo through partner imagery to hard partner-fucking. Partner imagery is used here (unlike the tutorial, which stays solo). Match the picture's intensity to the current BPM via the themed buckets: `tease-solo-build` (slow, solo) → `partner-tender` (slow/tender partner — catch-breath & interludes) → `partner-build` (≈60–110 BPM) → `partner-hard` (≈120+ BPM) → `climax` (the peak; plus the single-image `climax-hero` bucket for the money shot) → `afterglow` (wind-down).]
 
@@ -347,6 +347,7 @@ MENU:
 - `[PAUSE: ~Ns]` — silence, machine still (covers both mid-scene stops and anticipation holds).
 - `[LOOP START]` / `[LOOP END]` — the enclosed blocks repeat until a player button is pressed.
 - `[BUTTON: "label" → target]` — a player-driven branch.
+- `[END: …]` — ends the tease (the `end` action); no actions run after it.
 - `[IMAGE: <bucket>/*]` — show a random image from that themed gallery bucket (intensity follows the BPM band); `[IMAGE: <bucket>/hero — desc]` pins a specific shot; `[IMAGE: hold]` keeps the current image.
 - **Image cadence:** every `[METRONOME]` block opens with its own `[IMAGE]` — the displayed image changes on each tempo step (each block becomes its own page; random `/*` keeps successive images varied).
 All BPM/timing values are first-draft and meant to be tested and tuned against the real machine.]
@@ -488,6 +489,8 @@ _Feel how easy it is to stop holding on?_
 
 _Good. Let every stroke pull you a little deeper under._
 
+_God, I love this — feeling you give yourself up to me, a little more with every stroke._
+
 [IMAGE: tease-solo-build/*]
 
 [METRONOME: ~50 BPM, ~30s]
@@ -495,6 +498,8 @@ _Good. Let every stroke pull you a little deeper under._
 _You're already learning to just… let go._
 
 _See? You don't have to do a single thing but feel._
+
+_You have no idea what it does to me, watching you let go like this._
 
 ## Tease Page 10 — Act II · The first rise
 
@@ -508,6 +513,8 @@ _Feel me pick up the pace, bit by bit._
 
 _No more easing in — I want more of you now._
 
+_And I want this for me too — this is where I start taking my pleasure from you._
+
 [IMAGE: partner-build/*]
 
 [METRONOME: ~80 BPM, ~40s]
@@ -518,6 +525,8 @@ _This is me starting to take what I want._
 
 _And you're letting me. God, you're letting me._
 
+_Feel what that does to me — your surrender is what tips me over._
+
 [IMAGE: partner-build/*]
 
 [METRONOME: ~100 BPM, ~30s]
@@ -525,6 +534,8 @@ _And you're letting me. God, you're letting me._
 _Harder. You can take it — I know exactly what you can take._
 
 _Don't tense up — open up, and let me in deeper._
+
+_Mmm… you feel so good I can barely keep myself slow._
 
 [IMAGE: partner-hard/*]
 
@@ -539,6 +550,8 @@ _Feel me filling you, over and over._
 _Yes — just like that. You're mine now, completely._
 
 _Stay with it… stay right there with me…_
+
+_Yes — this is exactly what I wanted, and I'm nowhere near satisfied._
 
 [PAUSE: ~8s]
 
@@ -556,6 +569,8 @@ _You're already mine — we both know it now._
 
 _Easy strokes… just enough to keep you simmering for me._
 
+_Mmm… I could watch you ache like this for hours. It's delicious to me._
+
 [PAUSE: ~12s]
 
 _Look at you — hips chasing nothing, aching for a rhythm I've taken away._
@@ -567,6 +582,8 @@ _Look at you — hips chasing nothing, aching for a rhythm I've taken away._
 _Shh. You'll get it back when I decide you've earned it._
 
 _There — a little taste. Don't go getting greedy._
+
+_See how good you are for me? God, I love you needy like this._
 
 [PAUSE: ~10s]
 
@@ -592,6 +609,8 @@ _Climb for me. Faster._
 
 _Don't you dare come yet — I haven't said you can._
 
+_God, you feel good when you fight it._
+
 [PAUSE: ~6s — 0 BPM]
 
 _Stopped again. You hate how much you love this. Again._
@@ -612,6 +631,8 @@ _Last climb now—_
 
 _—everything you have — give it all to me!_
 
+_Yes — all of it — I want it._
+
 [PAUSE: ~6s — 0 BPM]
 
 _…and stop. Good. So good for me._
@@ -628,6 +649,8 @@ _Feel every single inch._
 
 _There's no rushing what I'm going to do to you._
 
+_I want to savour every inch — this is for me too, make no mistake._
+
 [IMAGE: partner-tender/*]
 
 [METRONOME: ~50 BPM, ~30s — building]
@@ -635,6 +658,8 @@ _There's no rushing what I'm going to do to you._
 _Closer now… let it build… right up to the edge…_
 
 _Almost — almost — don't you dare tip over without me._
+
+_I'm right there aching with you — I want us teetering together._
 
 [PAUSE: abrupt stop]
 
@@ -654,6 +679,8 @@ _Feel me settle into a harder rhythm._
 
 _Match your breath to it… there._
 
+_God, I've wanted this — wanted you — all night long._
+
 [IMAGE: partner-hard/*]
 
 [METRONOME: ~120 BPM, ~50s]
@@ -665,6 +692,8 @@ _Deeper now, with every single stroke._
 _You couldn't stop me even if you wanted to — and you don't._
 
 _Give in to it. Give in to me._
+
+_I'm taking my pleasure now, and I won't be gentle._
 
 [IMAGE: partner-hard/*]
 
@@ -678,6 +707,8 @@ _This is exactly what I promised you._
 
 _Stay with me — we are not slowing down._
 
+_Yes — just like that — you feel far too good to stop._
+
 [IMAGE: partner-hard/*]
 
 [METRONOME: ~160 BPM, ~40s]
@@ -688,6 +719,8 @@ _Higher. I can feel you trembling around me._
 
 _Don't fight the edge — race toward it._
 
+_I'm so close myself — take me there with you._
+
 [IMAGE: partner-hard/*]
 
 [METRONOME: ~170 BPM, ~30s]
@@ -695,6 +728,8 @@ _Don't fight the edge — race toward it._
 _Right to the edge now. Hold it for me._
 
 _So close… I want you aching for it._
+
+_Right there with you — I want us to break apart together._
 
 ## Tease Page 15 — Act VII · The climax moment
 
@@ -708,6 +743,8 @@ _I'm going to fuck you straight over that edge — don't you dare resist me._
 
 _Feel it building, building, nowhere left to hide._
 
+_I'm almost there too — you're going to take me over with you._
+
 [IMAGE: climax-hero/* — the one money shot; this bucket holds only that image]
 
 [METRONOME: ~190 BPM, ~40s]
@@ -715,6 +752,8 @@ _Feel it building, building, nowhere left to hide._
 _Come for me. Right now. Give me every last bit of you._
 
 _Let go — completely — I've got you._
+
+_God — yes — you're pulling me over the edge with you—_
 
 _That's it — let go — **come!**_
 
@@ -742,6 +781,8 @@ _Then I won't stop. I'll just keep taking you, and taking you._
 
 _Come on — come for me. Let go. You know you want to give in._
 
+_Every time you hold back, I only want you more._
+
 [IMAGE: partner-hard/*]
 
 [METRONOME: ~140 BPM, ~15s]
@@ -753,6 +794,8 @@ _Catch your breath… but I am nowhere near finished with you._
 [METRONOME: ~170 BPM, ~20s]
 
 _Again. Right back to the edge. Fall for me._
+
+_I could do this to you all night — and I just might._
 
 [LOOP END]
 
@@ -783,9 +826,7 @@ _And… rest. You were perfect._
 
 _Take all the time you need to come back to me. You did so beautifully — I'm proud of you, and you should be too._
 
-MENU:
-- 🔁 **Again, from the top**
-- ↩️ **Back to the main menu**
+[END: end the tease]
 
 ## Tease Page 18 — Outro · Gentle aftercare
 
@@ -803,6 +844,4 @@ _Breathe. Drink some water. Be gentle with yourself, the way I'd be with you._
 
 _You were wonderful. Come back to me whenever you want more._
 
-MENU:
-- 🔁 **Start over**
-- ↩️ **Back to the main menu**
+[END: end the tease]
