@@ -57,32 +57,46 @@ referenced below are detailed in §5.)
 | # | Who        | Step                                                                                                                                                                                                                                                                                                                                                                               |
 |---|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1 | user       | **Local folder** — create `milovana/Teases/<TeaseName>/`.                                                                                                                                                                                                                                                                                                                          |
-| 2 | both       | **Script** — write `script.md`: tone, pages, pacing, `[METRONOME]`/`[PAUSE]` markers, `[IMAGE: …]` image-placement markers (see below), author notes.                                                                                                                                                                                                                              |
+| 2 | both       | **Script** — write `script.md` in the marker DSL (*Script DSL & generator*, below): `[PAGE]`, `[SAY]`, `[METRONOME]`/`[PAUSE]`, `[IMAGE]` (bucket intent now; exact filenames land at step 9), `[NOTIFICATION]`, `[CHOICE]`/`[OPTION]`, `[GOTO]`/`[END]`. Headings, prose and `[Author note: …]` are ignored by the parser.                                                          |
 | 3 | **Claude** | **Asset plan** — read the script and propose **(a)** the **themed gallery buckets** it needs (one gallery per mood/pace, e.g. `solo-sensual`, `machine-soft`, `machine-hard`, `climax`) plus any hard constraints (e.g. *tutorial = solo only*), and **(b)** the metronome/audio files the `[METRONOME]` markers call for. **Raise the themed-buckets approach here** (§5.3). |
 | 4 | user       | **Asset setup** — create local `Gallery/<bucket>/` folders + `Files/`, add exact-byte sources; in the editor create matching galleries (folder name = gallery name) and upload **images *and* audio**.                                                                                                                                                                             |
 | 5 | user       | **Export stub** — export the (stub) tease JSON into `tease.json`; it carries the `galleries`/`files` manifest.                                                                                                                                                                                                                                                                     |
 | 6 | **Claude** | **Build map** — generate `asset-map.json` (SHA-1 join; §5.2).                                                                                                                                                                                                                                                                                                                      |
 | 7 | **Claude** | **Vision tagging** — view each image, write `asset-content.json` (§5.3).                                                                                                                                                                                                                                                                                                           |
 | 8 | user       | **Verify tags** — review/adjust the tags.                                                                                                                                                                                                                                                                                                                                          |
-| 9 | **Claude** | **Generate tease** — author the full `tease.json` from the script: select images by joining `asset-content` tags ↔ `asset-map` locators (match pace to BPM), declare the `audio` module, add `audio.play` for `[METRONOME]` blocks.                                                                                                                                           |
+| 9 | **Claude** | **Generate tease** — pick the specific image for each `[IMAGE]` (join `asset-content` tags ↔ `asset-map` locators; match pace to BPM) and write the exact `bucket/filename` into `script.md`; then run the shared generator — `milovana/Tools/Build-Tease.ps1 -TeaseDir <tease folder>`, or its per-tease `.cmd` wrapper (e.g. `Build-Tease-TFM.cmd`) — to **parse `script.md` → `tease.json`**. Re-run after any edit.                              |
 | 10 | user       | **Upload & verify** — upload `tease.json`, play through.                                                                                                                                                                                                                                                                                                                           |
 | 11 | both       | **Iterate** — refine on feedback until the result is right.                                                                                                                                                                                                                                                                                                                        |
 
-### Script markers (`script.md`)
+### Script DSL & generator (`script.md` → `tease.json`)
 
-`script.md` is the human-readable source the tease is generated from. Bracketed markers carry
-authoring intent and are **never shown to the player**:
+For a generated tease, `script.md` is the **single editable source**: a line-based DSL that a
+shared PowerShell generator (`milovana/Tools/Build-Tease.ps1 -TeaseDir <tease folder>`, run via a
+per-tease `.cmd` wrapper such as `Build-Tease-TFM.cmd`) parses into `tease.json`. Only lines beginning **at column 0** with a recognised
+`[KEYWORD …]` marker are processed; **every other line — headings, prose, `[Author note: …]` — is
+ignored**, so notes stay free-form. Grammar: `[KEYWORD (param=value, …): payload]` (params and
+payload optional). The generator reuses the exported stub's `galleries`/`files`/`editor` verbatim,
+declares the `audio`/`notification` modules, and validates that every nav target resolves and every
+image/audio locator exists — so a typo'd filename or page key fails loudly.
 
 | Marker | Meaning |
 |--------|---------|
-| `[METRONOME: ~N BPM, ~Ns]` | A timed block where the machine moves at ~N BPM for ~N seconds. Becomes a one-tempo-per-page `audio.play` + `timer` (§3.6). Keep N a multiple of 10 so it maps to a pre-generated metronome file. |
-| `[PAUSE: ~Ns]` | Silence — the machine is still (a `timer` with no audio). Covers both mid-scene stops and anticipation holds. |
-| `[IMAGE: <bucket>/*]` | Show a **random** image from themed gallery bucket `<bucket>`; intensity follows the page's BPM band. The default for most pages — leans on themed buckets (§5.3) instead of per-image picks. |
-| `[IMAGE: <bucket>/hero — desc]` | A **specific** hero shot for a key beat (e.g. the climax). Pinned to a real image `id` after tagging (steps 7–9); `desc` tells the tagger which shot. ⚠️ ids are reassigned on every re-upload, so a pinned id breaks if that gallery is re-uploaded. **Robust alternative:** give the guaranteed shot its own **single-image bucket** so `gallery:<bucket>/*` always returns it — deterministic, no id pinning, survives re-uploads. (This is what `climax-hero` does in The Fucking Machine tease.) |
-| `[IMAGE: hold]` | Keep the previously shown image (it persists across pages until replaced — §2). Used on practical/menu pages so a sensual backdrop carries over without competing with the copy. |
-| `[LOOP START]` / `[LOOP END]`, `[BUTTON: "label" → target]` | Repeat-until-button blocks and player branches. |
+| `[PAGE: key]  comment` | Starts a page; `key` is the EOS page name (letters/numbers/hyphen). First page must be `start`. Text after `]` is a human comment. |
+| `[IMAGE: bucket/filename.jpg]` | Image by **bucket + filename**; resolved to a `gallery:<uuid>/<id>` locator via `asset-map.json`. **Swap an image by editing the filename here.** `[IMAGE: hold]` keeps the previous image (it persists across pages — §2). |
+| `[SAY (mode=, align=, duration=): html]` | One `say` (params optional, mirror §3.1). Text is auto-wrapped in `<p>…</p>`; add inline `<em>`/`<strong>`/`<u>`. Omitted `mode` defaults to `instant`, except the **last say on a `[GOTO]`-exit page** becomes `pause` (single-tap advance). Every line is its own `say`. |
+| `[METRONOME (bpm=, secs=)]` | Timed block → its **own EOS page** (one tempo per page; §3.6). The `[SAY]`s after it are revealed evenly across `secs`. A preceding `[IMAGE]`/`[NOTIFICATION]` attaches to that block's page. Keep `bpm` a multiple of 10 so it maps to a pre-generated metronome file. |
+| `[PAUSE (secs=)]` | Silent timed block — the machine is still (a `timer` with no audio). |
+| `[AUDIO (bpm=, loops=)]` | Non-blocking looping metronome under a *non-timed* page (e.g. the setup pages, so the app has a beat to detect). |
+| `[NOTIFICATION (id=, target=): label]` | Persistent button overlay (§3.8); the button jumps to `target`. |
+| `[CHOICE]` + `[OPTION (target=, color=#hex): label]` | A menu / branch (the `OPTION` lines follow the `CHOICE`). |
+| `[GOTO: key]` / `[END]` | Page exit. `[GOTO]` back to the page's **own key** = loop (the on-page notifications are the real exits). |
 
-> **First page of a branch needs a real `[IMAGE: <bucket>/*]`, not `hold`** — a branch can be
+**Page expansion:** a page containing any `[METRONOME]`/`[PAUSE]` is **timed** — each such block
+becomes its own chained EOS page, and the page's `[GOTO]`/`[END]` applies after the last block.
+Otherwise the page emits its actions in order. Single-image "hero" buckets (e.g. `title-hero`,
+`climax-hero`) guarantee a specific shot deterministically — see §5.3.
+
+> **First page of a branch needs a real `[IMAGE: bucket/file]`, not `hold`** — a branch can be
 > entered fresh (e.g. from a menu), so there may be no prior image to hold.
 
 ---
