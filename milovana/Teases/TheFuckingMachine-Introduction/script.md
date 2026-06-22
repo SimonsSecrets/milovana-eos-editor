@@ -26,6 +26,7 @@ Keep all edits and additions consistent with the style below.
 - Lines in _italics_ are mood/voice text shown over the image.
 - `[ ... ]` are author notes, not shown to the player.
 - `[IMAGE: <bucket>/*]` is an image-placement note (not shown to the player): it names the **source bucket and scene intent** for that beat. `[IMAGE: <bucket>/hero — desc]` and the single-image buckets (`title-hero`, `climax-hero`) name an exact shot; `[IMAGE: hold]` keeps the previously shown image (it persists across pages until replaced).
+- `[NOTIFICATION: "label" → target]` is a persistent on-screen **notification** carrying a button (it overlays the page rather than sitting inline in the text flow). Clicking the button jumps to `target`. Maps to the `notification.create` action (button element) and **requires the `notification` module**; at authoring give it a unique `id` and remove it when leaving the page.
 
 [Author note — image selection: this tease uses **tailored, hand-picked images**, not random play-time selection. Each `[IMAGE: <bucket>/*]` marker names the **source bucket + scene intent**; at authoring (workflow step 9) every marker is resolved to a *specific* `gallery:<uuid>/<id>` locator chosen to fit that beat's text, using the vision tags in `asset-content.json`. Consequence: each bucket needs **one tailored image per placement** (not a padded random pool), and the vision-tagging pass must describe images well enough to match them to scenes.]
 
@@ -60,12 +61,14 @@ Truly hands-free. Slow and teasing, or relentless — tonight every rhythm is mi
 
 Before we begin, there are a few things I need you to have ready:
 
-- 🔌 **A compatible machine** — currently the **Hismith Pro 1** (model AK-01) - TODO research all compatible devices + add a note that players can contact me to support other devices
-- 💻 **The HismithController app** — Windows PC only ([download / setup link])
+- 🔌 **A compatible machine** — see **Supported Devices**
+- 💻 **The HismithController app** — Windows PC only (download instructions are provided later)
 - 📶 **Bluetooth** — your PC must be able to connect to Bluetooth devices
 - 💦 **Plenty of lube** — more than you think
 
 > 💡 **No machine? You can still play.** If you don't have a machine, just follow me by hand — ease a dildo in and out in time with each tick of the metronome. It's not quite the hands-free surrender I'd love to give you, but every rhythm I choose is still yours to feel.
+
+[NOTIFICATION: "Supported Devices" → Supported Devices]
 
 ## Page 4 — Menu
 
@@ -107,7 +110,7 @@ Take your time. I'll be right here.
 
 First, a little preparation:
 
-1. **Download HismithController** from the GitHub releases page ([releases link]) and install it on your Windows PC.
+1. **Download HismithController** from the [GitHub releases page](https://github.com/SimonsSecrets/hismith-bt-controller/releases) and install it on your Windows PC.
 2. **Set up your Hismith Pro 1** — mount it securely, attach your accessory, and **turn it on** so it's ready to pair over Bluetooth.
 
 No need to point it at yourself yet — just have it switched on and within reach.
@@ -758,7 +761,7 @@ _God — yes — you're pulling me over the edge with you—_
 
 _That's it — let go — **come!**_
 
-[Author note: if the player climaxes here they press the climax button (same one offered in the loop) → **climax outro**. If they don't, the page flows straight into the loop below.]
+[Author note: if the player climaxes h15ere they press the climax button (same one offered in the loop) → **climax outro**. If they don't, the page flows straight into the loop below.]
 
 ## Tease Page 16 — The loop · Relentless finish
 
@@ -859,12 +862,42 @@ _You were wonderful. Come back to me whenever you want more._
 
 **The Fucking Machine Tease** turns the milovana metronome you already know into something hands-free — the same beat that would normally guide you instead drives a real machine in real time, through the HismithController app.
 
-**The model** — every image in this tease is of **Leah Gotti**. ([credit / link])
+**The model** — every image in this tease is of **Leah Gotti**.
 
-**The app & the tease** — HismithController and this tease were created by **[creator handle]**.
+**The app & the tease** — HismithController and this tease were created by **SimonsSecrets**.
 
-💬 **Found a bug, or want your machine supported?** This began with a single device — the **Hismith Pro 1** — and I'd love to support more. If something isn't working, or you'd like another fucking machine added, please get in touch: **[contact link]**. Your reports and requests are exactly what makes the next version better.
+❤️ **Enjoying it?** If you'd like to support my work, you can buy me a coffee at [ko-fi.com/simonssecrets](https://ko-fi.com/simonssecrets). It genuinely helps.
+
+💬 **Found a bug, or want your machine supported?** This began with a single device — the **Hismith Pro 1** — and I'd love to support more. If something isn't working, or you'd like another fucking machine added, please get in touch at [simonssecrets@gmail.com](mailto:simonssecrets@gmail.com). Your reports and requests are exactly what makes the next version better.
 
 Thank you for playing.
+
+[NOTIFICATION: "Supported Devices" → Supported Devices]
+
+[BUTTON: "↩️ Back to the menu" → Page 4]
+
+---
+
+# Supported Devices
+
+[Author note: reached via the "Supported Devices" notification button on Page 3 (What you'll need) and on the About page. Like About, this is a meta/technical page — **out of the seductive persona**, plain and skimmable. Uses the same single hero shot as About (`about-hero`). Device facts come from the project `CLAUDE.md` "Supported devices" section; support is ultimately decided by the **model code the app reads on connect**, not the retail product name — so frame it as guidance, not a guarantee. Routes back to the main menu (Page 4).]
+
+## Supported Devices Page — Will my machine work?
+
+[IMAGE: about-hero/* — same hero shot as the About page]
+
+HismithController speaks the **legacy Hismith control protocol**. Whether a machine works comes down to the control box inside it — the app confirms automatically by reading the device's model when it connects.
+
+✅ **Confirmed working**
+- **Hismith Premium 3.0 Pro** (AK-01) — the device this app is built and tested against.
+
+👍 **Should work** — same legacy protocol
+- **Table Top 2.0 / 2.0 Pro / Max**, **Double Penetration (2.0 Pro)** and other machines built on the AK-01 control box.
+- **Pro Traveler**, **Capsule**, **G011**, **Thrusting Cup**, **Wildolo**.
+
+❌ **Not yet supported** — uses a newer protocol the app doesn't speak
+- **Premium 4.0 Pro**, **Hismith Servo / Servok**, **Hismith Mini Pro**, and the newer **HISMITH S1 / S2 / S3** and Premium 4.0 generation. These will connect but won't respond to the app.
+
+💬 **Not sure, or don't see your machine?** Just connect it once — the app reads the model when it pairs. And if your device isn't supported yet, get in touch at [simonssecrets@gmail.com](mailto:simonssecrets@gmail.com). Requests like that are exactly what shapes the next version.
 
 [BUTTON: "↩️ Back to the menu" → Page 4]
