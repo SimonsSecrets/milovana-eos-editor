@@ -65,6 +65,8 @@ Before we begin, there are a few things I need you to have ready:
 - 📶 **Bluetooth** — your PC must be able to connect to Bluetooth devices
 - 💦 **Plenty of lube** — more than you think
 
+> 💡 **No machine? You can still play.** If you don't have a machine, just follow me by hand — ease a dildo in and out in time with each tick of the metronome. It's not quite the hands-free surrender I'd love to give you, but every rhythm I choose is still yours to feel.
+
 ## Page 4 — Menu
 
 [IMAGE: intro-solo-sensual/*]
@@ -179,7 +181,7 @@ This is the moment everything's been leading to.
 
 That's me, moving it. No hands, no effort from you — just the beat.
 
-While it's running, find the **emergency stop** — just press the **Space bar** and everything halts instantly. Try it once now, so your fingers know exactly where it is before you ever need it. It works even when the app isn't the window you're looking at.
+While it's running, find the **emergency stop** — just press **Alt+Space** and everything halts instantly. Try it once now, so your fingers know exactly where it is before you ever need it. It works even when the app isn't the window you're looking at.
 
 When you've seen enough, press the button again to pause. **Remember — still just watching for now.**
 
@@ -222,7 +224,7 @@ Before we start, let's set the scene:
 - 💦 **Lube generously** — far more than feels necessary. Then add a little more.
 - 🛋️ Get into a relaxed, comfortable position with the machine settled where you want it.
 - 🎚️ In the app's **Sound** mode, set **THRUST RHYTHM** to **1 beat per stroke** — so every tick of the metronome is one full, deliberate stroke.
-- 🛑 Emergency stop is still just the **Space bar**, any time you want it.
+- 🛑 Emergency stop is still just **Alt+Space**, any time you want it.
 
 Take a slow breath. When you're ready, and not a moment before, we'll begin.
 
@@ -272,7 +274,7 @@ _See how easy this is? You don't have to do a thing. Just feel._
 
 [PAUSE: ~12s]
 
-_Quiet again. I love leaving you like this — wanting just a little more than I'm giving._
+_Quiet again. I love teasing you like this — wanting just a little more than I'm giving._
 
 ## Tutorial Page 5 — Teasing you
 
@@ -320,7 +322,7 @@ _…and that's where I'll leave you._
 
 _Aching, wet, and wanting — exactly how you should be before the real thing._
 
-_Everything you just felt? That was me being gentle. If you dare, come find out what happens when I'm not._
+_Everything you just felt? That was me being gentle. If you dare, start the real tease and find out what happens when I'm not._
 
 ## Tutorial Page 7 — Ready for the real thing
 
@@ -412,7 +414,7 @@ Now let's get you slick and the app listening.
 
 Knowing how to stop me is exactly what lets you let go of everything else.
 
-- 🛑 **Space** halts everything instantly — it works even when the app isn't the window you're looking at.
+- 🛑 **Alt+Space** halts everything instantly — it works even when the app isn't the window you're looking at.
 - 🆘 At the very end you'll have two buttons: one for when you come, and a **mercy** button for when you simply can't take any more. **Either one is completely okay.**
 - 💧 Keep water and extra lube close.
 
@@ -428,7 +430,11 @@ By your own hand now — get yourself onto it.
 2. Gently **move up and down** — just you, no machine — until it feels easy and welcoming.
 3. More lube if you want it. No rush.
 
-_When you're settled, and aching to be taken… turn the page. Once you do that... you're mine._
+_When you're settled, and aching to be taken… press the button below. Once you do that... you're mine._
+
+[BUTTON: "🔥 I'm yours — take me" → Tease Page 8]
+
+[Author note: this page must advance via an explicit continue button (a single-option `choice`), **not** tap-to-advance — so handing over control is a deliberate, consenting click rather than an accidental skip. Show the text in `pause`/`autoplay` mode and make the button the only way forward to Tease Page 8.]
 
 ## Tease Page 8 — Hands off
 
@@ -750,7 +756,7 @@ _Again. Right back to the edge. Fall for me._
 
 [LOOP END]
 
-[Author note: waves oscillate **120 ↔ 180 BPM** and repeat indefinitely. Rotate/vary the encouragement lines on each pass so it never reads repetitive. The loop ends only when the player presses one of the buttons below (Space e-stop always halts the machine regardless).]
+[Author note: waves oscillate **120 ↔ 180 BPM** and repeat indefinitely. Rotate/vary the encouragement lines on each pass so it never reads repetitive. The loop ends only when the player presses one of the buttons below (Alt+Space e-stop always halts the machine regardless).]
 
 [BUTTON: "I'm coming!" → Tease Page 17 (climax outro)]
 [BUTTON: "I can't take any more" → Tease Page 18 (mercy outro)]
