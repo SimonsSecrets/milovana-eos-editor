@@ -25,7 +25,9 @@ Keep all edits and additions consistent with the style below.
 - Each `## Page N` heading marks a new page in the tease.
 - Lines in _italics_ are mood/voice text shown over the image.
 - `[ ... ]` are author notes, not shown to the player.
-- `[IMAGE: <bucket>/*]` is an image-placement note (not shown to the player): show a random image from that themed gallery bucket. `[IMAGE: <bucket>/hero — desc]` marks a specific hero shot to pin to an image ID after upload; `[IMAGE: hold]` keeps the previously shown image (it persists across pages until replaced).
+- `[IMAGE: <bucket>/*]` is an image-placement note (not shown to the player): it names the **source bucket and scene intent** for that beat. `[IMAGE: <bucket>/hero — desc]` and the single-image buckets (`title-hero`, `climax-hero`) name an exact shot; `[IMAGE: hold]` keeps the previously shown image (it persists across pages until replaced).
+
+[Author note — image selection: this tease uses **tailored, hand-picked images**, not random play-time selection. Each `[IMAGE: <bucket>/*]` marker names the **source bucket + scene intent**; at authoring (workflow step 9) every marker is resolved to a *specific* `gallery:<uuid>/<id>` locator chosen to fit that beat's text, using the vision tags in `asset-content.json`. Consequence: each bucket needs **one tailored image per placement** (not a padded random pool), and the vision-tagging pass must describe images well enough to match them to scenes.]
 
 ---
 
@@ -58,38 +60,12 @@ Truly hands-free. Slow and teasing, or relentless — tonight every rhythm is mi
 
 Before we begin, there are a few things I need you to have ready:
 
-- 🔌 **A compatible machine** — currently the **Hismith Pro 1** (model AK-01)
+- 🔌 **A compatible machine** — currently the **Hismith Pro 1** (model AK-01) - TODO research all compatible devices + add a note that players can contact me to support other devices
 - 💻 **The HismithController app** — Windows PC only ([download / setup link])
 - 📶 **Bluetooth** — your PC must be able to connect to Bluetooth devices
 - 💦 **Plenty of lube** — more than you think
 
-## Page 4 — How it works (30 seconds)
-
-[IMAGE: hold]
-
-Don't worry — it's simple. Here's how it will work:
-
-1. You'll pair your machine and open **HismithController**.
-2. You'll press start in the app so it's listening.
-3. Then you'll begin the tease — and when the metronome plays, the machine moves with it.
-
-That's all there will be to it. Once we've begun there'll be nothing for you to adjust — from there, the rhythm is mine.
-
-[Author note: this page is just an overview so the player knows what to expect. The actual step-by-step setup happens on the **Application Setup** page.]
-
-## Page 5 — Consent & safety [recommended]
-
-[IMAGE: hold]
-
-Before I take over, let's make sure you're safe.
-
-- Set your machine's stroke length and position **before** you start — I only control the *speed*.
-- Keep the app open and your **emergency stop** within reach.
-- You can stop me any time. When the sound stops, so does the machine.
-
-Now settle in, get comfortable, and let me take over ;)
-
-## Page 6 — Menu
+## Page 4 — Menu
 
 [IMAGE: intro-solo-sensual/*]
 
@@ -106,13 +82,13 @@ MENU:
 
 # Application Setup
 
-[Author note: this is the "Application Setup" branch reached from the Page 6 menu. Goal of this whole branch: get the app installed, connected, and **proven to work** — purely a function check. The player should NOT be using the machine on themselves yet; that comes in the Tutorial. UI labels below are quoted exactly as they appear in HismithController so they match what the player sees on screen.]
+[Author note: this is the "Application Setup" branch reached from the Page 6 menu. Goal of this whole branch: get the app installed, connected, and **proven to work** — purely a function check. The player should NOT be using the machine on themselves yet; that comes in the Tutorial. UI labels below are quoted exactly as they appear in HismithController so they match what the player sees on screen. Imagery for this whole branch comes from the `setup-solo` bucket (tasteful, solo) — kept non-distracting since this is just setup.]
 
 [Author note: steps 6–7 need a metronome sound for the app to detect. This tease page should play a steady metronome through the same PC the app runs on — the app listens to the system audio, so the beat it hears is the beat coming from this page.]
 
 ## Setup Page 1 — What this is
 
-[IMAGE: intro-solo-sensual/*]
+[IMAGE: setup-solo/*]
 
 _Before I can take over, let's make sure everything's working — together._
 
@@ -124,7 +100,7 @@ Take your time. I'll be right here.
 
 ## Setup Page 2 — Get the app & your machine ready
 
-[IMAGE: hold]
+[IMAGE: setup-solo/*]
 
 First, a little preparation:
 
@@ -139,7 +115,7 @@ No need to point it at yourself yet — just have it switched on and within reac
 
 ## Setup Page 3 — Connect over Bluetooth
 
-[IMAGE: hold]
+[IMAGE: setup-solo/*]
 
 Now let's introduce them to each other:
 
@@ -155,7 +131,7 @@ Once you're connected, you'll land on the main screen with the **Manual** / **So
 
 ## Setup Page 4 — Test it in Manual mode
 
-[IMAGE: hold]
+[IMAGE: setup-solo/*]
 
 Let's make sure your machine listens to you first.
 
@@ -171,7 +147,7 @@ Feel free to play with a few values. When you've seen it respond, bring it back 
 
 ## Setup Page 5 — Let the app hear the beat
 
-[IMAGE: hold]
+[IMAGE: setup-solo/*]
 
 Now the part that makes this special — letting the metronome drive it.
 
@@ -194,7 +170,7 @@ That means the app can hear me. Once you see the beat being picked up, you're re
 
 ## Setup Page 6 — Watch it move to the beat
 
-[IMAGE: hold]
+[IMAGE: setup-solo/*]
 
 This is the moment everything's been leading to.
 
@@ -209,7 +185,7 @@ When you've seen enough, press the button again to pause. **Remember — still j
 
 ## Setup Page 7 — All set
 
-[IMAGE: intro-solo-sensual/*]
+[IMAGE: setup-solo/*]
 
 _Perfect. Everything's working._
 
@@ -387,7 +363,7 @@ No more gentle introductions, no more easing you in. Tonight I take over complet
 
 ## Tease Page 2 — A little honesty first
 
-[IMAGE: hold]
+[IMAGE: tease-solo-build/*]
 
 Before we begin, here's what you're agreeing to.
 
@@ -401,7 +377,7 @@ MENU:
 
 ## Tease Page 3 — Is your machine ready for me?
 
-[IMAGE: hold]
+[IMAGE: tease-solo-build/*]
 
 First, tell me — is everything set up?
 
@@ -415,7 +391,7 @@ MENU:
 
 ## Tease Page 4 — Choose well
 
-[IMAGE: hold]
+[IMAGE: tease-solo-build/*]
 
 _Choose carefully — you'll be living with this decision for a while._
 
@@ -423,7 +399,7 @@ _Choose carefully — you'll be living with this decision for a while._
 
 ## Tease Page 5 — Get ready for me
 
-[IMAGE: hold]
+[IMAGE: tease-solo-build/*]
 
 Now let's get you slick and the app listening.
 
@@ -432,7 +408,7 @@ Now let's get you slick and the app listening.
 
 ## Tease Page 6 — How to stop me
 
-[IMAGE: hold]
+[IMAGE: tease-solo-build/*]
 
 Knowing how to stop me is exactly what lets you let go of everything else.
 
@@ -592,7 +568,7 @@ _Not yet. A little wanting is so good for you._
 
 ## Tease Page 12 — Act IV · The ladder
 
-[Author note: 4 identical step-up cycles. Each cycle: 60 → 90 → 120 → 150 BPM in quick transitions, then a hard stop. Each rung is its own page, so each gets a fresh `[IMAGE: partner-hard/*]` (image changes on every tempo step). Voice lines rotate per cycle (below) so it escalates rather than repeats.]
+[Author note: 4 identical step-up cycles. Each cycle: 60 → 90 → 120 → 150 BPM in quick transitions, then a hard stop. Each rung is its own page, so each gets a fresh `[IMAGE: partner-hard/*]` (image changes on every tempo step). All **16 rungs (4 cycles × 4) use distinct, tailored images** — no reuse across cycles — for full visual escalation. Voice lines rotate per cycle (below) so it escalates rather than repeats.]
 
 [IMAGE: partner-hard/*] [METRONOME: 60 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 90 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 120 BPM, ~8s] · [IMAGE: partner-hard/*] [METRONOME: 150 BPM, ~10s]
 
