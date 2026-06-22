@@ -77,6 +77,7 @@ MENU:
 - ⚙️ **Application Setup** — install, pair, and test your machine
 - 🎓 **Tutorial** — a short, gentle run so you can feel how it responds
 - 🔥 **The Fucking Machine Tease** — the real thing
+- ℹ️ **About** — the model, the app, and how to get in touch
 
 [Author note: "Tutorial" doubles as a calibration page — low, steady tempo so the player can confirm the machine reacts before committing to the full tease.]
 
@@ -845,3 +846,25 @@ _Breathe. Drink some water. Be gentle with yourself, the way I'd be with you._
 _You were wonderful. Come back to me whenever you want more._
 
 [END: end the tease]
+
+---
+
+# About
+
+[Author note: the "About" branch reached from the Page 4 menu. This is a meta/credits page — intentionally **out of the seductive persona** (it's the creator speaking directly, not Leah), so the fantasy isn't broken by crediting the model as herself. Keep it warm but plain. The hero image is a single tailored shot from the `about-hero` bucket. Routes back to the menu (Page 4) rather than ending the tease.]
+
+## About Page — About this tease
+
+[IMAGE: about-hero/* — a striking hero portrait of the model; this bucket holds only that image]
+
+**The Fucking Machine Tease** turns the milovana metronome you already know into something hands-free — the same beat that would normally guide you instead drives a real machine in real time, through the HismithController app.
+
+**The model** — every image in this tease is of **Leah Gotti**. ([credit / link])
+
+**The app & the tease** — HismithController and this tease were created by **[creator handle]**.
+
+💬 **Found a bug, or want your machine supported?** This began with a single device — the **Hismith Pro 1** — and I'd love to support more. If something isn't working, or you'd like another fucking machine added, please get in touch: **[contact link]**. Your reports and requests are exactly what makes the next version better.
+
+Thank you for playing.
+
+[BUTTON: "↩️ Back to the menu" → Page 4]
