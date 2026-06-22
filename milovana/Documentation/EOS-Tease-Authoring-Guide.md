@@ -4,7 +4,7 @@ A reference for hand-writing Milovana **EOS** teases in JSON so they can be uplo
 EOS editor via its backup/restore function.
 
 This guide is derived **strictly** from the worked example
-[`teachingmaterial-2026-06-19.json`](teachingmaterial-2026-06-19.json), which demonstrates the
+[`teachingmaterial-2026-06-22.json`](teachingmaterial-2026-06-22.json), which demonstrates the
 most commonly used actions. In that example, every action is preceded by a `say` action that
 explains the action that follows it — this guide distills those explanations into a structured
 reference. Only the actions and fields that actually appear in that example are documented as
@@ -94,8 +94,9 @@ authoring intent and are **never shown to the player**:
   `002-Timers`, `099-End`.
 - **`start` is the entry page.** Execution begins there.
 - Each page's value is an **ordered array of action objects**. Actions run top to bottom.
-- **Each action object has exactly one key**, naming the action. The seven actions used in the
-  example are: `say`, `goto`, `image`, `timer`, `choice`, `audio.play`, `end`.
+- **Each action object has exactly one key**, naming the action. The actions used in the
+  example are: `say`, `goto`, `image`, `timer`, `choice`, `audio.play`, `end`,
+  `notification.create`, `notification.remove`.
 
 ### What carries across a page switch
 
@@ -308,6 +309,64 @@ Ends the tease and prompts the user to rate it. No actions run after it.
 { "end": {} }
 ```
 
+### 3.8 `notification.create` — show a notification
+
+Shows a notification. **Requires the `notification` module** to be declared (see §4). A
+notification can optionally carry a **button element** and/or a **timer element**, each with its
+own list of commands.
+
+| Param            | Type    | Values / notes |
+|------------------|---------|----------------|
+| `id`             | string  | **Required.** A unique identifier for this notification, used to remove it later (via `notification.remove`, or from inside its own button/timer commands). |
+| `title`          | string  | **Optional.** The notification's title. May be omitted for a notification with no title. |
+| `buttonLabel`    | string  | Optional. Label for a clickable button on the notification. Pair with `buttonCommands`. |
+| `buttonCommands` | array   | Optional. A nested array of action objects run when the button is clicked. |
+| `timerDuration`  | string  | Optional. A timer on the notification; single value (`"3s"`) or range (`"3s-5s"`). Same seconds-only / one-decimal rules as the `timer` action (§3.4). Pair with `timerCommands`. |
+| `timerCommands`  | array   | Optional. A nested array of action objects run when the timer fires. |
+
+A common pattern is to have the button/timer commands remove the notification by its own `id`.
+
+```json
+{ "notification.create": { "id": "N001", "title": "Notification title" } }
+```
+
+```json
+{
+  "notification.create": {
+    "id": "N002",
+    "title": "Button notification",
+    "buttonLabel": "Click me",
+    "buttonCommands": [
+      { "say": { "label": "<p>You clicked the button</p>" } },
+      { "notification.remove": { "id": "N002" } }
+    ]
+  }
+}
+```
+
+```json
+{
+  "notification.create": {
+    "id": "N003",
+    "title": "Timer notification",
+    "timerDuration": "3s",
+    "timerCommands": [ { "notification.remove": { "id": "N003" } } ]
+  }
+}
+```
+
+### 3.9 `notification.remove` — remove a notification
+
+Removes a previously created notification by its `id`. Requires the `notification` module.
+
+| Param | Type   | Values / notes |
+|-------|--------|----------------|
+| `id`  | string | The `id` of the notification to remove. |
+
+```json
+{ "notification.remove": { "id": "N001" } }
+```
+
 ---
 
 ## 4. Top-level metadata sections
@@ -317,10 +376,11 @@ A string, empty (`""`) in the example. Purpose/expected content still unconfirme
 Include it as `""` for parity with editor exports.
 
 ### `modules`
-Feature toggles. To use `audio.play`, the `audio` module must be present:
+Feature toggles, each enabled by an empty object. A module must be present to use its actions:
+`audio` for `audio.play`, `notification` for `notification.create` / `notification.remove`.
 
 ```json
-"modules": { "audio": {} }
+"modules": { "audio": {}, "notification": {} }
 ```
 
 ### `editor`
@@ -563,7 +623,9 @@ random locators cover "any fitting image here."
 - **One key per action object.** `{ "say": {…} }`, not two actions in one object.
 - **Define `start`.** It is the entry page.
 - **Page names:** letters, numbers, hyphen only.
-- **Declare the `audio` module** before using `audio.play`.
+- **Declare the matching module** before using a module action: `audio` for `audio.play`,
+  `notification` for `notification.create` / `notification.remove`.
+- **Give every notification a unique `id`** so it can be removed (§3.8).
 - **Every locator must resolve:** each `gallery:<uuid>/<id>` and `file:<name>` needs a matching
   entry in `galleries` / `files`.
 - **HTML-encode `say` text:** wrap in `<p>…</p>`; entity-encode apostrophes/quotes (`&#39;`).
@@ -627,8 +689,8 @@ Fields/behaviors present or referenced in the example whose exact form is **not*
 the JSON itself. Resolve these (e.g. by inspecting a real editor export) before relying on them:
 
 1. **`init`** — empty string in the example; its purpose and expected content are unknown.
-2. **`modules` entries beyond `audio`** — only `audio: {}` is demonstrated; other modules and
-  their config shapes are unknown.
+2. **`modules` entries beyond `audio` and `notification`** — only `audio: {}` and
+  `notification: {}` are demonstrated; other modules and their config shapes are unknown.
 
 ### Resolved (previously open)
 

@@ -165,7 +165,7 @@
       },
       {
         "goto": {
-          "target": "099-End"
+          "target": "005-Notifications"
         }
       }
     ],
@@ -178,10 +178,106 @@
       {
         "end": {}
       }
+    ],
+    "005-Notifications": [
+      {
+        "say": {
+          "label": "<p>This page shows the Notification-related actions. They need the Notifications module to be enabled.</p>"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>The action below creates a notification that has no special elements. Title is optional. Every notification needs a unique identifier, so it can be removed by a later action.</p>"
+        }
+      },
+      {
+        "notification.create": {
+          "title": "Notification title",
+          "id": "N001"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>The next action removes the just created notification</p>"
+        }
+      },
+      {
+        "notification.remove": {
+          "id": "N001"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>The notification below uses a button element. You can specify actions to execute when the user clicks the button.</p>"
+        }
+      },
+      {
+        "notification.create": {
+          "id": "N002",
+          "title": "Button notification",
+          "buttonCommands": [
+            {
+              "say": {
+                "label": "<p>You clicked the button</p>"
+              }
+            },
+            {
+              "notification.remove": {
+                "id": "N002"
+              }
+            }
+          ],
+          "buttonLabel": "Click me"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>The next notification shows the usage of a timer element inside a notification</p>"
+        }
+      },
+      {
+        "notification.create": {
+          "title": "Timer notification",
+          "timerCommands": [
+            {
+              "notification.remove": {
+                "id": "N003"
+              }
+            }
+          ],
+          "timerDuration": "3s",
+          "id": "N003"
+        }
+      },
+      {
+        "notification.create": {
+          "timerCommands": [
+            {
+              "notification.remove": {
+                "id": "N004"
+              }
+            }
+          ],
+          "timerDuration": "3s-5s",
+          "id": "N004"
+        }
+      },
+      {
+        "say": {
+          "label": "<p>Click to go to the next page</p>",
+          "mode": "pause"
+        }
+      },
+      {
+        "goto": {
+          "target": "099-End"
+        }
+      }
     ]
   },
   "modules": {
-    "audio": {}
+    "audio": {},
+    "notification": {}
   },
   "galleries": {
     "c150a13b-1d79-412d-8fbe-6f609b77962c": {
