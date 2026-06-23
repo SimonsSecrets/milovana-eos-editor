@@ -160,6 +160,11 @@ encoded in the source (`&#39;` for `'`).
 `<strong>`/`<em>` for emphasis instead. Stick to the tags listed above; only those are known to
 render.
 
+**Do not use `<a>` links** — anchor tags are **not** rendered (confirmed 2026-06-23): Milovana
+shows the raw `<a href='…'>…</a>` text to the player. EOS has no "open URL" action, so a clickable
+link is not possible. Present a URL/email as plain text the player can read and type — e.g. bold
+colored text: `<strong><span style="color: #1976d2">ko-fi.com/simonssecrets</span></strong>`.
+
 **Only `color:` survives in `style=""`** — layout CSS is stripped. `display:inline-block` and
 `text-align` inside a span were **confirmed stripped on 2026-06-23**, so the common "center the
 block as a group while left-aligning its lines" trick does **not** work. A `say` has one
@@ -347,6 +352,15 @@ own list of commands.
 | `timerCommands`  | array   | Optional. A nested array of action objects run when the timer fires. |
 
 A common pattern is to have the button/timer commands remove the notification by its own `id`.
+
+**Notifications persist across page switches** until explicitly removed — unlike on-screen `say`
+text, a page change does **not** clear them. A notification created on one page therefore lingers
+onto every following page until a `notification.remove` runs. When authoring raw JSON, remember to
+remove them. The **`Build-Tease.ps1` generator handles this automatically**: it treats a
+notification as scoped to the page that created it and injects `notification.remove` whenever the
+player navigates to a page that does not re-declare the same `id` (a destination that re-declares
+it keeps it, so a self-loop does not flicker). So in the DSL you just place `[NOTIFICATION]` on the
+pages where the button should appear and the generator clears it on exit for you.
 
 ```json
 { "notification.create": { "id": "N001", "title": "Notification title" } }

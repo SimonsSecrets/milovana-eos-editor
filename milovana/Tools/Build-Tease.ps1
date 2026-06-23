@@ -23,6 +23,10 @@
   a block attaches to it; the page's [GOTO]/[END] applies after the last block; [GOTO] to the page's
   own key = loop. Image filenames resolve to locators via asset-map.json.
 
+  Notifications are page-scoped automatically: a post-assembly pass injects notification.remove for
+  every notification a page created when navigating to a page that does NOT re-declare that same id
+  (Milovana otherwise keeps a notification visible across page switches until explicitly removed).
+
   Diagnostics: every problem found while parsing/building is reported with the offending script.md
   line number (see the "Diagnostics" section printed at the end). Hard ERRORs (bad/missing image
   locators, missing or non-numeric params, structural problems, unresolved nav targets, missing
@@ -84,9 +88,22 @@ function WarnUnknownParams($kw, $p, $line) {
         if ($allowed -notcontains $k) { Warn $line "[$kw] unknown parameter '$k=' (expected one of: $($allowed -join ', '))" }
     }
 }
+# A parameter segment with no '=' (e.g. the typo "mode-pause" instead of "mode=pause") is silently
+# dropped by ParseParams, so the intended param would vanish with no effect and no trace. Flag each
+# such malformed segment from the RAW param string (ParseParams has already discarded it by the time
+# WarnUnknownParams sees the hash), tying it to the offending script.md line.
+function WarnMalformedParams($kw, $rawParams, $line) {
+    if ([string]::IsNullOrWhiteSpace($rawParams)) { return }
+    foreach ($seg in ($rawParams -split ',')) {
+        $s = $seg.Trim()
+        if ($s -and $s.IndexOf('=') -lt 0) {
+            Warn $line "[$kw] malformed parameter '$s' (expected name=value, e.g. 'mode=pause'); it was ignored"
+        }
+    }
+}
 # Tags Milovana actually renders in a say label (everything else is silently dropped on Milovana,
 # e.g. <color=…> / <font> / <b> / <code>). Flag the rest so a typo'd format is caught at build time.
-$script:sayAllowedTags = @("p", "br", "strong", "em", "u", "span", "a")
+$script:sayAllowedTags = @("p", "br", "strong", "em", "u", "span")
 function WarnUnsupportedSayTags($payload, $line) {
     $seen = @{}
     foreach ($mm in [regex]::Matches($payload, '</?\s*([A-Za-z][A-Za-z0-9]*)')) {
@@ -148,6 +165,7 @@ function aAudioN($bpm, $loops, $line) {
 function aNotif($id, $lbl, $tgt) {
     [ordered]@{ "notification.create" = [ordered]@{ id = $id; buttonLabel = $lbl; buttonCommands = @( (aGoto $tgt) ) } }
 }
+function aNotifRemove($id) { [ordered]@{ "notification.remove" = [ordered]@{ id = $id } } }
 function aChoice($opts) {
     $o = @()
     foreach ($x in $opts) { $o += [ordered]@{ label = $x.l; commands = @( (aGoto $x.t) ); color = $x.c } }
@@ -170,15 +188,25 @@ function PreserveSpacing($line) {
     [regex]::Replace($line, ' {2,}', { param($m) "&nbsp;" * $m.Value.Length })
 }
 # A [SAY] may span several script.md lines (the closing ']' on its own line); each source line
-# becomes one visual line within the *single* say. Joining with <br> keeps it one say action rather
-# than splitting into several. Blank (whitespace-only) lines -- including the empty segment before
-# the closing ']' -- are dropped. Leading, interior AND trailing space/tab runs are kept (as &nbsp;
-# via PreserveSpacing), so padding at the END of a line aligns just like leading indentation. Note:
-# the FIRST line's leading whitespace is eaten by the [SAY: \s* marker, so indent via the others.
+# becomes one visual line within the *single* say, joined with <br>. INTERIOR blank lines are kept:
+# an authored empty line becomes an extra <br> (i.e. a visible empty line for vertical spacing), and
+# two blank lines give two -- so spacing is authorable. Only LEADING/TRAILING blank lines are trimmed
+# -- in particular the empty segment created by the closing ']' on its own line, which is structural,
+# not authored content. Leading, interior AND trailing space/tab runs on non-blank lines are kept (as
+# &nbsp; via PreserveSpacing), so padding at the END of a line aligns just like leading indentation.
+# Note: the FIRST line's leading whitespace is eaten by the [SAY: \s* marker, so indent via the others.
 function NormalizeSay($payload) {
     if ($payload -notmatch "`n") { return (PreserveSpacing $payload) }
+    $raw = @($payload -split "`n")
+    # Blank-ness is decided on the RAW line (before PreserveSpacing, which would turn a spaces-only
+    # line into &nbsp; and so no longer read as blank). Trim only the outer blank lines; keep inner.
+    $start = 0; $end = $raw.Count - 1
+    while ($start -le $end -and $raw[$start].Trim() -eq "") { $start++ }
+    while ($end -ge $start -and $raw[$end].Trim() -eq "") { $end-- }
     $parts = @()
-    foreach ($ln in ($payload -split "`n")) { if ($ln.Trim() -ne "") { $parts += (PreserveSpacing $ln) } }
+    for ($i = $start; $i -le $end; $i++) {
+        if ($raw[$i].Trim() -eq "") { $parts += "" } else { $parts += (PreserveSpacing $raw[$i]) }
+    }
     $parts -join "<br>"
 }
 
@@ -365,6 +393,7 @@ foreach ($rec in (CoalesceMarkers $allLines)) {
     if ($known -notcontains $kw) { Warn $lineNo "unknown keyword '[$kw]'; line ignored"; continue }
     $params = $m.Groups[2].Value
     $payload = $m.Groups[3].Value
+    WarnMalformedParams $kw $params $lineNo
     if ($kw -eq "PAGE") {
         $newKey = $payload.Trim()
         if (-not $newKey) { Err $lineNo "[PAGE] with an empty key" }
@@ -389,6 +418,69 @@ foreach ($rec in (CoalesceMarkers $allLines)) {
 if ($cur) { DispatchPage $cur $curItems }
 
 if ($order.Count -eq 0) { Err 0 "no [PAGE] markers found in script.md" }
+
+# ---- notification scoping: auto-remove page-scoped notifications on navigation ----
+# Milovana notifications persist across page switches until explicitly removed (there is no implicit
+# clear on a page change). Treat each notification as scoped to the page that created it: whenever the
+# player navigates to a page that does NOT re-declare the same id, emit a notification.remove just
+# before that navigation. A destination that re-declares the id keeps it (no remove), so a self-loop
+# like tease-16 doesn't flicker. Without this, a notification (e.g. "Supported Devices" on 003-need,
+# or the climax/mercy buttons in the tease-16 loop) would linger onto later pages.
+$pageNotifs = @{}
+foreach ($pn in @($pages.Keys)) {
+    $ids = New-Object System.Collections.Generic.List[string]
+    foreach ($act in $pages[$pn]) {
+        if ($act.Contains("notification.create")) { $ids.Add([string]$act["notification.create"]["id"]) }
+    }
+    $pageNotifs[$pn] = $ids
+}
+# The navigation target of a command list is its last goto (aGoto/aNotif emit exactly one).
+function NotifTarget($commands) {
+    $t = $null
+    foreach ($c in $commands) { if ($c.Contains("goto")) { $t = [string]$c["goto"]["target"] } }
+    $t
+}
+# notification.remove actions for each created id the destination page does NOT re-declare. A null /
+# unknown / wildcard target re-declares nothing, so all are removed (acceptable; no such case here).
+function RemovesFor($createdIds, $targetPage) {
+    $r = @()
+    if ($createdIds.Count -eq 0) { return $r }
+    $keep = if ($targetPage -and $pageNotifs.ContainsKey($targetPage)) { $pageNotifs[$targetPage] } else { @() }
+    foreach ($id in $createdIds) { if ($keep -notcontains $id) { $r += (aNotifRemove $id) } }
+    $r
+}
+foreach ($pn in @($pages.Keys)) {
+    $created = $pageNotifs[$pn]
+    if ($created.Count -eq 0) { continue }
+    $newActions = @()
+    foreach ($act in $pages[$pn]) {
+        if ($act.Contains("goto")) {
+            $newActions += (RemovesFor $created ([string]$act["goto"]["target"]))
+            $newActions += $act
+        }
+        elseif ($act.Contains("end")) {
+            $newActions += (RemovesFor $created $null)   # tease ends -> clear everything this page made
+            $newActions += $act
+        }
+        elseif ($act.Contains("choice")) {
+            foreach ($opt in $act["choice"]["options"]) {
+                $tgt = NotifTarget $opt["commands"]
+                $opt["commands"] = @(RemovesFor $created $tgt) + @($opt["commands"])
+            }
+            $newActions += $act
+        }
+        elseif ($act.Contains("notification.create")) {
+            # $created includes this button's own id plus any sibling notifs on the page, so a click
+            # removes itself and any sibling the destination doesn't continue.
+            $nc = $act["notification.create"]
+            $tgt = NotifTarget $nc["buttonCommands"]
+            $nc["buttonCommands"] = @(RemovesFor $created $tgt) + @($nc["buttonCommands"])
+            $newActions += $act
+        }
+        else { $newActions += $act }
+    }
+    $pages[$pn] = $newActions
+}
 
 # ---- assemble (reuse stub galleries/files/editor) ----
 $teaseJsonPath = "$base\tease.json"

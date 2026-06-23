@@ -51,7 +51,7 @@ The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/
 [SAY (mode=autoplay): The same metronome you already know moves a <strong>real machine</strong>, in real time.]
 [SAY (mode=custom, duration=1s): It quickens,]
 [SAY (mode=custom, duration=1s): it slows,]
-[SAY (mode=custom, duration=5s): it lingers and it drives...]
+[SAY (mode=custom, duration=4s): it lingers and it drives...]
 [SAY (mode=autoplay): ... and all you have to do is lie back and let <strong>me</strong> set the pace.]
 [SAY (mode=autoplay): <em>Truly hands-free.</em> Slow and teasing, or relentless — tonight every rhythm is mine to choose, and yours to feel.]
 [CHOICE]
@@ -60,7 +60,7 @@ The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/
 [PAGE: 003-need]  What you'll need  (no [IMAGE] = holds the previous image)
 [SAY (mode=pause): It truly does sound <em>amazing</em>, doesn't it?]
 [SAY (mode=autoplay): Before we begin, there are a few things you will need:]
-[SAY:  🔌 <strong>A fucking machine</strong> — see Supported Devices on the right. 
+[SAY: 🔌 <strong>A fucking machine</strong> — see 'Supported Devices' on the right. 
                                                 💻 <strong>The HismithController app</strong> — Windows PC only (download instructions come later).
                   📶 <strong>Bluetooth</strong> — your PC must be able to connect to Bluetooth devices.
 💦 <strong>Plenty of lube</strong> — more than you think.                                  
@@ -77,10 +77,10 @@ The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/
 
 [PAGE: 004-menu]  Menu
 [IMAGE: intro-solo-sensual/31517085_005_17db.jpg]
-[SAY (mode=pause): So… shall we begin?]
 [SAY: If this is your first time here, you will want to start with the <strong><span style="color: #1976d2">Application Setup</span></strong>, where your will install, pair and test your machine.
 Then, move on to the <strong><span style="color: #2e7d32">Tutorial</span></strong> — a short, gentle run so you can feel how it responds.]
 [SAY: When you think you are ready for it, you can move on to the real thing — <strong><span style="color: #d81b60">The Fucking Machine Tease</span></strong>.]
+[SAY: More info on the model, the creator of this tease and support can be found in the <strong><span style="color: #6a1b9a">About</span></strong> section.]
 [CHOICE]
 [OPTION (target=setup-1, color=#1976d2): ⚙️ Application Setup]
 [OPTION (target=tut-1, color=#2e7d32): 🎓 Tutorial]
@@ -104,7 +104,7 @@ Then, move on to the <strong><span style="color: #2e7d32">Tutorial</span></stron
 [PAGE: setup-2]  Get the app & your machine ready
 [IMAGE: setup-solo/66348606_015_4d51.jpg]
 [SAY (mode=pause): First, a little preparation.]
-[SAY: 1. <strong>Download HismithController</strong> from the <a href='https://github.com/SimonsSecrets/hismith-bt-controller/releases'>GitHub releases page</a>.
+[SAY: 1. <strong>Download HismithController</strong> from the GitHub releases page: <strong><span style="color: #1976d2">github.com/SimonsSecrets/hismith-bt-controller/releases</span></strong>
 2. <strong>Set up your Hismith Pro 1</strong> — mount it securely, attach your accessory, and <strong>turn it on</strong> so it's ready to pair over Bluetooth.
                     No need to point it at yourself yet — just have it switched on and within reach.
 3. Start the <strong>HismithController</strong> app
@@ -115,7 +115,7 @@ Then, move on to the <strong><span style="color: #2e7d32">Tutorial</span></stron
 
 [PAGE: setup-3]  Connect over Bluetooth
 [IMAGE: setup-solo/66348606_022_5905.jpg]
-[SAY (mode-pause): Now let's introduce them to each other.]
+[SAY (mode=pause): Now let's introduce them to each other.]
 [SAY: 1. If this is the first time you run the app, click 'Get started'.
 2. On the connection screen, click 'Scan for devices'.
 3. When your Hismith appears in the list, <strong>tap to select it</strong>, then click 'Connect'.
@@ -137,7 +137,7 @@ Then, move on to the <strong><span style="color: #2e7d32">Tutorial</span></stron
 
 [PAGE: setup-5]  PC sound configuration
 [IMAGE: setup-solo/92231232_025_172c.jpg]
-[SAY (mode-pause): Now the part that makes this special — letting the metronome drive it.]
+[SAY (mode=pause): Now the part that makes this special — letting the metronome drive it.]
 [SAY: The app listens to whatever sound your PC is playing, so first make sure it can hear sounds coming from this tease:]
 [SAY: 🔊 Play this tease <strong>on the same Windows PC</strong> the app is running on.
 🔉 Turn your <strong>volume up</strong> and make sure you're <strong>not muted</strong>.
@@ -206,51 +206,51 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [METRONOME (bpm=20, secs=45)]
 [SAY: <em>There it is. Feel me start to move.</em>]
 [SAY: <em>Slow… easy… there's nowhere to be but right here.</em>]
-[SAY: <em>Don't tense up. Let it glide. Let me do all the work.</em>]
+[SAY: <em>Don't tense up. Let it <span style="color: #f48fb1">glide</span>. Let me do all the work.</em>]
 [PAUSE (secs=12)]
-[SAY: <em>…and stop. Feel that sudden emptiness? Hold onto that wanting for me.</em>]
+[SAY: <em>…and stop. Feel that sudden <span style="color: #4fc3f7">emptiness</span>? Hold onto that wanting for me.</em>]
 [GOTO: tut-4]
 
 [PAGE: tut-4]  Settling into a rhythm
 [IMAGE: tutorial-solo/73573492_002_8fd7.jpg]
 [METRONOME (bpm=40, secs=50)]
 [SAY: <em>Here I come again — a little more sure of myself this time.</em>]
-[SAY: <em>Breathe with it. In… and out… let every stroke sink in a little deeper.</em>]
+[SAY: <em>Breathe with it. In… and out… let every stroke sink in a little <span style="color: #f48fb1">deeper</span>.</em>]
 [SAY: <em>See how easy this is? You don't have to do a thing. Just feel.</em>]
 [PAUSE (secs=12)]
-[SAY: <em>Quiet again. I love teasing you like this — wanting just a little more than I'm giving.</em>]
+[SAY: <em><span style="color: #4fc3f7">Quiet</span> again. I love teasing you like this — wanting just a little more than I'm giving.</em>]
 [GOTO: tut-5]
 
 [PAGE: tut-5]  Teasing you
 [IMAGE: tutorial-solo/73573492_003_bc6d.jpg]
 [METRONOME (bpm=50, secs=30)]
-[SAY: <em>Mmm, there. Just enough to keep you needing it.</em>]
+[SAY: <em>Mmm, there. Just enough to keep you <span style="color: #f48fb1">needing</span> it.</em>]
 [PAUSE (secs=15)]
 [SAY: <em>And gone again. Patience. I decide when you get more.</em>]
 [IMAGE: tutorial-solo/73573492_008_e504.jpg]
 [METRONOME (bpm=50, secs=30)]
 [SAY: <em>Back so soon? You're starting to crave the beat now, aren't you.</em>]
 [PAUSE (secs=15)]
-[SAY: <em>Feel how much you miss it the instant it stops. That ache is the whole point.</em>]
+[SAY: <em>Feel how much you miss it the instant it stops. That <span style="color: #4fc3f7">ache</span> is the whole point.</em>]
 [GOTO: tut-6]
 
 [PAGE: tut-6]  A taste of what's coming
 [IMAGE: tutorial-solo/73573492_010_a1a9.jpg]
 [METRONOME (bpm=60, secs=40)]
 [SAY: <em>Now… let me show you just a little more.</em>]
-[SAY: <em>Feel me quicken? A hint of how relentless I can be when I really want you.</em>]
+[SAY: <em>Feel me <span style="color: #fb8c00">quicken</span>? A hint of how relentless I can be when I really want you.</em>]
 [SAY: <em>That's it — let go, let it build…</em>]
 [IMAGE: tutorial-solo/31517085_015_7eac.jpg]
 [METRONOME (bpm=80, secs=8)]
-[SAY: <em>…faster — feel that? That's barely the beginning.</em>]
+[SAY: <em>…<span style="color: #fb8c00">faster</span> — feel that? That's barely the beginning.</em>]
 [PAUSE (secs=18)]
-[SAY: <em>…and that's where I'll leave you.</em>]
-[SAY: <em>Aching, wet, and wanting — exactly how you should be before the real thing.</em>]
-[SAY (mode=pause): <em>Everything you just felt? That was me being gentle. If you dare, start the real tease and find out what happens when I'm not.</em>]
+[SAY (mode=autoplay): <em>…and that's where I'll leave you.</em>]
+[SAY (mode=pause): <em><span style="color: #4fc3f7">Aching</span>, wet, and wanting — exactly how you should be before the real thing.</em>]
 [GOTO: tut-7]
 
 [PAGE: tut-7]  Ready for the real thing
 [IMAGE: tutorial-solo/73573492_004_55a3.jpg]
+[SAY (mode=autoplay): <em>Everything you just felt? That was me being gentle. If you dare, start the real tease and find out what happens when I'm not.</em>]
 [SAY: So… do you think you can handle some real fucking now?]
 [CHOICE]
 [OPTION (target=tease-1, color=#d81b60): 🔥 Start The Fucking Machine Tease]
@@ -319,7 +319,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [PAGE: tease-8]  Hands off
 [IMAGE: tease-solo-build/97162788_111_d82d.jpg]
 [PAUSE (secs=12)]
-[SAY: <em>Good. Now hold perfectly still for me.</em>]
+[SAY: <em>Good. Now hold perfectly <span style="color: #4fc3f7">still</span> for me.</em>]
 [SAY: <em>Hands off. From this moment you don't move — I do. All you have to do is feel, and obey.</em>]
 [SAY: <em>Here we go.</em>]
 [GOTO: tease-9]
@@ -329,7 +329,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [METRONOME (bpm=20, secs=45)]
 [SAY: <em>There. Feel me take that very first stroke.</em>]
 [SAY: <em>Slow… deliberate… I'm in no hurry with you tonight.</em>]
-[SAY: <em>Breathe out for me. Let your whole body go soft and heavy.</em>]
+[SAY: <em>Breathe out for me. Let your whole body go <span style="color: #f48fb1">soft</span> and heavy.</em>]
 [IMAGE: tease-solo-build/97162788_126_1fb3.jpg]
 [METRONOME (bpm=30, secs=45)]
 [SAY: <em>A little more now. Let it open you up.</em>]
@@ -337,13 +337,13 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [SAY: <em>Mmm… you're already starting to give in, aren't you.</em>]
 [SAY: <em>That's it. No thinking. Just me, moving you.</em>]
 [PAUSE (secs=10)]
-[SAY: <em>…and still. Feel how much you already miss me?</em>]
+[SAY: <em>…and still. Feel how much you already <span style="color: #4fc3f7">miss</span> me?</em>]
 [IMAGE: tease-solo-build/97162788_076_5e12.jpg]
 [METRONOME (bpm=50, secs=50)]
 [SAY: <em>There I am again.</em>]
 [SAY: <em>Settle into it — this is mine to decide now, not yours.</em>]
 [SAY: <em>Feel how easy it is to stop holding on?</em>]
-[SAY: <em>Good. Let every stroke pull you a little deeper under.</em>]
+[SAY: <em>Good. Let every stroke pull you a little <span style="color: #f48fb1">deeper</span> under.</em>]
 [SAY: <em>God, I love this — feeling you give yourself up to me, a little more with every stroke.</em>]
 [IMAGE: tease-solo-build/97162788_065_bfb3.jpg]
 [METRONOME (bpm=50, secs=30)]
@@ -355,7 +355,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [PAGE: tease-10]  Act II · The first rise
 [IMAGE: partner-build/47702997_013_2f18.jpg]
 [METRONOME (bpm=60, secs=40)]
-[SAY: <em>Now we climb. Stay with me.</em>]
+[SAY: <em>Now we <span style="color: #fb8c00">climb</span>. Stay with me.</em>]
 [SAY: <em>Feel me pick up the pace, bit by bit.</em>]
 [SAY: <em>No more easing in — I want more of you now.</em>]
 [SAY: <em>And I want this for me too — this is where I start taking my pleasure from you.</em>]
@@ -367,7 +367,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [SAY: <em>Feel what that does to me — your surrender is what tips me over.</em>]
 [IMAGE: partner-build/47702997_021_a776.jpg]
 [METRONOME (bpm=100, secs=30)]
-[SAY: <em>Harder. You can take it — I know exactly what you can take.</em>]
+[SAY: <em><span style="color: #fb8c00">Harder</span>. You can take it — I know exactly what you can take.</em>]
 [SAY: <em>Don't tense up — open up, and let me in deeper.</em>]
 [SAY: <em>Mmm… you feel so good I can barely keep myself slow.</em>]
 [IMAGE: partner-hard/47702997_014_214e.jpg]
@@ -375,7 +375,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [SAY: <em>There it is. This is what you came back for.</em>]
 [SAY: <em>Don't fight it. Let me fuck you exactly as hard as I please.</em>]
 [SAY: <em>Feel me filling you, over and over.</em>]
-[SAY: <em>Yes — just like that. You're mine now, completely.</em>]
+[SAY: <em>Yes — just like that. You're <span style="color: #e53935">mine</span> now, completely.</em>]
 [SAY: <em>Stay with it… stay right there with me…</em>]
 [SAY: <em>Yes — this is exactly what I wanted, and I'm nowhere near satisfied.</em>]
 [PAUSE (secs=8)]
@@ -387,15 +387,15 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [METRONOME (bpm=40, secs=40)]
 [SAY: <em>Slow again. Feel your heart pounding? I did that to you.</em>]
 [SAY: <em>You're already mine — we both know it now.</em>]
-[SAY: <em>Easy strokes… just enough to keep you simmering for me.</em>]
+[SAY: <em>Easy strokes… just enough to keep you <span style="color: #f48fb1">simmering</span> for me.</em>]
 [SAY: <em>Mmm… I could watch you ache like this for hours. It's delicious to me.</em>]
 [PAUSE (secs=12)]
-[SAY: <em>Look at you — hips chasing nothing, aching for a rhythm I've taken away.</em>]
+[SAY: <em>Look at you — hips chasing nothing, <span style="color: #4fc3f7">aching</span> for a rhythm I've taken away.</em>]
 [IMAGE: partner-tender/25952977_043_5cbb.jpg]
 [METRONOME (bpm=50, secs=30)]
 [SAY: <em>Shh. You'll get it back when I decide you've earned it.</em>]
 [SAY: <em>There — a little taste. Don't go getting greedy.</em>]
-[SAY: <em>See how good you are for me? God, I love you needy like this.</em>]
+[SAY: <em>See how good you are for me? God, I love you <span style="color: #f48fb1">needy</span> like this.</em>]
 [PAUSE (secs=10)]
 [SAY: <em>Not yet. A little wanting is so good for you.</em>]
 [GOTO: tease-12]
@@ -410,7 +410,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [METRONOME (bpm=120, secs=8)]
 [IMAGE: partner-hard/88033482_060_eaf4.jpg]
 [METRONOME (bpm=150, secs=10)]
-[SAY: <em>…harder — all the way — now take it!</em>]
+[SAY: <em>…<span style="color: #e53935">harder</span> — all the way — now take it!</em>]
 [PAUSE (secs=6)]
 [SAY: <em>…and nothing. Again.</em>]
 [IMAGE: partner-hard/88033482_063_da8c.jpg]
@@ -420,7 +420,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [METRONOME (bpm=90, secs=8)]
 [IMAGE: partner-hard/88033482_070_b7c5.jpg]
 [METRONOME (bpm=120, secs=8)]
-[SAY: <em>Don't you dare come yet — I haven't said you can.</em>]
+[SAY: <em>Don't you dare <span style="color: #e53935">come</span> yet — I haven't said you can.</em>]
 [IMAGE: partner-hard/88033482_076_8630.jpg]
 [METRONOME (bpm=150, secs=10)]
 [SAY: <em>God, you feel good when you fight it.</em>]
@@ -447,7 +447,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [METRONOME (bpm=120, secs=8)]
 [IMAGE: partner-hard/48437305_069_68d4.jpg]
 [METRONOME (bpm=150, secs=10)]
-[SAY: <em>—everything you have — give it all to me!</em>]
+[SAY: <em>—<span style="color: #e53935">everything</span> you have — give it all to me!</em>]
 [SAY: <em>Yes — all of it — I want it.</em>]
 [PAUSE (secs=6)]
 [SAY: <em>…and stop. Good. So good for me.</em>]
@@ -459,27 +459,27 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [SAY: <em>Now I want you slow. Achingly slow.</em>]
 [SAY: <em>Feel every single inch.</em>]
 [SAY: <em>There's no rushing what I'm going to do to you.</em>]
-[SAY: <em>I want to savour every inch — this is for me too, make no mistake.</em>]
+[SAY: <em>I want to <span style="color: #f48fb1">savour</span> every inch — this is for me too, make no mistake.</em>]
 [IMAGE: partner-tender/62413076_009_a501.jpg]
 [METRONOME (bpm=50, secs=30)]
-[SAY: <em>Closer now… let it build… right up to the edge…</em>]
+[SAY: <em>Closer now… let it build… right up to the <span style="color: #f48fb1">edge</span>…</em>]
 [SAY: <em>Almost — almost — don't you dare tip over without me.</em>]
 [SAY: <em>I'm right there aching with you — I want us teetering together.</em>]
 [PAUSE (secs=12)]
 [SAY: <em>…and stop. Not yet. Not until I say so.</em>]
-[SAY: <em>Stay right there, trembling on the edge. I love you most like this.</em>]
+[SAY: <em>Stay right there, <span style="color: #4fc3f7">trembling</span> on the edge. I love you most like this.</em>]
 [GOTO: tease-14]
 
 [PAGE: tease-14]  Act VI · The climb
 [IMAGE: partner-build/47702997_022_a147.jpg]
 [METRONOME (bpm=100, secs=40)]
-[SAY: <em>No more mercy now. We climb — and this time we don't come back down.</em>]
+[SAY: <em>No more mercy now. We <span style="color: #fb8c00">climb</span> — and this time we don't come back down.</em>]
 [SAY: <em>Feel me settle into a harder rhythm.</em>]
 [SAY: <em>Match your breath to it… there.</em>]
 [SAY: <em>God, I've wanted this — wanted you — all night long.</em>]
 [IMAGE: partner-hard/25952977_049_5587.jpg]
 [METRONOME (bpm=120, secs=50)]
-[SAY: <em>Harder. Feel me taking what's mine.</em>]
+[SAY: <em><span style="color: #e53935">Harder</span>. Feel me taking what's mine.</em>]
 [SAY: <em>Deeper now, with every single stroke.</em>]
 [SAY: <em>You couldn't stop me even if you wanted to — and you don't.</em>]
 [SAY: <em>Give in to it. Give in to me.</em>]
@@ -561,6 +561,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [PAUSE (secs=20)]
 [SAY: <em>And… rest. You were perfect.</em>]
 [SAY: <em>Take all the time you need to come back to me. You did so beautifully — I'm proud of you, and you should be too.</em>]
+[SAY (mode=pause): Thank you for playing! <strong><span style="color: #f06292"><3</span></strong>]
 [END]
 
 [PAGE: tease-18]  Outro · Gentle aftercare  (reached by the mercy button)
@@ -572,6 +573,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [SAY: <em>No disappointment here — none at all. You gave me so much tonight, and I loved every second of it.</em>]
 [SAY: <em>Breathe. Drink some water. Be gentle with yourself, the way I'd be with you.</em>]
 [SAY: <em>You were wonderful. Come back to me whenever you want more.</em>]
+[SAY (mode=pause): Thank you for playing! <strong><span style="color: #f06292"><3</span></strong>]
 [END]
 
 ---
@@ -581,13 +583,17 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 [PAGE: about]  About this tease
 [IMAGE: about-hero/66348606_002_b404.jpg]
 [NOTIFICATION (id=devices-btn, target=devices): Supported Devices]
-[SAY: <strong>The model</strong> — every image in this tease is of <strong>Leah Gotti</strong>.
-          <strong>The app and the tease</strong> — HismithController and this tease were created by <strong>SimonsSecrets</strong>.
-                    ❤️ <strong>Enjoying it?</strong> If you'd like to support my work, you can buy me a coffee at <a href='https://ko-fi.com/simonssecrets'>ko-fi.com/simonssecrets</a>. It genuinely helps.
-                    💬 <strong>Found a bug, or want your machine supported?</strong> I'd love to help. 
-                     Please get in touch at <a href='mailto:simonssecrets@gmail.com'>simonssecrets@gmail.com</a>. Your reports and requests are exactly what makes the next version better.
+[SAY: <strong>** About **</strong>
+
+🫦 <strong>The model</strong> — every image in this tease is of the lovely <strong>Leah Gotti</strong>.
+
+🧩 <strong>The app and the tease</strong> — HismithController and this tease were created by <strong>SimonsSecrets</strong>.
+
+❤️ <strong>Enjoying it?</strong> You can show support by buying me a coffee at <strong><span style="color: #1976d2">ko-fi.com/simonssecrets</span></strong>. It genuinely helps.
+
+💬 <strong>Found a bug, or want your machine supported?</strong> I'd love to help. 
+Please get in touch at <strong><span style="color: #1976d2">simonssecrets@gmail.com</span></strong>. Your reports and requests are exactly what makes the next version better.
 ]
-[SAY: Thank you for playing! <strong><span style="color: #f06292"><3</span></strong>]
 [CHOICE]
 [OPTION (target=004-menu, color=#5d4037): ↩️ Back to the menu]
 
@@ -602,6 +608,6 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 • <strong>Premium 4.0 Pro</strong>, <strong>Hismith Servo / Servok</strong>, <strong>Hismith Mini Pro</strong>
 •  The newer <strong>HISMITH S1 / S2 / S3</strong> and Premium 4.0 generation
 ]
-[SAY: 💬 <strong>Not sure, or don't see your machine?</strong> Just connect it once — the app reads the model when it pairs. And if your device isn't supported yet, get in touch at <a href='mailto:simonssecrets@gmail.com'>simonssecrets@gmail.com</a>.]
+[SAY: 💬 <strong>Not sure, or don't see your machine?</strong> Just connect it once — the app reads the model when it pairs. And if your device isn't supported yet, get in touch at <strong><span style="color: #1976d2">simonssecrets@gmail.com</span></strong>.]
 [CHOICE]
 [OPTION (target=004-menu, color=#5d4037): ↩️ Back to the menu]
