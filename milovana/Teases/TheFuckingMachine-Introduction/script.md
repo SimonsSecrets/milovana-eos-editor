@@ -40,35 +40,52 @@ The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/
 
 [PAGE: start]  Title / Hook
 [IMAGE: title-hero/97162788_004_9e2c_cropped.jpg]
-[SAY: <em>You've followed the metronome a hundred times.</em>]
+[SAY (mode=autoplay): <em>You've followed the metronome a hundred times.</em>]
 [SAY: <em>Tonight, you don't have to move at all. I'll take it from here.</em>]
 [GOTO: 002-pitch]
 
 [PAGE: 002-pitch]  The pitch
 [IMAGE: intro-solo-sensual/31517085_004_ca6a.jpg]
-[SAY: Welcome to <strong>The Fucking Machine Tease</strong>. I'm so glad you're here.]
-[SAY: Every tick of the metronome you're about to hear isn't meant for <em>you</em> — it's meant for the machine. The same milovana metronome you already know moves a real machine, in real time. It quickens, it slows, it lingers and it drives… and all you have to do is lie back and let me set the pace.]
-[SAY: Truly hands-free. Slow and teasing, or relentless — tonight every rhythm is mine to choose, and yours to feel.]
-[GOTO: 003-need]
+[SAY (mode=autoplay): Welcome to <strong>The Fucking Machine Tease</strong>. I'm so glad you're here.]
+[SAY (mode=autoplay): Every tick of the metronome you're about to hear isn't meant for <em>you</em> — it's meant for <em>the machine.</em>]
+[SAY (mode=autoplay): The same metronome you already know moves a <strong>real machine</strong>, in real time.]
+[SAY (mode=custom, duration=1s): It quickens,]
+[SAY (mode=custom, duration=1s): it slows,]
+[SAY (mode=custom, duration=5s): it lingers and it drives...]
+[SAY (mode=autoplay): ... and all you have to do is lie back and let <strong>me</strong> set the pace.]
+[SAY (mode=autoplay): <em>Truly hands-free.</em> Slow and teasing, or relentless — tonight every rhythm is mine to choose, and yours to feel.]
+[CHOICE]
+[OPTION (target=003-need, color=#f06292): That sounds amazing!]
 
 [PAGE: 003-need]  What you'll need  (no [IMAGE] = holds the previous image)
+[SAY (mode=pause): It truly does sound <em>amazing</em>, doesn't it?]
+[SAY (mode=autoplay): Before we begin, there are a few things you will need:]
+[SAY:    🔌 <strong>A fucking machine</strong> — see Supported Devices on the right. 
+                                                💻 <strong>The HismithController app</strong> — Windows PC only (download instructions come later).
+                  📶 <strong>Bluetooth</strong> — your PC must be able to connect to Bluetooth devices.
+💦 <strong>Plenty of lube</strong> — more than you think.                                  
+]
 [NOTIFICATION (id=devices-btn, target=devices): Supported Devices]
-[SAY: Before we begin, there are a few things I need you to have ready:]
-[SAY: 🔌 <strong>A compatible machine</strong> — see <strong>Supported Devices</strong> below.]
-[SAY: 💻 <strong>The HismithController app</strong> — Windows PC only (download instructions come later).]
-[SAY: 📶 <strong>Bluetooth</strong> — your PC must be able to connect to Bluetooth devices.]
-[SAY: 💦 <strong>Plenty of lube</strong> — more than you think.]
-[SAY: 💡 <strong>No machine? You can still play.</strong> If you don't have a machine, just follow me by hand — ease a dildo in and out in time with each tick of the metronome. It's not quite the hands-free surrender I'd love to give you, but every rhythm I choose is still yours to feel.]
+[SAY: <strong>No machine? You can still play.</strong>  Just ease a dildo in and out in time with each tick of the metronome. It's not quite the hands-free surrender I'd love to give you, but every rhythm I choose is still yours to feel.]
+[CHOICE]
+[OPTION (target=004-premenu, color=#f06292): This... is exciting]
+
+[PAGE: 004-premenu] Pre-menu
+[IMAGE: intro-solo-sensual/31517085_005_17db.jpg]
+[SAY (mode=pause): So… shall we begin?]
 [GOTO: 004-menu]
 
 [PAGE: 004-menu]  Menu
 [IMAGE: intro-solo-sensual/31517085_005_17db.jpg]
-[SAY: So… shall we begin?]
+[SAY (mode=pause): So… shall we begin?]
+[SAY: If this is your first time here, you will want to start with the <strong><span style="color: #1976d2">Application Setup</span></strong>, where your will install, pair and test your machine.
+Then, move on to the <strong><span style="color: #2e7d32">Tutorial</span></strong> — a short, gentle run so you can feel how it responds.]
+[SAY: When you think you are ready for it, you can move on to the real thing — <strong><span style="color: #d81b60">The Fucking Machine Tease</span></strong>.]
 [CHOICE]
-[OPTION (target=setup-1, color=#1976d2): ⚙️ Application Setup — install, pair, and test your machine]
-[OPTION (target=tut-1, color=#2e7d32): 🎓 Tutorial — a short, gentle run so you can feel how it responds]
-[OPTION (target=tease-1, color=#d81b60): 🔥 The Fucking Machine Tease — the real thing]
-[OPTION (target=about, color=#6a1b9a): ℹ️ About — the model, the app, and how to get in touch]
+[OPTION (target=setup-1, color=#1976d2): ⚙️ Application Setup]
+[OPTION (target=tut-1, color=#2e7d32): 🎓 Tutorial]
+[OPTION (target=tease-1, color=#d81b60): 🔥 The Fucking Machine Tease]
+[OPTION (target=about, color=#6a1b9a): ℹ️ About]
 
 ---
 

@@ -160,6 +160,14 @@ encoded in the source (`&#39;` for `'`).
 `<strong>`/`<em>` for emphasis instead. Stick to the tags listed above; only those are known to
 render.
 
+**Only `color:` survives in `style=""`** — layout CSS is stripped. `display:inline-block` and
+`text-align` inside a span were **confirmed stripped on 2026-06-23**, so the common "center the
+block as a group while left-aligning its lines" trick does **not** work. A `say` has one
+alignment (`align`: `left`/`center`/`right`) applied to the whole paragraph; for a left-aligned
+list use `align: "left"`. There is no way to both center a say as a group *and* left-align its
+internal lines. Manual indentation/columns are still possible with non-breaking spaces (`&nbsp;`),
+but proportional fonts make precise alignment unreliable.
+
 **Non-blocking after media:** a `say` placed after an `image` or `audio.play` runs immediately
 — it does not wait for the image transition or audio clip to finish.
 
