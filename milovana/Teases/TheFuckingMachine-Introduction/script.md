@@ -60,7 +60,7 @@ The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/
 [PAGE: 003-need]  What you'll need  (no [IMAGE] = holds the previous image)
 [SAY (mode=pause): It truly does sound <em>amazing</em>, doesn't it?]
 [SAY (mode=autoplay): Before we begin, there are a few things you will need:]
-[SAY:    🔌 <strong>A fucking machine</strong> — see Supported Devices on the right. 
+[SAY:  🔌 <strong>A fucking machine</strong> — see Supported Devices on the right. 
                                                 💻 <strong>The HismithController app</strong> — Windows PC only (download instructions come later).
                   📶 <strong>Bluetooth</strong> — your PC must be able to connect to Bluetooth devices.
 💦 <strong>Plenty of lube</strong> — more than you think.                                  
@@ -68,7 +68,7 @@ The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/
 [NOTIFICATION (id=devices-btn, target=devices): Supported Devices]
 [SAY: <strong>No machine? You can still play.</strong>  Just ease a dildo in and out in time with each tick of the metronome. It's not quite the hands-free surrender I'd love to give you, but every rhythm I choose is still yours to feel.]
 [CHOICE]
-[OPTION (target=004-premenu, color=#f06292): This... is exciting]
+[OPTION (target=004-premenu, color=#f06292): This is... exciting]
 
 [PAGE: 004-premenu] Pre-menu
 [IMAGE: intro-solo-sensual/31517085_005_17db.jpg]
@@ -97,69 +97,81 @@ Then, move on to the <strong><span style="color: #2e7d32">Tutorial</span></stron
 [SAY: This part is just setup. We'll get the app running, connect your machine, and check that it responds to the beat.]
 [SAY: <strong>You won't be using the machine on yourself yet</strong> — for now we're only watching to confirm it all works. The real fun comes later.]
 [SAY: Take your time. I'll be right here.]
-[GOTO: setup-2]
+[CHOICE]
+[OPTION (target=setup-2, color=#5d4037): ➡️ Continue]
+[OPTION (target=004-menu, color=#5d4037): ↩️ Back to the menu]
 
 [PAGE: setup-2]  Get the app & your machine ready
 [IMAGE: setup-solo/66348606_015_4d51.jpg]
-[SAY: First, a little preparation:]
-[SAY: 1. <strong>Download HismithController</strong> from the <a href='https://github.com/SimonsSecrets/hismith-bt-controller/releases'>GitHub releases page</a> and install it on your Windows PC.]
-[SAY: 2. <strong>Set up your Hismith Pro 1</strong> — mount it securely, attach your accessory, and <strong>turn it on</strong> so it's ready to pair over Bluetooth.]
-[SAY: No need to point it at yourself yet — just have it switched on and within reach.]
-[SAY: 💡 <strong>If Windows shows a blue 'Windows protected your PC' screen</strong>, that's normal for a small app like this one. Click 'More info', then 'Run anyway' to continue.]
-[GOTO: setup-3]
+[SAY (mode=pause): First, a little preparation.]
+[SAY: 1. <strong>Download HismithController</strong> from the <a href='https://github.com/SimonsSecrets/hismith-bt-controller/releases'>GitHub releases page</a>.
+2. <strong>Set up your Hismith Pro 1</strong> — mount it securely, attach your accessory, and <strong>turn it on</strong> so it's ready to pair over Bluetooth.
+                    No need to point it at yourself yet — just have it switched on and within reach.
+3. Start the <strong>HismithController</strong> app
+💡 <strong>If Windows shows a blue 'Windows protected your PC' screen</strong>, that's normal for a small app like this one. Click 'More info', then 'Run anyway' to continue.
+]
+[CHOICE]
+[OPTION (target=setup-3, color=#5d4037): ➡️ Continue]
 
 [PAGE: setup-3]  Connect over Bluetooth
 [IMAGE: setup-solo/66348606_022_5905.jpg]
-[SAY: Now let's introduce them to each other:]
-[SAY: 1. <strong>Start HismithController</strong> and click 'Get started'.]
-[SAY: 2. On the connection screen, click 'Scan for devices'.]
-[SAY: 3. When your Hismith appears in the list, <strong>tap to select it</strong>, then click 'Connect'.]
-[SAY: 🔍 <strong>Don't see your device?</strong> Make sure it's switched on, your PC's <strong>Bluetooth is enabled</strong>, and the machine isn't already paired to something else. Click 'Scan for devices' again to retry.]
+[SAY (mode-pause): Now let's introduce them to each other.]
+[SAY: 1. If this is the first time you run the app, click 'Get started'.
+2. On the connection screen, click 'Scan for devices'.
+3. When your Hismith appears in the list, <strong>tap to select it</strong>, then click 'Connect'.
+🔍 <strong>Don't see your device?</strong> Make sure it's switched on, your PC's <strong>Bluetooth is enabled</strong>, and the machine isn't already paired to something else. Click 'Scan for devices' again to retry.
 [SAY: Once you're connected, you'll land on the main screen with the <strong>Manual</strong> / <strong>Sound</strong> mode toggle at the top.]
-[GOTO: setup-4]
+[CHOICE]
+[OPTION (target=setup-4, color=#5d4037): ➡️ Continue]
 
 [PAGE: setup-4]  Test it in Manual mode
 [IMAGE: setup-solo/66348606_028_5c9e.jpg]
 [SAY: Let's make sure your machine listens to you first.]
-[SAY: 1. Make sure the <strong>Manual</strong> tab is selected.]
-[SAY: 2. Under <strong>Speed control</strong>, either type a value into <strong>SPEED (%)</strong> or tap one of the <strong>PRESETS</strong>.]
-[SAY: 3. Watch your machine — it should ramp smoothly up to the speed you set.]
+[SAY: 1. Make sure the <strong>Manual</strong> tab is selected.
+2. Under <strong>Speed control</strong>, either type a value into <strong>SPEED (%)</strong> or tap one of the <strong>PRESETS</strong>.
+3. Watch your machine — it should ramp smoothly up to the speed you set.
+]
 [SAY: Feel free to play with a few values. When you've seen it respond, bring it back down to a stop.]
-[SAY: 🔍 <strong>Machine not moving?</strong> Check it's still powered on and connected (the app shows a 'Connection lost' banner if it dropped — click 'Reconnect'). Try a higher value, and make sure it has somewhere to move freely.]
-[GOTO: setup-5]
+[CHOICE]
+[OPTION (target=setup-5, color=#5d4037): ➡️ Continue]
 
-[PAGE: setup-5]  Let the app hear the beat  (plays a 60 BPM metronome so the app has a beat to detect)
+[PAGE: setup-5]  PC sound configuration
 [IMAGE: setup-solo/92231232_025_172c.jpg]
+[SAY (mode-pause): Now the part that makes this special — letting the metronome drive it.]
+[SAY: The app listens to whatever sound your PC is playing, so first make sure it can hear sounds coming from this tease:]
+[SAY: 🔊 Play this tease <strong>on the same Windows PC</strong> the app is running on.
+🔉 Turn your <strong>volume up</strong> and make sure you're <strong>not muted</strong>.
+🎧 Keep the sound coming out of that PC — if your audio goes to a separate speaker or a Bluetooth headset, the app may not hear it.
+]
+[CHOICE]
+[OPTION (target=setup-5b, color=#5d4037): ➡️ Continue]
+
+[PAGE: setup-5b]  Let the app hear the beat  (plays a 60 BPM metronome so the app has a beat to detect)
 [AUDIO (bpm=60, loops=40)]
-[SAY: Now the part that makes this special — letting the metronome drive it.]
-[SAY: The app listens to whatever your PC is playing, so first make sure my voice can actually reach it:]
-[SAY: 🔊 Play this tease <strong>on the same Windows PC</strong> the app is running on.]
-[SAY: 🔉 Turn your <strong>volume up</strong> and make sure you're <strong>not muted</strong>.]
-[SAY: 🎧 Keep the sound coming out of that PC — if your audio goes to a separate speaker or a Bluetooth headset, the app may not hear it.]
-[SAY: Then switch to the <strong>Sound</strong> tab and let the metronome on this page play. Within a few seconds you should see the <strong>MUSIC</strong> readout showing a live <strong>bpm</strong>, and the <strong>visualizer bars</strong> moving in time with the beat.]
+[SAY: Switch to the <strong>Sound</strong> tab and let the metronome on this page play. Within a few seconds you should see the <strong>MUSIC</strong> readout showing a live <strong>bpm</strong>, and the <strong>visualizer bars</strong> moving in time with the beat.]
 [SAY: That means the app can hear me. Once you see the beat being picked up, you're ready for the next step.]
-[SAY: 🔍 <strong>No bpm, or the bars aren't moving?</strong> Turn the volume up, confirm the tease is playing on this PC, and check the app's audio is started (it shows 'Play some music to get started' when it's listening but hearing nothing).]
-[GOTO: setup-6]
+[CHOICE]
+[OPTION (target=setup-6, color=#5d4037): ➡️ Continue]
 
 [PAGE: setup-6]  Watch it move to the beat
 [IMAGE: setup-solo/92231232_040_1eaa.jpg]
 [AUDIO (bpm=60, loops=40)]
-[SAY: This is the moment everything's been leading to.]
-[SAY: 1. Press the <strong>play button</strong> in the centre of the visualizer.]
-[SAY: 2. Watch your machine fall into rhythm with the metronome — speeding up and easing off exactly with the beat.]
-[SAY: That's me, moving it. No hands, no effort from you — just the beat.]
-[SAY: While it's running, find the <strong>emergency stop</strong> — just press <strong>Alt+Space</strong> and everything halts instantly. Try it once now, so your fingers know exactly where it is before you ever need it. It works even when the app isn't the window you're looking at.]
-[SAY: When you've seen enough, press the button again to pause. <strong>Remember — still just watching for now.</strong>]
-[GOTO: setup-7]
+[SAY (mode=pause): This is the moment everything's been leading to.]
+[SAY (mode=autoplay): Press the <strong>play button</strong> in the centre of the visualizer.]
+[SAY (mode=autoplay): Watch your machine fall into rhythm with the metronome — speeding up and easing off exactly with the beat.]
+[SAY (mode=autoplay): That's me, moving it. No hands, no effort from you — just the beat.]
+[SAY: While it's running, find the <strong>emergency stop</strong> — just press <strong>Alt+Space</strong> and everything halts instantly. 
+Try it once now, so your fingers know exactly where it is before you ever need it.]
+[CHOICE]
+[OPTION (target=setup-7, color=#5d4037): ➡️ Continue]
 
 [PAGE: setup-7]  All set
 [IMAGE: setup-solo/92231232_032_968c.jpg]
 [SAY: <em>Perfect. Everything's working.</em>]
 [SAY: Your machine connects, it responds, and it moves to the beat. That's all we needed to see.]
-[SAY: When you're ready to actually <em>feel</em> it, head to the <strong>Tutorial</strong> — I'll guide you through your first real run, gently.]
+[SAY: When you're ready to actually <em>feel</em> it, head to the <strong>Tutorial</strong> — I'll guide you through your first real run... <em>gently, I promise</em>.]
 [CHOICE]
 [OPTION (target=tut-1, color=#2e7d32): 🎓 Continue to the Tutorial]
-[OPTION (target=tease-4, color=#d81b60): 🔥 Back to the tease]
 [OPTION (target=004-menu, color=#5d4037): ↩️ Back to the main menu]
 
 ---
@@ -234,7 +246,7 @@ Then, move on to the <strong><span style="color: #2e7d32">Tutorial</span></stron
 [PAUSE (secs=18)]
 [SAY: <em>…and that's where I'll leave you.</em>]
 [SAY: <em>Aching, wet, and wanting — exactly how you should be before the real thing.</em>]
-[SAY: <em>Everything you just felt? That was me being gentle. If you dare, start the real tease and find out what happens when I'm not.</em>]
+[SAY (mode=pause): <em>Everything you just felt? That was me being gentle. If you dare, start the real tease and find out what happens when I'm not.</em>]
 [GOTO: tut-7]
 
 [PAGE: tut-7]  Ready for the real thing
@@ -569,25 +581,27 @@ Then, move on to the <strong><span style="color: #2e7d32">Tutorial</span></stron
 [PAGE: about]  About this tease
 [IMAGE: about-hero/66348606_002_b404.jpg]
 [NOTIFICATION (id=devices-btn, target=devices): Supported Devices]
-[SAY: <strong>The Fucking Machine Tease</strong> turns the milovana metronome you already know into something hands-free — the same beat that would normally guide you instead drives a real machine in real time, through the HismithController app.]
-[SAY: <strong>The model</strong> — every image in this tease is of <strong>Leah Gotti</strong>.]
-[SAY: <strong>The app and the tease</strong> — HismithController and this tease were created by <strong>SimonsSecrets</strong>.]
-[SAY: ❤️ <strong>Enjoying it?</strong> If you'd like to support my work, you can buy me a coffee at <a href='https://ko-fi.com/simonssecrets'>ko-fi.com/simonssecrets</a>. It genuinely helps.]
-[SAY: 💬 <strong>Found a bug, or want your machine supported?</strong> This began with a single device — the <strong>Hismith Premium 3.0 Pro (AK-01 series)</strong> — and I'd love to support more. If something isn't working, or you'd like another fucking machine added, please get in touch at <a href='mailto:simonssecrets@gmail.com'>simonssecrets@gmail.com</a>. Your reports and requests are exactly what makes the next version better.]
-[SAY: Thank you for playing.]
+[SAY: <strong>The model</strong> — every image in this tease is of <strong>Leah Gotti</strong>.
+          <strong>The app and the tease</strong> — HismithController and this tease were created by <strong>SimonsSecrets</strong>.
+                    ❤️ <strong>Enjoying it?</strong> If you'd like to support my work, you can buy me a coffee at <a href='https://ko-fi.com/simonssecrets'>ko-fi.com/simonssecrets</a>. It genuinely helps.
+                    💬 <strong>Found a bug, or want your machine supported?</strong> I'd love to help. 
+                     Please get in touch at <a href='mailto:simonssecrets@gmail.com'>simonssecrets@gmail.com</a>. Your reports and requests are exactly what makes the next version better.
+]
+[SAY: Thank you for playing! <strong><span style="color: #f06292"><3</span></strong>]
 [CHOICE]
 [OPTION (target=004-menu, color=#5d4037): ↩️ Back to the menu]
 
 [PAGE: devices]  Will my machine work?
-[IMAGE: about-hero/66348606_002_b404.jpg]
-[SAY: HismithController speaks the <strong>legacy Hismith control protocol</strong>. Whether a machine works comes down to the control box inside it — the app confirms automatically by reading the device's model when it connects.]
-[SAY: ✅ <strong>Confirmed working</strong>]
-[SAY: • <strong>Hismith Premium 3.0 Pro</strong> (AK-01) — the device this app is built and tested against.]
-[SAY: 👍 <strong>Should work</strong> — same legacy protocol]
-[SAY: • <strong>Table Top 2.0 / 2.0 Pro / Max</strong>, <strong>Double Penetration (2.0 Pro)</strong>, and other machines built on the AK-01 control box.]
-[SAY: • <strong>Pro Traveler</strong>, <strong>Capsule</strong>, <strong>G011</strong>, <strong>Thrusting Cup</strong>, <strong>Wildolo</strong>.]
-[SAY: ❌ <strong>Not yet supported</strong> — uses a newer protocol the app doesn't speak]
-[SAY: • <strong>Premium 4.0 Pro</strong>, <strong>Hismith Servo / Servok</strong>, <strong>Hismith Mini Pro</strong>, and the newer <strong>HISMITH S1 / S2 / S3</strong> and Premium 4.0 generation. These will connect but won't respond to the app.]
+[IMAGE: setup-solo/66348606_028_5c9e.jpg]
+[SAY: ✅ <strong>Confirmed working</strong>
+• <strong>Hismith Premium 3.0 Pro</strong> (AK-01 Series)
+👍 <strong>Should work</strong> — same legacy protocol (but not tested)
+• <strong>Table Top 2.0 / 2.0 Pro / Max</strong>, <strong>Double Penetration (2.0 Pro)</strong>
+• <strong>Pro Traveler</strong>, <strong>Capsule</strong>, <strong>G011</strong>, <strong>Thrusting Cup</strong>, <strong>Wildolo</strong>.
+❌ <strong>Not yet supported</strong> — These will probably connect but won't respond to the app.
+• <strong>Premium 4.0 Pro</strong>, <strong>Hismith Servo / Servok</strong>, <strong>Hismith Mini Pro</strong>
+•  The newer <strong>HISMITH S1 / S2 / S3</strong> and Premium 4.0 generation
+]
 [SAY: 💬 <strong>Not sure, or don't see your machine?</strong> Just connect it once — the app reads the model when it pairs. And if your device isn't supported yet, get in touch at <a href='mailto:simonssecrets@gmail.com'>simonssecrets@gmail.com</a>.]
 [CHOICE]
 [OPTION (target=004-menu, color=#5d4037): ↩️ Back to the menu]
