@@ -46,7 +46,7 @@ The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/
 
 [PAGE: 002-pitch]  The pitch
 [IMAGE: intro-solo-sensual/31517085_004_ca6a.jpg]
-[SAY (mode=autoplay): Welcome to <strong>The Fucking Machine Tease</strong>. I'm so glad you're here.]
+[SAY (mode=autoplay): Welcome to <strong><span style="color: #d81b60">The Fucking Machine Tease</span></strong>. I'm so glad you're here.]
 [SAY (mode=autoplay): Every tick of the metronome you're about to hear isn't meant for <em>you</em> — it's meant for <em>the machine.</em>]
 [SAY (mode=autoplay): The same metronome you already know moves a <strong>real machine</strong>, in real time.]
 [SAY (mode=custom, duration=1s): It quickens,]
@@ -77,7 +77,8 @@ The main model featuring in this tease is Leah Gotti - https://www.pornpics.com/
 
 [PAGE: 004-menu]  Menu
 [IMAGE: intro-solo-sensual/31517085_005_17db.jpg]
-[SAY: If this is your first time here, you will want to start with the <strong><span style="color: #1976d2">Application Setup</span></strong>, where your will install, pair and test your machine.
+[Say: I'm so glad you are here! 🩷]
+[SAY: If this is your first time, you will want to start with the <strong><span style="color: #1976d2">Application Setup</span></strong>, where your will install, pair and test your machine.
 Then, move on to the <strong><span style="color: #2e7d32">Tutorial</span></strong> — a short, gentle run so you can feel how it responds.]
 [SAY: When you think you are ready for it, you can move on to the real thing — <strong><span style="color: #d81b60">The Fucking Machine Tease</span></strong>.]
 [SAY: More info on the model, the creator of this tease and support can be found in the <strong><span style="color: #6a1b9a">About</span></strong> section.]
@@ -180,29 +181,37 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 
 [PAGE: tut-1]  Get comfortable
 [IMAGE: tutorial-solo/31517085_010_482d.jpg]
-[SAY: <em>No rush now. This first time is all about you getting comfortable with me.</em>]
-[SAY: Before we start, let's set the scene:]
-[SAY: 🍆 <strong>Choose a dildo you're completely comfortable with</strong> — for your first time, go smaller and familiar, never bigger. Too much and this becomes far too intense; the right size lets you relax and enjoy.]
-[SAY: 💦 <strong>Lube generously</strong> — far more than feels necessary. Then add a little more.]
-[SAY: 🛋️ Get into a relaxed, comfortable position with the machine settled where you want it.]
-[SAY: 🎚️ In the app's <strong>Sound</strong> mode, set <strong>THRUST RHYTHM</strong> to <strong>1 beat per stroke</strong> — so every tick of the metronome is one full, deliberate stroke.]
-[SAY: 🛑 Emergency stop is still just <strong>Alt+Space</strong>, any time you want it.]
-[SAY: Take a slow breath. When you're ready, and not a moment before, we'll begin.]
-[GOTO: tut-2]
+[SAY (mode=autoplay): <em>No rush now. This first time is all about you getting comfortable with me.</em>]
+[SAY: 🍆 <strong>Choose a dildo you're completely comfortable with</strong>
+for your first time, go smaller and familiar, never bigger. Too much and this becomes far too intense; the right size lets you relax and enjoy.
+
+💦 <strong>Lube generously</strong>
+far more than feels necessary. Then add a little more.
+
+🎚️ In the app's <strong>Sound</strong> mode, set <strong>THRUST RHYTHM</strong> to <strong>1 beat per stroke</strong>
+so every tick of the metronome is one full, deliberate stroke. Then, hit the play button, so the app is listening for sound.
+
+🛑 Emergency stop is still just <strong>Alt+Space</strong>, any time you need it.
+]
+[CHOICE]
+[OPTION (target=tut-2, color=#f06292): I'm ready... wet and excited]
 
 [PAGE: tut-2]  Ease yourself onto it
 [IMAGE: tutorial-solo/31517085_012_d5b4.jpg]
-[SAY: Before I take over, let's get you settled onto it — at your own pace, by your own hand.]
-[SAY: 1. Position yourself against the dildo and, slowly, <strong>ease yourself onto it</strong>.]
-[SAY: 2. Gently <strong>move up and down</strong> along its length — no machine yet, just you — until it feels easy and comfortable.]
-[SAY: 3. Add more lube if you need it. There's no rush at all.]
-[SAY: <em>Take all the time you want. When it feels good and you're ready to hand control to me… turn the page.</em>]
-[GOTO: tut-3]
+[SAY (mode=autoplay): Before I take over, let's get you settled onto the machine — at your own pace.]
+[SAY: First, position yourself against the dildo and, slowly, <strong>ease yourself onto it</strong>.
+
+Then gently <strong>move up and down</strong> all the way along its length — no machine yet, just you — until it feels easy and comfortable.
+
+Be sure to add more lube if you need it. There's no rush at all.]
+[SAY (mode=autoplay): Take a slow breath. When you're ready, and not a moment before, I will take control.]
+[CHOICE]
+[OPTION (target=tut-3, color=#f06292): Please take me!]
 
 [PAGE: tut-3]  The first, slow strokes
 [IMAGE: tutorial-solo/31517085_014_7a54.jpg]
 [PAUSE (secs=10)]
-[SAY: <em>Here we go. Stay just like that for me… let the anticipation build.</em>]
+[SAY: <em>Here we go. Stay just like that for me… let the <span style="color: #4fc3f7">anticipation</span> build.</em>]
 [METRONOME (bpm=20, secs=45)]
 [SAY: <em>There it is. Feel me start to move.</em>]
 [SAY: <em>Slow… easy… there's nowhere to be but right here.</em>]
@@ -589,7 +598,7 @@ Try it once now, so your fingers know exactly where it is before you ever need i
 
 🧩 <strong>The app and the tease</strong> — HismithController and this tease were created by <strong>SimonsSecrets</strong>.
 
-❤️ <strong>Enjoying it?</strong> You can show support by buying me a coffee at <strong><span style="color: #1976d2">ko-fi.com/simonssecrets</span></strong>. It genuinely helps.
+❤️ <strong>Enjoying it?</strong> You can show support and buy me a coffee at <strong><span style="color: #1976d2">ko-fi.com/simonssecrets</span></strong>. It genuinely helps.
 
 💬 <strong>Found a bug, or want your machine supported?</strong> I'd love to help. 
 Please get in touch at <strong><span style="color: #1976d2">simonssecrets@gmail.com</span></strong>. Your reports and requests are exactly what makes the next version better.
@@ -601,9 +610,11 @@ Please get in touch at <strong><span style="color: #1976d2">simonssecrets@gmail.
 [IMAGE: setup-solo/66348606_028_5c9e.jpg]
 [SAY: ✅ <strong>Confirmed working</strong>
 • <strong>Hismith Premium 3.0 Pro</strong> (AK-01 Series)
+
 👍 <strong>Should work</strong> — same legacy protocol (but not tested)
 • <strong>Table Top 2.0 / 2.0 Pro / Max</strong>, <strong>Double Penetration (2.0 Pro)</strong>
 • <strong>Pro Traveler</strong>, <strong>Capsule</strong>, <strong>G011</strong>, <strong>Thrusting Cup</strong>, <strong>Wildolo</strong>.
+
 ❌ <strong>Not yet supported</strong> — These will probably connect but won't respond to the app.
 • <strong>Premium 4.0 Pro</strong>, <strong>Hismith Servo / Servok</strong>, <strong>Hismith Mini Pro</strong>
 •  The newer <strong>HISMITH S1 / S2 / S3</strong> and Premium 4.0 generation
