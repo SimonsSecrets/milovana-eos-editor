@@ -8,6 +8,11 @@ tool used to prepare tease assets.
 See [CLAUDE_GENERAL_GUIDELINES.md](CLAUDE_GENERAL_GUIDELINES.md) for general behavioral guidelines
 when working in this project.
 
+**Do not commit or push.** Never run `git commit` or `git push` (or otherwise create commits/tags
+or publish to a remote) unless explicitly tasked to do so, or after asking and being given
+permission. The user handles commits and pushes themselves most of the time — make the changes,
+then leave staging/committing to them.
+
 ## Repository layout
 
 - `milovana/` — tease content and authoring docs.
