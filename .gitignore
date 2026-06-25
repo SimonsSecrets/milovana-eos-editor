@@ -1,5 +1,6 @@
 ## Claude
 .claude/
+src/design/
 
 ## Build output
 bin/
