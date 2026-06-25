@@ -1,0 +1,140 @@
+<!-- LEGACY view (the original single-window gallery/tagging UI). Moved to src/Old/ as a reference
+     while its functionality is migrated into the new Tag Images / Workflow tool views. Not navigated
+     to by the new shell; kept compiling so it stays a live reference. `local` still points at the
+     model namespace (GalleryNode/ImageItem live in MilovanaEosEditor). -->
+<Window x:Class="MilovanaEosEditor.Old.LegacyTaggingView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:MilovanaEosEditor"
+        Title="Milovana EOS Editor" Height="800" Width="1240"
+        Closing="OnClosing">
+    <Window.InputBindings>
+        <KeyBinding Modifiers="Control" Key="S" Command="ApplicationCommands.Save" />
+    </Window.InputBindings>
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Save" Executed="OnSaveCommand" />
+    </Window.CommandBindings>
+
+    <DockPanel>
+        <ToolBar DockPanel.Dock="Top">
+            <Button Content="Open…" Click="OnOpen" />
+            <Button Content="Save" Click="OnSave" />
+            <Separator />
+            <Button Content="Generate asset-map…" Click="OnGenerateMap"
+                    ToolTip="Step 6: rebuild asset-map.json from tease.json + local files, and seed tag stubs for any new images." />
+            <Separator />
+            <TextBlock x:Name="StatusText" VerticalAlignment="Center" Margin="8,0" />
+        </ToolBar>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Explorer: galleries (folders) → images -->
+            <TreeView x:Name="Tree" Grid.Column="0" Margin="6" SelectedItemChanged="OnTreeSelected">
+                <TreeView.ItemContainerStyle>
+                    <Style TargetType="TreeViewItem">
+                        <Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay}" />
+                        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                    </Style>
+                </TreeView.ItemContainerStyle>
+                <TreeView.Resources>
+                    <HierarchicalDataTemplate DataType="{x:Type local:GalleryNode}" ItemsSource="{Binding Images}">
+                        <TextBlock Text="{Binding Header}" FontWeight="Bold" />
+                    </HierarchicalDataTemplate>
+                    <DataTemplate DataType="{x:Type local:ImageItem}">
+                        <TextBlock Text="{Binding FileName}" />
+                    </DataTemplate>
+                </TreeView.Resources>
+            </TreeView>
+
+            <!-- Right pane: gallery view OR image view (toggled by selection) -->
+            <Grid Grid.Column="1" Margin="6">
+                <TextBlock x:Name="EmptyHint" Text="Select a gallery or an image on the left."
+                           Foreground="#888888" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+                <!-- Gallery view: theme + all thumbnails -->
+                <DockPanel x:Name="GalleryView" Visibility="Collapsed">
+                    <StackPanel DockPanel.Dock="Top" Margin="0,0,0,8">
+                        <TextBlock x:Name="GalleryNameText" FontWeight="Bold" FontSize="16" />
+                        <TextBlock Text="Theme" FontWeight="Bold" Margin="0,8,0,0" />
+                        <TextBox x:Name="ThemeBox"
+                                 Text="{Binding Theme, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Theme note" FontWeight="Bold" Margin="0,8,0,0" />
+                        <TextBox x:Name="ThemeNoteBox" AcceptsReturn="True" TextWrapping="Wrap" MinHeight="56"
+                                 VerticalScrollBarVisibility="Auto"
+                                 Text="{Binding ThemeNote, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        <TextBlock Text="Pictures (click to edit tags)" FontWeight="Bold" Margin="0,10,0,2" />
+                    </StackPanel>
+                    <ListBox x:Name="Thumbs" ItemsSource="{Binding Images}" SelectionChanged="OnThumbSelected"
+                             ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel />
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Width="156" Margin="4">
+                                    <Border Background="#222222" Height="156">
+                                        <Image Source="{Binding Thumbnail}" Stretch="Uniform" />
+                                    </Border>
+                                    <TextBlock Text="{Binding FileName}" TextTrimming="CharacterEllipsis"
+                                               TextAlignment="Center" Margin="0,2,0,0" />
+                                    <TextBlock Text="{Binding TagSummary}" FontSize="10" Foreground="#888888"
+                                               TextAlignment="Center" TextWrapping="Wrap" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+
+                <!-- Image view: preview + tags only (no theme) -->
+                <Grid x:Name="ImageView" Visibility="Collapsed">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="360" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0" Background="#222222">
+                        <Grid>
+                            <TextBlock x:Name="NoImageText" Text="(image file not found)" Foreground="#888888"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <Image x:Name="Preview" Stretch="Uniform" StretchDirection="DownOnly" />
+                        </Grid>
+                    </Border>
+
+                    <ScrollViewer Grid.Column="1" Margin="8,0,0,0" VerticalScrollBarVisibility="Auto">
+                        <StackPanel>
+                            <TextBlock Text="Gallery / file" FontWeight="Bold" />
+                            <TextBlock x:Name="WhichText" TextWrapping="Wrap" Margin="0,2,0,10" />
+
+                            <TextBlock Text="Subject" FontWeight="Bold" />
+                            <ComboBox x:Name="SubjectBox" IsEditable="True"
+                                      Text="{Binding Subject, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" />
+
+                            <TextBlock Text="Pace (1–5, energy/tempo — ignores nudity)" FontWeight="Bold" Margin="0,10,0,0" />
+                            <ComboBox x:Name="PaceBox"
+                                      SelectedItem="{Binding Pace, Mode=TwoWay}" />
+
+                            <TextBlock Text="Explicitness (exposure)" FontWeight="Bold" Margin="0,10,0,0" />
+                            <ComboBox x:Name="ExplicitBox" IsEditable="True"
+                                      Text="{Binding Explicitness, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" />
+
+                            <TextBlock Text="Orientation" FontWeight="Bold" Margin="0,10,0,0" />
+                            <ComboBox x:Name="OrientationBox" IsEditable="True"
+                                      Text="{Binding Orientation, Mode=TwoWay, UpdateSourceTrigger=LostFocus}" />
+
+                            <TextBlock Text="Notes" FontWeight="Bold" Margin="0,10,0,0" />
+                            <TextBox x:Name="NotesBox" AcceptsReturn="True" TextWrapping="Wrap" MinHeight="100"
+                                     VerticalScrollBarVisibility="Auto"
+                                     Text="{Binding Notes, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </Grid>
+        </Grid>
+    </DockPanel>
+</Window>

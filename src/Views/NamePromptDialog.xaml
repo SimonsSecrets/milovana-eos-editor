@@ -1,0 +1,28 @@
+<Window x:Class="MilovanaEosEditor.NamePromptDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="New tease"
+        SizeToContent="Height" Width="440" ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
+        Background="White" FontFamily="Segoe UI Variable Text, Segoe UI"
+        TextOptions.TextFormattingMode="Display">
+    <StackPanel Margin="22,20,22,18">
+        <TextBlock Text="Name your tease" FontSize="16" FontWeight="SemiBold"
+                   Foreground="{StaticResource TextPrimaryBrush}" />
+        <TextBlock Text="This becomes the tease's folder name." FontSize="12" Margin="0,4,0,0"
+                   Foreground="{StaticResource TextMutedBrush}" />
+
+        <TextBox x:Name="NameBox" Margin="0,16,0,0" Padding="9,7" FontSize="13.5"
+                 BorderBrush="{StaticResource ControlBorderBrush}" BorderThickness="1"
+                 TextChanged="OnNameChanged" />
+
+        <TextBlock x:Name="ErrorText" Margin="0,8,0,0" FontSize="12" TextWrapping="Wrap"
+                   Foreground="{StaticResource StatusRedTextBrush}" Visibility="Collapsed" />
+
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Content="Cancel" Style="{StaticResource SecondaryButton}" IsCancel="True" Width="92" />
+            <Button x:Name="OkButton" Content="Create" Style="{StaticResource PrimaryButton}"
+                    IsDefault="True" Width="110" Margin="10,0,0,0" Click="OnCreate" />
+        </StackPanel>
+    </StackPanel>
+</Window>

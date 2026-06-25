@@ -1,0 +1,166 @@
+<UserControl x:Class="MilovanaEosEditor.TeaseBrowserView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MilovanaEosEditor"
+             Background="{StaticResource AppBackgroundBrush}">
+
+    <UserControl.Resources>
+        <!-- Lets the trailing ghost card (outside the bound items) reach the view-model. -->
+        <local:BindingProxy x:Key="Proxy" Data="{Binding}" />
+
+        <!-- One tease card. -->
+        <DataTemplate x:Key="TeaseCardTemplate" DataType="{x:Type local:TeaseInfo}">
+            <Button Style="{StaticResource CardButton}" Width="330" MinHeight="168" Margin="0,0,16,16"
+                    Command="{Binding Data.OpenTeaseCommand, Source={StaticResource Proxy}}"
+                    CommandParameter="{Binding}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <!-- status pill + modified -->
+                    <Grid Grid.Row="0" Margin="0,0,0,13">
+                        <Border x:Name="Pill" CornerRadius="6" Padding="9,3" HorizontalAlignment="Left">
+                            <TextBlock x:Name="PillText" Text="{Binding StatusLabel}" FontSize="11" FontWeight="SemiBold" />
+                        </Border>
+                        <TextBlock Text="{Binding ModifiedDisplay}" FontSize="11.5" VerticalAlignment="Center"
+                                   HorizontalAlignment="Right" Foreground="{StaticResource TextFaintBrush}" />
+                    </Grid>
+
+                    <TextBlock Grid.Row="1" Text="{Binding Name}" FontSize="16.5" FontWeight="SemiBold"
+                               Foreground="{StaticResource TextPrimaryBrush}" TextTrimming="CharacterEllipsis" />
+                    <TextBlock Grid.Row="2" Text="{Binding FolderPath}" FontSize="12" FontFamily="Consolas"
+                               Foreground="{StaticResource TextMutedBrush}" TextTrimming="CharacterEllipsis"
+                               Margin="0,3,0,0" ToolTip="{Binding FolderPath}" />
+
+                    <StackPanel Grid.Row="4" Margin="0,16,0,0">
+                        <TextBlock Text="{Binding AssetSummary}" FontSize="12" Foreground="{StaticResource TextSecondaryBrush}" />
+                        <TextBlock Text="{Binding PipelineSummary}" FontSize="11.5" Margin="0,4,0,0"
+                                   Foreground="{StaticResource TextFaintBrush}" />
+                    </StackPanel>
+                </Grid>
+            </Button>
+
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding StatusKind}" Value="{x:Static local:TeaseStatusKind.Empty}">
+                    <Setter TargetName="Pill" Property="Background" Value="#f3f3f3" />
+                    <Setter TargetName="PillText" Property="Foreground" Value="#888888" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding StatusKind}" Value="{x:Static local:TeaseStatusKind.Draft}">
+                    <Setter TargetName="Pill" Property="Background" Value="{StaticResource StatusAmberBgBrush}" />
+                    <Setter TargetName="PillText" Property="Foreground" Value="{StaticResource StatusAmberTextBrush}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding StatusKind}" Value="{x:Static local:TeaseStatusKind.InProgress}">
+                    <Setter TargetName="Pill" Property="Background" Value="{StaticResource StatusBlueBgBrush}" />
+                    <Setter TargetName="PillText" Property="Foreground" Value="{StaticResource StatusBlueTextBrush}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding StatusKind}" Value="{x:Static local:TeaseStatusKind.Generated}">
+                    <Setter TargetName="Pill" Property="Background" Value="{StaticResource StatusGreenBgBrush}" />
+                    <Setter TargetName="PillText" Property="Foreground" Value="{StaticResource StatusGreenTextBrush}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding StatusKind}" Value="{x:Static local:TeaseStatusKind.Missing}">
+                    <Setter TargetName="Pill" Property="Background" Value="{StaticResource StatusRedBgBrush}" />
+                    <Setter TargetName="PillText" Property="Foreground" Value="{StaticResource StatusRedTextBrush}" />
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        </DataTemplate>
+    </UserControl.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+        <Grid>
+            <Grid MaxWidth="1180" Margin="40,34,40,60">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <!-- ===== header ===== -->
+                <Grid Grid.Row="0" Margin="0,0,0,26">
+                    <TextBlock Text="Teases" FontSize="25" FontWeight="SemiBold"
+                               Foreground="{StaticResource TextPrimaryBrush}" VerticalAlignment="Center" />
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <Button Style="{StaticResource SecondaryButton}" Command="{Binding AddExistingCommand}">
+                            <StackPanel Orientation="Horizontal">
+                                <Path Width="15" Height="15" Stretch="Uniform" Stroke="#444" StrokeThickness="1.4"
+                                      StrokeLineJoin="Round"
+                                      Data="M1.8 4.2 a1 1 0 0 1 1-1 H6 L7.4 4.6 H13.2 a1 1 0 0 1 1 1 V12 a1 1 0 0 1-1 1 H2.8 a1 1 0 0 1-1-1 Z M8 7 V11 M6 9 H10" />
+                                <TextBlock Text="Add existing tease" Margin="8,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                        <Button Style="{StaticResource PrimaryButton}" Command="{Binding NewTeaseCommand}" Margin="10,0,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="+" FontSize="16" Margin="0,-1,0,0" VerticalAlignment="Center" />
+                                <TextBlock Text="New tease" Margin="7,0,0,0" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                </Grid>
+
+                <!-- ===== card grid (when there are teases) ===== -->
+                <ItemsControl Grid.Row="1" VerticalAlignment="Top"
+                              Visibility="{Binding IsEmpty, Converter={StaticResource BoolToVisInverse}}"
+                              ItemTemplate="{StaticResource TeaseCardTemplate}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemsSource>
+                        <CompositeCollection>
+                            <CollectionContainer Collection="{Binding Data.Teases, Source={StaticResource Proxy}}" />
+                            <!-- trailing "create new" ghost card -->
+                            <Button Style="{StaticResource GhostCardButton}" Width="330" MinHeight="168" Margin="0,0,16,16"
+                                    Command="{Binding Data.NewTeaseCommand, Source={StaticResource Proxy}}">
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Border Width="40" Height="40" CornerRadius="20" BorderThickness="1.5"
+                                            HorizontalAlignment="Center"
+                                            BorderBrush="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}">
+                                        <TextBlock Text="+" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                   Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" />
+                                    </Border>
+                                    <TextBlock Text="Create a new tease" FontSize="13" FontWeight="Medium" Margin="0,10,0,0"
+                                               HorizontalAlignment="Center"
+                                               Foreground="{Binding Foreground, RelativeSource={RelativeSource AncestorType=Button}}" />
+                                    <TextBlock Text="Scaffolds Gallery/ · Files/ · script.md" FontSize="11.5" Margin="0,4,0,0"
+                                               HorizontalAlignment="Center" Foreground="#aaaaaa" />
+                                </StackPanel>
+                            </Button>
+                        </CompositeCollection>
+                    </ItemsControl.ItemsSource>
+                </ItemsControl>
+
+                <!-- ===== empty workspace state ===== -->
+                <Border Grid.Row="1" Visibility="{Binding IsEmpty, Converter={StaticResource BoolToVis}}"
+                        Margin="0,20,0,0" Padding="40,56" CornerRadius="14"
+                        Background="#80FFFFFF" BorderBrush="{StaticResource CardBorderBrush}" BorderThickness="1">
+                    <StackPanel HorizontalAlignment="Center" MaxWidth="420">
+                        <Border Width="56" Height="56" CornerRadius="28" Background="{StaticResource AccentSoftBrush}"
+                                HorizontalAlignment="Center">
+                            <TextBlock Text="+" FontSize="30" Foreground="{StaticResource AccentBrush}"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <TextBlock Text="No teases yet" FontSize="18" FontWeight="SemiBold" Margin="0,18,0,0"
+                                   HorizontalAlignment="Center" Foreground="{StaticResource TextPrimaryBrush}" />
+                        <TextBlock TextAlignment="Center" TextWrapping="Wrap" Margin="0,8,0,0" FontSize="13"
+                                   Foreground="{StaticResource TextMutedBrush}"
+                                   Text="Teases you create or add show up here. Nothing is auto-discovered — start by creating your first tease, or add a folder you already have." />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,22,0,0">
+                            <Button Style="{StaticResource PrimaryButton}" Command="{Binding NewTeaseCommand}">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="+" FontSize="16" Margin="0,-1,0,0" VerticalAlignment="Center" />
+                                    <TextBlock Text="New tease" Margin="7,0,0,0" VerticalAlignment="Center" />
+                                </StackPanel>
+                            </Button>
+                            <Button Style="{StaticResource SecondaryButton}" Command="{Binding AddExistingCommand}"
+                                    Margin="10,0,0,0" Content="Add existing tease" />
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

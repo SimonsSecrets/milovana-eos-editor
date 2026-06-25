@@ -1,0 +1,88 @@
+<UserControl x:Class="MilovanaEosEditor.ActiveTeaseView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:MilovanaEosEditor">
+    <DockPanel>
+
+        <!-- ===================== NAV RAIL ===================== -->
+        <Border DockPanel.Dock="Left" Padding="8" Background="#B3F9F9F9"
+                BorderBrush="{StaticResource DividerBrush}" BorderThickness="0,0,1,0">
+            <Border.Style>
+                <Style TargetType="Border">
+                    <Setter Property="Width" Value="224" />
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding RailOpen}" Value="False">
+                            <Setter Property="Width" Value="60" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+
+            <StackPanel>
+                <!-- collapse toggle -->
+                <Button Command="{Binding ToggleRailCommand}"
+                        ToolTip="Toggle sidebar" Margin="0,0,0,2">
+                    <Button.Style>
+                        <Style TargetType="Button" BasedOn="{StaticResource IconButton}">
+                            <Setter Property="HorizontalAlignment" Value="Right" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding RailOpen}" Value="False">
+                                    <Setter Property="HorizontalAlignment" Value="Center" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Path Width="17" Height="17" Stretch="Uniform" Stroke="#666" StrokeThickness="1.5"
+                          StrokeStartLineCap="Round" StrokeEndLineCap="Round"
+                          Data="M2.5 4.5 H15.5 M2.5 9 H15.5 M2.5 13.5 H15.5" />
+                </Button>
+
+                <!-- caption -->
+                <TextBlock Text="WORKSPACE" Style="{StaticResource SectionCaption}" Margin="10,8,10,6"
+                           Visibility="{Binding RailOpen, Converter={StaticResource BoolToVis}}" />
+
+                <!-- tools -->
+                <RadioButton Style="{StaticResource NavRailButton}" GroupName="Tools"
+                             IsChecked="{Binding SelectedTool, Converter={StaticResource EnumToBool}, ConverterParameter=Workflow}"
+                             ToolTip="Workflow">
+                    <StackPanel Orientation="Horizontal">
+                        <Path Width="17" Height="17" Stretch="Uniform" StrokeThickness="1.5" Fill="Transparent"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=RadioButton}}"
+                              Data="M4 1.8 a2.2 2.2 0 1 0 0.01 0 M4 11.8 a2.2 2.2 0 1 0 0.01 0 M14 6.8 a2.2 2.2 0 1 0 0.01 0 M4 6.2 V11.8 M6 4 H10 a2 2 0 0 1 2 2 V7 M6 14 H10 a2 2 0 0 0 2 -2 V11" />
+                        <TextBlock Text="Workflow" Margin="11,0,0,0" VerticalAlignment="Center"
+                                   Visibility="{Binding DataContext.RailOpen, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BoolToVis}}" />
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton Style="{StaticResource NavRailButton}" GroupName="Tools"
+                             IsChecked="{Binding SelectedTool, Converter={StaticResource EnumToBool}, ConverterParameter=TagImages}"
+                             ToolTip="Tag Images">
+                    <StackPanel Orientation="Horizontal">
+                        <Path Width="17" Height="17" Stretch="Uniform" StrokeThickness="1.5" Fill="Transparent"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=RadioButton}}"
+                              Data="M2.2 3.2 H15.8 V14.8 H2.2 Z M6.4 7.2 a1.5 1.5 0 1 0 0.01 0 M3 13 L7 9.4 L10.2 12.4 L12.4 10.4 L15 12.8" />
+                        <TextBlock Text="Tag Images" Margin="11,0,0,0" VerticalAlignment="Center"
+                                   Visibility="{Binding DataContext.RailOpen, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BoolToVis}}" />
+                    </StackPanel>
+                </RadioButton>
+
+                <RadioButton Style="{StaticResource NavRailButton}" GroupName="Tools"
+                             IsChecked="{Binding SelectedTool, Converter={StaticResource EnumToBool}, ConverterParameter=ScriptEditor}"
+                             ToolTip="Script Editor">
+                    <StackPanel Orientation="Horizontal">
+                        <Path Width="17" Height="17" Stretch="Uniform" StrokeThickness="1.5" Fill="Transparent"
+                              StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+                              Stroke="{Binding Foreground, RelativeSource={RelativeSource AncestorType=RadioButton}}"
+                              Data="M6.5 5 L3 9 L6.5 13 M11.5 5 L15 9 L11.5 13" />
+                        <TextBlock Text="Script Editor" Margin="11,0,0,0" VerticalAlignment="Center"
+                                   Visibility="{Binding DataContext.RailOpen, RelativeSource={RelativeSource AncestorType=UserControl}, Converter={StaticResource BoolToVis}}" />
+                    </StackPanel>
+                </RadioButton>
+            </StackPanel>
+        </Border>
+
+        <!-- ===================== TOOL MAIN VIEW ===================== -->
+        <ContentControl Content="{Binding CurrentTool}" />
+
+    </DockPanel>
+</UserControl>
