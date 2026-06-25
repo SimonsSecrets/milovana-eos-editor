@@ -61,7 +61,7 @@ referenced below are detailed in §5.)
 | 3 | **Claude** | **Asset plan** — read the script and propose **(a)** the **themed gallery buckets** it needs (one gallery per mood/pace, e.g. `solo-sensual`, `machine-soft`, `machine-hard`, `climax`) plus any hard constraints (e.g. *tutorial = solo only*), and **(b)** the metronome/audio files the `[METRONOME]` markers call for. **Raise the themed-buckets approach here** (§5.3). |
 | 4 | user       | **Asset setup** — create local `Gallery/<bucket>/` folders + `Files/`, add exact-byte sources; in the editor create matching galleries (folder name = gallery name) and upload **images *and* audio**.                                                                                                                                                                             |
 | 5 | user       | **Export stub** — export the (stub) tease JSON into `tease.json`; it carries the `galleries`/`files` manifest.                                                                                                                                                                                                                                                                     |
-| 6 | **Claude** | **Build map** — generate `asset-map.json` (SHA-1 join; §5.2).                                                                                                                                                                                                                                                                                                                      |
+| 6 | **Claude** | **Build map** — run `MilovanaEosEditor --generate-map <tease folder>` to generate `asset-map.json` (SHA-1 join; §5.2). Idempotent; also seeds tag stubs into `asset-content.json` for any new images, so step 7 only tags the new ones.                                                                                                                                                                |
 | 7 | **Claude** | **Vision tagging** — view each image, write `asset-content.json` (§5.3).                                                                                                                                                                                                                                                                                                           |
 | 8 | user       | **Verify tags** — review/adjust the tags.                                                                                                                                                                                                                                                                                                                                          |
 | 9 | **Claude** | **Generate tease** — pick the specific image for each `[IMAGE]` (join `asset-content` tags ↔ `asset-map` locators; match pace to BPM) and write the exact `bucket/filename` into `script.md`; then run the shared generator — `milovana/Tools/Build-Tease.ps1 -TeaseDir <tease folder>`, or its per-tease `.cmd` wrapper (e.g. `Build-Tease-TFM.cmd`) — to **parse `script.md` → `tease.json`**. Re-run after any edit.                              |
@@ -581,9 +581,16 @@ export manifest to on-disk SHA-1 hashes, so there is no transcription error. Sha
 }
 ```
 
-A PowerShell generator (Windows; no Python on this machine) reads `tease.json`, builds a
-`SHA-1 → local file` index with `Get-FileHash -Algorithm SHA1`, then emits the map. Validate by
-confirming **every** manifest entry resolved (zero unmatched).
+The **MilovanaEosEditor** tool (`tools/MilovanaEosEditor/`) generates this map: it reads
+`tease.json`, builds a `SHA-1 → local file` index, reads the **true** dimensions from each local
+image, then emits the map. Run it headless —
+`dotnet run --project tools/MilovanaEosEditor -- --generate-map <tease folder>` (exit `0` = every
+manifest entry resolved, `1` = something unmatched, `2` = bad usage) — or click
+**Generate asset-map…** in its UI. It is **idempotent** (re-running yields byte-identical output)
+and, as a side effect, **seeds empty tag stubs into `asset-content.json`** for any newly-mapped
+images while leaving existing verified tags untouched (see §5.3), so adding pictures later only
+requires tagging the new ones. Validate by confirming **every** manifest entry resolved (zero
+unmatched).
 
 ## 5.3 Image selection: vision tagging & themed galleries
 
@@ -599,6 +606,11 @@ from `asset-map.json` so regenerating the mechanical map never clobbers hand-ver
 authoring time the two are **joined on the filename key**: `asset-content` = *what's in the
 picture*, `asset-map` = *how to reference it*. (Tags are content-intrinsic, so they can be reused
 if the same source image appears in a later tease.)
+
+The step-6 generator (§5.2) **pre-creates an empty stub here for each newly-mapped image**
+(`subject`/`explicitness`/`notes` blank, `pace` 0, `orientation` prefilled from the true
+dimensions), and never touches a stub that already exists — so the vision-tagging pass only has to
+fill in the new pictures, and re-running step 6 after adding images is safe.
 
 ### Tag vocabulary (controlled, for consistency)
 

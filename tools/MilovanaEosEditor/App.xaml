@@ -1,0 +1,4 @@
+<!-- No StartupUri: App.OnStartup chooses between the GUI and the headless generate-map path. -->
+<Application x:Class="MilovanaEosEditor.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />

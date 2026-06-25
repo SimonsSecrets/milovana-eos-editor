@@ -7,7 +7,7 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Windows.Media.Imaging;
 
-namespace AssetTagViewer;
+namespace MilovanaEosEditor;
 
 // Mirrors asset-content.json (EOS-Tease-Authoring-Guide.md §5.4). Property order here is the
 // serialized order, so it matches the hand-authored file. `vocabulary` is kept as a raw JsonNode

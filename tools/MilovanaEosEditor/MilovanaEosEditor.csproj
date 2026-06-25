@@ -2,12 +2,13 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <!-- WPF needs the Windows TFM; this tool is a desktop image/tag editor, not headless. -->
+    <!-- WPF needs the Windows TFM. Mostly a desktop editor, but it also has a headless
+         generate-map mode (App.OnStartup) that runs without showing a window. -->
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <RootNamespace>AssetTagViewer</RootNamespace>
+    <RootNamespace>MilovanaEosEditor</RootNamespace>
   </PropertyGroup>
 
 </Project>

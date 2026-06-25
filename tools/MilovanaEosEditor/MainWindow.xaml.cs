@@ -1,28 +1,18 @@
 using System.IO;
-using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace AssetTagViewer;
+namespace MilovanaEosEditor;
 
 public partial class MainWindow : Window
 {
-    // Case-insensitive read; write with camelCase names (matching the hand-authored keys) and the
-    // relaxed encoder so characters like apostrophes/parentheses in notes stay human-readable.
-    private static readonly JsonSerializerOptions ReadOptions = new()
-    {
-        PropertyNameCaseInsensitive = true,
-    };
-
-    private static readonly JsonSerializerOptions WriteOptions = new()
-    {
-        WriteIndented = true,
-        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-        Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-    };
+    // Read/write JSON the same way the asset-map generator does (camelCase, relaxed encoder), so
+    // asset-content.json and asset-map.json stay byte-consistent. See AssetMapGenerator.
+    private static readonly JsonSerializerOptions ReadOptions = AssetMapGenerator.ReadOptions;
+    private static readonly JsonSerializerOptions WriteOptions = AssetMapGenerator.WriteOptions;
 
     private string? _jsonPath;
     private AssetContent? _content;
@@ -206,7 +196,7 @@ public partial class MainWindow : Window
         StatusText.Text = _jsonPath is null
             ? string.Empty
             : $"{_jsonPath}{(_dirty ? "   • unsaved changes" : string.Empty)}";
-        Title = $"Asset Tag Viewer{(_dirty ? " *" : string.Empty)}";
+        Title = $"Milovana EOS Editor{(_dirty ? " *" : string.Empty)}";
     }
 
     private bool Save()
@@ -246,6 +236,45 @@ public partial class MainWindow : Window
     private void OnSave(object sender, RoutedEventArgs e) => Save();
 
     private void OnSaveCommand(object sender, ExecutedRoutedEventArgs e) => Save();
+
+    /// <summary>
+    /// Step 6: rebuild asset-map.json for the current tease and seed stub tags for any new images.
+    /// Operates on the open file's folder, or prompts for a tease folder if nothing is loaded.
+    /// </summary>
+    private void OnGenerateMap(object sender, RoutedEventArgs e)
+    {
+        // Seeding rewrites asset-content.json, so don't let it clobber unsaved tag edits.
+        if (!ConfirmDiscardIfDirty()) return;
+
+        string? teaseDir = _jsonPath is not null ? Path.GetDirectoryName(_jsonPath) : PromptForTeaseDir();
+        if (string.IsNullOrEmpty(teaseDir)) return;
+
+        GenerateResult result;
+        try
+        {
+            result = AssetMapGenerator.Run(teaseDir);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show($"Could not generate asset-map.json:\n\n{ex.Message}",
+                "Generate asset-map", MessageBoxButton.OK, MessageBoxImage.Error);
+            return;
+        }
+
+        // Reload asset-content.json so freshly-seeded stub rows appear in the tree immediately.
+        string contentPath = Path.Combine(teaseDir, "asset-content.json");
+        if (File.Exists(contentPath)) Load(contentPath);
+
+        MessageBox.Show(AssetMapGenerator.FormatReport(result),
+            result.Ok ? "Generate asset-map — done" : "Generate asset-map — incomplete",
+            MessageBoxButton.OK, result.Ok ? MessageBoxImage.Information : MessageBoxImage.Warning);
+    }
+
+    private static string? PromptForTeaseDir()
+    {
+        var dlg = new Microsoft.Win32.OpenFolderDialog { Title = "Pick the tease folder (contains tease.json)" };
+        return dlg.ShowDialog() == true ? dlg.FolderName : null;
+    }
 
     private void OnClosing(object sender, System.ComponentModel.CancelEventArgs e)
     {
