@@ -15,17 +15,18 @@ then leave staging/committing to them.
 
 ## Repository layout
 
-- `milovana/` — tease content and authoring docs.
-  - `milovana/Documentation/` — the EOS authoring guide, instructions, and teaching material.
-  - `milovana/Teases/<TeaseName>/` — per-tease `tease.json`, `asset-map.json`,
-    `asset-content.json`, `Gallery/<bucket>/` images, and `Files/` audio.
-  - `milovana/Files/` — shared asset sources (e.g. metronome loops).
-- `tools/MilovanaEosEditor/` — WPF tool for asset tagging and generating `asset-map.json`.
+- `Documentation/` — the EOS authoring guide, instructions, and teaching material.
+- `Teases/<TeaseName>/` — per-tease `tease.json`, `asset-map.json`, `asset-content.json`,
+  `Gallery/<bucket>/` images, and `Files/` audio.
+- `Files/` — shared asset sources (e.g. metronome loops).
+- `src/` — the **MilovanaEosEditor** WPF tool for asset tagging and generating `asset-map.json`
+  (project file: `src/MilovanaEosEditor.csproj`).
+- `Tools/` — build scripts (`Build-Tease.ps1`, `Build-Tease-TFM.cmd`).
 
 ## Milovana Teases
 
 When asked to write, edit, or read a Milovana EOS tease (JSON format), **always consult
-[milovana/Documentation/EOS-Tease-Authoring-Guide.md](milovana/Documentation/EOS-Tease-Authoring-Guide.md)
+[Documentation/EOS-Tease-Authoring-Guide.md](Documentation/EOS-Tease-Authoring-Guide.md)
 first** — it documents the page/action model, every supported action and field, the
 `gallery:`/`file:` asset locators, and known constraints. Keep that guide updated when new
 tease behavior is learned (the `§8 Open questions` section tracks unconfirmed fields).
@@ -52,6 +53,6 @@ Tease images and audio (`*.jpg *.jpeg *.png *.mp3 *.wav`) are tracked with **Git
 ## Build & Run (MilovanaEosEditor)
 
 ```sh
-dotnet build tools/MilovanaEosEditor/MilovanaEosEditor.csproj
-dotnet run --project tools/MilovanaEosEditor
+dotnet build src/MilovanaEosEditor.csproj
+dotnet run --project src
 ```
