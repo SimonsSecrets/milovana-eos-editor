@@ -13,7 +13,7 @@ public partial class ActiveTeaseViewModel : ObservableObject
     public ActiveTeaseViewModel(TeaseInfo tease)
     {
         Tease = tease;
-        Workflow = new WorkflowViewModel(tease);
+        Workflow = new WorkflowViewModel(tease, area => SelectedTool = area);
         TagImages = new TagImagesViewModel(tease);
         ScriptEditor = new ScriptEditorViewModel(tease);
         _currentTool = Workflow;
