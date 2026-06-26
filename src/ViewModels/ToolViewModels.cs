@@ -173,13 +173,6 @@ public sealed class WorkflowViewModel : ToolViewModel
     }
 }
 
-public sealed class TagImagesViewModel : ToolViewModel
-{
-    public TagImagesViewModel(TeaseInfo tease) : base(tease) { }
-    public override string Title => "Tag Images";
-    public override string Subtitle => "Review galleries and tag each image (subject, pace, explicitness).";
-}
-
 public sealed class ScriptEditorViewModel : ToolViewModel
 {
     public ScriptEditorViewModel(TeaseInfo tease) : base(tease) { }

@@ -1,19 +1,523 @@
 <UserControl x:Class="MilovanaEosEditor.TagImagesView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MilovanaEosEditor">
-    <!-- Placeholder. The legacy gallery/tagging UI (src/Old/LegacyTaggingView) is migrated here later. -->
-    <Border Background="White">
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="460">
-            <TextBlock Text="{Binding Title}" FontSize="22" FontWeight="SemiBold" HorizontalAlignment="Center"
-                       Foreground="{StaticResource TextPrimaryBrush}" />
-            <TextBlock Text="{Binding Subtitle}" TextAlignment="Center" TextWrapping="Wrap" Margin="0,10,0,0"
-                       FontSize="13.5" Foreground="{StaticResource TextMutedBrush}" />
-            <Border CornerRadius="6" Padding="10,4" Margin="0,18,0,0" HorizontalAlignment="Center"
-                    Background="{StaticResource AccentSoftBrush}">
-                <TextBlock Text="Coming in a follow-up" FontSize="11.5" FontWeight="SemiBold"
-                           Foreground="{StaticResource AccentBrush}" />
+             xmlns:local="clr-namespace:MilovanaEosEditor"
+             Background="{StaticResource AppBackgroundBrush}">
+
+    <UserControl.Resources>
+        <!-- Lets item templates inside ItemsControls reach the view-model's selection commands. -->
+        <local:BindingProxy x:Key="Proxy" Data="{Binding}" />
+
+        <!-- Diagonal hatch placeholder shown behind a thumbnail/preview (and red for missing files). -->
+        <DrawingBrush x:Key="HatchNeutralBrush" TileMode="Tile" Viewport="0,0,12,12"
+                      ViewportUnits="Absolute" Stretch="None">
+            <DrawingBrush.Drawing>
+                <GeometryDrawing>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0,12" EndPoint="12,0" />
+                    </GeometryDrawing.Geometry>
+                    <GeometryDrawing.Pen><Pen Brush="#ededed" Thickness="7" /></GeometryDrawing.Pen>
+                </GeometryDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+        <DrawingBrush x:Key="HatchRedBrush" TileMode="Tile" Viewport="0,0,12,12"
+                      ViewportUnits="Absolute" Stretch="None">
+            <DrawingBrush.Drawing>
+                <GeometryDrawing>
+                    <GeometryDrawing.Geometry>
+                        <LineGeometry StartPoint="0,12" EndPoint="12,0" />
+                    </GeometryDrawing.Geometry>
+                    <GeometryDrawing.Pen><Pen Brush="#fbdbdd" Thickness="7" /></GeometryDrawing.Pen>
+                </GeometryDrawing>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+
+        <!-- Flat progress bar for a bucket's tagged coverage (amber → green when complete). -->
+        <Style x:Key="CoverageBar" TargetType="ProgressBar">
+            <Setter Property="Height" Value="4" />
+            <Setter Property="Minimum" Value="0" />
+            <Setter Property="Foreground" Value="{StaticResource StatusAmberTextBrush}" />
+            <Setter Property="Background" Value="#ececec" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ProgressBar">
+                        <Border CornerRadius="2" Background="{TemplateBinding Background}" ClipToBounds="True">
+                            <Grid>
+                                <Border x:Name="PART_Track" />
+                                <Border x:Name="PART_Indicator" HorizontalAlignment="Left"
+                                        Background="{TemplateBinding Foreground}" CornerRadius="2" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Bucket row in the left list. -->
+        <Style x:Key="BucketRowButton" TargetType="Button">
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bd" Background="Transparent">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="3" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Border x:Name="accent" Grid.Column="0" Background="Transparent" />
+                                <ContentPresenter Grid.Column="1" Margin="12,12,15,12" />
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#f3f3f3" />
+                            </Trigger>
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="{StaticResource AccentSoftBrush}" />
+                                <Setter TargetName="accent" Property="Background" Value="{StaticResource AccentBrush}" />
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- One image card in the grid. -->
+        <Style x:Key="ImageCardButton" TargetType="Button">
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+            <Setter Property="VerticalContentAlignment" Value="Stretch" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bd" Background="{StaticResource SurfaceBrush}" CornerRadius="10"
+                                BorderThickness="1" BorderBrush="{StaticResource DividerBrush}"
+                                SnapsToDevicePixels="True">
+                            <Border CornerRadius="9" ClipToBounds="True">
+                                <ContentPresenter />
+                            </Border>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource AccentSoftBorderBrush}" />
+                            </Trigger>
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                <Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+                                <Setter TargetName="bd" Property="BorderThickness" Value="2" />
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Selectable vocabulary chip (subject / explicitness). -->
+        <Style x:Key="ChipButton" TargetType="Button">
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Margin" Value="0,0,7,7" />
+            <Setter Property="Foreground" Value="#555" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bd" CornerRadius="7" BorderThickness="1"
+                                BorderBrush="#e2e2e2" Background="{StaticResource SurfaceBrush}"
+                                Padding="12,7">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="BorderBrush" Value="#c4c4c4" />
+                            </Trigger>
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="{StaticResource AccentBrush}" />
+                                <Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource AccentBrush}" />
+                                <Setter Property="Foreground" Value="White" />
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Pace button: number + BPM band; purple when selected (mockup paceStyle). -->
+        <Style x:Key="PaceButton" TargetType="Button">
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Foreground" Value="#666" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bd" CornerRadius="7" BorderThickness="1"
+                                BorderBrush="#e2e2e2" Background="{StaticResource SurfaceBrush}"
+                                Padding="0,7" Margin="0,0,6,0">
+                            <StackPanel HorizontalAlignment="Center">
+                                <TextBlock Text="{Binding Number}" FontSize="15" FontWeight="Bold"
+                                           HorizontalAlignment="Center" />
+                                <TextBlock Text="{Binding Bpm}" FontSize="9" Opacity="0.8"
+                                           HorizontalAlignment="Center" />
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="BorderBrush" Value="#c4c4c4" />
+                            </Trigger>
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#6b3fa0" />
+                                <Setter TargetName="bd" Property="BorderBrush" Value="#6b3fa0" />
+                                <Setter Property="Foreground" Value="White" />
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- One segment of the grid's sort toggle (RadioButton: IsChecked = active sort). -->
+        <Style x:Key="SortSegButton" TargetType="RadioButton">
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="FontSize" Value="11.5" />
+            <Setter Property="Foreground" Value="#666" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RadioButton">
+                        <Border x:Name="bd" CornerRadius="5" Background="Transparent" Padding="11,4">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="#ececec" />
+                            </Trigger>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter TargetName="bd" Property="Background" Value="{StaticResource SurfaceBrush}" />
+                                <Setter Property="Foreground" Value="{StaticResource AccentBrush}" />
+                                <Setter Property="FontWeight" Value="SemiBold" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Small grouped-summary chip used in the image-card caption. -->
+        <Style x:Key="SummaryChip" TargetType="Border">
+            <Setter Property="CornerRadius" Value="4" />
+            <Setter Property="Padding" Value="6,1" />
+            <Setter Property="Margin" Value="0,0,4,0" />
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <!-- ===================== EMPTY STATE (no asset-content.json) ===================== -->
+        <Border Visibility="{Binding HasContent, Converter={StaticResource BoolToVisInverse}}"
+                Background="{StaticResource SurfaceBrush}">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" MaxWidth="460">
+                <TextBlock Text="No tags yet" FontSize="22" FontWeight="SemiBold" HorizontalAlignment="Center"
+                           Foreground="{StaticResource TextPrimaryBrush}" />
+                <TextBlock TextAlignment="Center" TextWrapping="Wrap" Margin="0,10,0,0"
+                           FontSize="13.5" Foreground="{StaticResource TextMutedBrush}"
+                           Text="There's no asset-content.json for this tease yet. Run &quot;Generate the asset map&quot; on the Workflow page first — it seeds a tag row for every image, then they'll appear here to tag." />
+            </StackPanel>
+        </Border>
+
+        <!-- ===================== TAGGING BAND ===================== -->
+        <Grid Visibility="{Binding HasContent, Converter={StaticResource BoolToVis}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="248" />
+                <ColumnDefinition Width="*" MinWidth="320" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="540" MinWidth="380" />
+            </Grid.ColumnDefinitions>
+
+            <!-- ===== BUCKETS ===== -->
+            <Border Grid.Column="0" Background="{StaticResource SubtleSurfaceBrush}"
+                    BorderBrush="{StaticResource DividerBrush}" BorderThickness="0,0,1,0">
+                <DockPanel>
+                    <StackPanel DockPanel.Dock="Top" Margin="16,16,16,10"
+                                Background="{StaticResource SubtleSurfaceBrush}">
+                        <TextBlock Text="GALLERIES / BUCKETS" Style="{StaticResource SectionCaption}"
+                                   Margin="0,0,0,3" />
+                        <TextBlock Text="one bucket ≈ one mood/pace" FontSize="11.5"
+                                   Foreground="{StaticResource TextFaintBrush}" />
+                    </StackPanel>
+
+                    <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                        <ItemsControl ItemsSource="{Binding Buckets}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate DataType="{x:Type local:TagBucket}">
+                                    <Button Style="{StaticResource BucketRowButton}"
+                                            Command="{Binding Data.SelectBucketCommand, Source={StaticResource Proxy}}"
+                                            CommandParameter="{Binding}">
+                                        <StackPanel>
+                                            <Grid>
+                                                <TextBlock Text="{Binding Name}" FontSize="13" FontWeight="SemiBold"
+                                                           FontFamily="Consolas" Foreground="#333"
+                                                           TextTrimming="CharacterEllipsis" VerticalAlignment="Center" />
+                                                <Border x:Name="CountPill" CornerRadius="5" Padding="7,2"
+                                                        HorizontalAlignment="Right" VerticalAlignment="Center"
+                                                        Background="{StaticResource StatusAmberBgBrush}">
+                                                    <TextBlock x:Name="CountText" Text="{Binding CountLabel}" FontSize="11"
+                                                               FontWeight="SemiBold"
+                                                               Foreground="{StaticResource StatusAmberTextBrush}" />
+                                                </Border>
+                                            </Grid>
+                                            <TextBlock Text="{Binding Note}" FontSize="11.5" Margin="0,4,0,0"
+                                                       Foreground="{StaticResource TextMutedBrush}" TextWrapping="Wrap"
+                                                       Visibility="{Binding HasNote, Converter={StaticResource BoolToVis}}" />
+                                            <ProgressBar x:Name="CoverageBar" Style="{StaticResource CoverageBar}"
+                                                         Margin="0,9,0,0" Maximum="{Binding Count}" Value="{Binding Tagged}" />
+                                        </StackPanel>
+                                    </Button>
+                                    <DataTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding IsFullyTagged}" Value="True">
+                                            <Setter TargetName="CountPill" Property="Background" Value="{StaticResource StatusGreenBgBrush}" />
+                                            <Setter TargetName="CountText" Property="Foreground" Value="{StaticResource StatusGreenTextBrush}" />
+                                            <Setter TargetName="CoverageBar" Property="Foreground" Value="{StaticResource StatusGreenTextBrush}" />
+                                        </DataTrigger>
+                                    </DataTemplate.Triggers>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </ScrollViewer>
+                </DockPanel>
             </Border>
-        </StackPanel>
-    </Border>
+
+            <!-- ===== IMAGE GRID ===== -->
+            <DockPanel Grid.Column="1">
+                <Border DockPanel.Dock="Top" Padding="22,12" BorderBrush="{StaticResource CardBorderBrush}"
+                        BorderThickness="0,0,0,1">
+                    <Grid>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                            <TextBlock Text="{Binding SelectedBucket.Name}" FontSize="15" FontWeight="SemiBold"
+                                       FontFamily="Consolas" VerticalAlignment="Center" />
+                            <TextBlock Text="{Binding SelectedBucket.ImagesLabel}" FontSize="12" Margin="14,0,0,0"
+                                       Foreground="{StaticResource TextMutedBrush}" VerticalAlignment="Center" />
+                        </StackPanel>
+
+                        <!-- sort control -->
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                            <TextBlock Text="Sort" FontSize="11.5" Margin="0,0,9,0" VerticalAlignment="Center"
+                                       Foreground="{StaticResource TextFaintBrush}" />
+                            <Border CornerRadius="7" Padding="2" Background="#f0f0f0"
+                                    BorderBrush="{StaticResource ControlBorderBrush}" BorderThickness="1">
+                                <StackPanel Orientation="Horizontal">
+                                    <RadioButton Style="{StaticResource SortSegButton}" GroupName="ImageSort" Content="Name"
+                                                 IsChecked="{Binding SelectedSort, Converter={StaticResource EnumToBool}, ConverterParameter=Name}" />
+                                    <RadioButton Style="{StaticResource SortSegButton}" GroupName="ImageSort" Content="Pace"
+                                                 IsChecked="{Binding SelectedSort, Converter={StaticResource EnumToBool}, ConverterParameter=Pace}" />
+                                    <RadioButton Style="{StaticResource SortSegButton}" GroupName="ImageSort" Content="Explicitness"
+                                                 IsChecked="{Binding SelectedSort, Converter={StaticResource EnumToBool}, ConverterParameter=Explicitness}" />
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"
+                              Padding="22,20">
+                    <ItemsControl ItemsSource="{Binding GridImages}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate DataType="{x:Type local:TagImage}">
+                                <Button Style="{StaticResource ImageCardButton}" Width="168" Margin="0,0,16,16"
+                                        Command="{Binding Data.SelectImageCommand, Source={StaticResource Proxy}}"
+                                        CommandParameter="{Binding}">
+                                    <StackPanel>
+                                        <!-- thumbnail -->
+                                        <Border Height="150" Background="{StaticResource HatchNeutralBrush}">
+                                            <Grid>
+                                                <Image Source="{Binding Thumbnail}" Stretch="Uniform" />
+                                                <Border x:Name="Missing" Visibility="Collapsed"
+                                                        Background="{StaticResource HatchRedBrush}">
+                                                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                                                        <Path Width="20" Height="20" Stretch="Uniform"
+                                                              Stroke="{StaticResource StatusRedTextBrush}" StrokeThickness="1.5"
+                                                              Data="M3 3 L17 17 M17 3 L3 17" />
+                                                        <TextBlock Text="file not found" FontSize="10" FontWeight="SemiBold"
+                                                                   Margin="0,5,0,0" HorizontalAlignment="Center"
+                                                                   Foreground="{StaticResource StatusRedTextBrush}" />
+                                                    </StackPanel>
+                                                </Border>
+                                            </Grid>
+                                        </Border>
+                                        <!-- caption -->
+                                        <StackPanel Margin="10,9,10,10">
+                                            <TextBlock Text="{Binding FileName}" FontSize="11.5" FontFamily="Consolas"
+                                                       Foreground="#555" TextTrimming="CharacterEllipsis" />
+                                            <Grid Margin="0,7,0,0">
+                                                <!-- missing -->
+                                                <TextBlock x:Name="MissingTag" Text="⚠ missing file" FontSize="10.5"
+                                                           FontWeight="SemiBold" Visibility="Collapsed"
+                                                           Foreground="{StaticResource StatusRedTextBrush}" />
+                                                <!-- untagged -->
+                                                <Border x:Name="UntaggedTag" CornerRadius="4" Padding="7,2" Visibility="Collapsed"
+                                                        HorizontalAlignment="Left" Background="{StaticResource StatusAmberBgBrush}">
+                                                    <TextBlock Text="untagged" FontSize="10.5" FontWeight="SemiBold"
+                                                               Foreground="{StaticResource StatusAmberTextBrush}" />
+                                                </Border>
+                                                <!-- tagged summary -->
+                                                <StackPanel x:Name="TaggedTags" Orientation="Horizontal">
+                                                    <Border Style="{StaticResource SummaryChip}" Background="{StaticResource StatusBlueBgBrush}">
+                                                        <TextBlock Text="{Binding Subject}" FontSize="9.5" FontWeight="SemiBold"
+                                                                   Foreground="{StaticResource StatusBlueTextBrush}" />
+                                                    </Border>
+                                                    <Border Style="{StaticResource SummaryChip}" Background="#f0ecf8">
+                                                        <TextBlock Text="{Binding PaceLabel}" FontSize="9.5" FontWeight="SemiBold"
+                                                                   Foreground="#6b3fa0" />
+                                                    </Border>
+                                                    <Border Style="{StaticResource SummaryChip}" Background="#f3f3f3">
+                                                        <TextBlock Text="{Binding Explicitness}" FontSize="9.5" FontWeight="SemiBold"
+                                                                   Foreground="#666" />
+                                                    </Border>
+                                                </StackPanel>
+                                            </Grid>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </Button>
+                                <DataTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding IsMissing}" Value="True">
+                                        <Setter TargetName="Missing" Property="Visibility" Value="Visible" />
+                                        <Setter TargetName="MissingTag" Property="Visibility" Value="Visible" />
+                                        <Setter TargetName="TaggedTags" Property="Visibility" Value="Collapsed" />
+                                    </DataTrigger>
+                                    <MultiDataTrigger>
+                                        <MultiDataTrigger.Conditions>
+                                            <Condition Binding="{Binding IsMissing}" Value="False" />
+                                            <Condition Binding="{Binding IsTagged}" Value="False" />
+                                        </MultiDataTrigger.Conditions>
+                                        <Setter TargetName="UntaggedTag" Property="Visibility" Value="Visible" />
+                                        <Setter TargetName="TaggedTags" Property="Visibility" Value="Collapsed" />
+                                    </MultiDataTrigger>
+                                </DataTemplate.Triggers>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </ScrollViewer>
+            </DockPanel>
+
+            <!-- ===== DRAG DIVIDER ===== -->
+            <GridSplitter Grid.Column="2" Width="7" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                          Background="#ececec" ResizeBehavior="PreviousAndNext" ResizeDirection="Columns"
+                          ToolTip="Drag to resize the preview panel" />
+
+            <!-- ===== TAG EDITOR ===== -->
+            <Border Grid.Column="3" Background="{StaticResource SubtleSurfaceBrush}">
+                <DockPanel>
+                    <!-- header -->
+                    <Border DockPanel.Dock="Top" Padding="18,14" BorderBrush="{StaticResource CardBorderBrush}"
+                            BorderThickness="0,0,0,1">
+                        <Grid>
+                            <TextBlock Text="Tag image" FontSize="13.5" FontWeight="SemiBold" VerticalAlignment="Center" />
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                <Path Width="13" Height="13" Stretch="Uniform" Margin="0,0,6,0"
+                                      Stroke="{StaticResource StatusGreenTextBrush}" StrokeThickness="1.8"
+                                      StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeLineJoin="Round"
+                                      Data="M3 8.5 L6.5 12 L13 4" />
+                                <TextBlock Text="{Binding SaveState}" FontSize="11.5"
+                                           Foreground="{StaticResource StatusGreenTextBrush}" VerticalAlignment="Center" />
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+
+                    <!-- body: preview | controls -->
+                    <Grid Visibility="{Binding HasSelectedImage, Converter={StaticResource BoolToVis}}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" MinWidth="220" />
+                            <ColumnDefinition Width="252" />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- big preview -->
+                        <Border Grid.Column="0" BorderBrush="{StaticResource CardBorderBrush}" BorderThickness="0,0,1,0">
+                            <DockPanel Margin="18">
+                                <TextBlock DockPanel.Dock="Bottom" Text="{Binding SelectedImage.FileName}" FontSize="11.5"
+                                           FontFamily="Consolas" Foreground="#777" Margin="0,11,0,0" TextWrapping="Wrap" />
+                                <Border CornerRadius="10" BorderThickness="1" BorderBrush="{StaticResource ControlBorderBrush}"
+                                        Background="{StaticResource HatchNeutralBrush}" MinHeight="180" ClipToBounds="True">
+                                    <Grid>
+                                        <Image Source="{Binding SelectedImage.Preview}" Stretch="Uniform" Margin="6" />
+                                        <TextBlock Text="image file not found" FontSize="11" FontFamily="Consolas"
+                                                   Foreground="{StaticResource StatusRedTextBrush}"
+                                                   HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                   Visibility="{Binding SelectedImage.IsMissing, Converter={StaticResource BoolToVis}}" />
+                                    </Grid>
+                                </Border>
+                            </DockPanel>
+                        </Border>
+
+                        <!-- controls -->
+                        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto" Padding="18">
+                            <StackPanel>
+                                <!-- subject -->
+                                <Grid>
+                                    <TextBlock Text="Subject" FontSize="12" FontWeight="SemiBold" Foreground="#444" />
+                                    <TextBlock Text="who / what is shown" FontSize="10.5" HorizontalAlignment="Right"
+                                               Foreground="{StaticResource TextFaintBrush}" />
+                                </Grid>
+                                <ItemsControl ItemsSource="{Binding SubjectChips}" Margin="0,8,0,0">
+                                    <ItemsControl.ItemsPanel><ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate></ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate DataType="{x:Type local:ChipOption}">
+                                            <Button Style="{StaticResource ChipButton}" Content="{Binding Label}"
+                                                    Command="{Binding SelectCommand}" />
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                                <!-- pace -->
+                                <Grid Margin="0,18,0,0">
+                                    <TextBlock Text="Pace" FontSize="12" FontWeight="SemiBold" Foreground="#444" />
+                                    <TextBlock Text="tempo only · BPM-banded" FontSize="10.5" HorizontalAlignment="Right"
+                                               Foreground="{StaticResource TextFaintBrush}" />
+                                </Grid>
+                                <ItemsControl ItemsSource="{Binding PaceOptions}" Margin="0,8,0,0">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <UniformGrid Rows="1" Columns="5" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate DataType="{x:Type local:PaceOption}">
+                                            <Button Style="{StaticResource PaceButton}" Command="{Binding SelectCommand}" />
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                                <TextBlock Text="{Binding PaceHint}" FontSize="11" Margin="0,7,0,0"
+                                           Foreground="{StaticResource TextMutedBrush}" />
+
+                                <!-- explicitness -->
+                                <Grid Margin="0,18,0,0">
+                                    <TextBlock Text="Explicitness" FontSize="12" FontWeight="SemiBold" Foreground="#444" />
+                                    <TextBlock Text="independent of pace" FontSize="10.5" HorizontalAlignment="Right"
+                                               Foreground="{StaticResource TextFaintBrush}" />
+                                </Grid>
+                                <ItemsControl ItemsSource="{Binding ExplicitChips}" Margin="0,8,0,0">
+                                    <ItemsControl.ItemsPanel><ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate></ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate DataType="{x:Type local:ChipOption}">
+                                            <Button Style="{StaticResource ChipButton}" Content="{Binding Label}"
+                                                    Command="{Binding SelectCommand}" />
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+
+                                <!-- notes -->
+                                <StackPanel Orientation="Horizontal" Margin="0,18,0,8">
+                                    <TextBlock Text="Notes" FontSize="12" FontWeight="SemiBold" Foreground="#444" />
+                                    <TextBlock Text="pose / setting cue" FontSize="10.5" Margin="6,0,0,0"
+                                               VerticalAlignment="Center" Foreground="{StaticResource TextFaintBrush}" />
+                                </StackPanel>
+                                <TextBox Text="{Binding SelectedImage.Notes, UpdateSourceTrigger=PropertyChanged}"
+                                         AcceptsReturn="True" TextWrapping="Wrap" MinHeight="70"
+                                         VerticalScrollBarVisibility="Auto" Padding="9,7" FontSize="12"
+                                         BorderBrush="{StaticResource ControlBorderBrush}" Background="{StaticResource SurfaceBrush}" />
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Grid>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </Grid>
 </UserControl>
