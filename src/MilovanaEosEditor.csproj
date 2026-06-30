@@ -15,4 +15,14 @@
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="obj\Debug\net8.0-windows\App.baml" />
+    <Content Include="obj\Debug\net8.0-windows\MainWindow.baml" />
+    <Content Include="obj\Debug\net8.0-windows\Views\ActiveTeaseView.baml" />
+    <Content Include="obj\Debug\net8.0-windows\Views\ScriptEditorView.baml" />
+    <Content Include="obj\Debug\net8.0-windows\Views\TagImagesView.baml" />
+    <Content Include="obj\Debug\net8.0-windows\Views\TeaseBrowserView.baml" />
+    <Content Include="obj\Debug\net8.0-windows\Views\WorkflowView.baml" />
+  </ItemGroup>
+
 </Project>

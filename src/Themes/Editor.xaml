@@ -1,0 +1,27 @@
+<!-- Script-editor theme: the embedded JetBrains Mono code font plus the DSL syntax-highlight palette,
+     both lifted from the Claude Design mockup (src/design). The font ships inside the app as a WPF
+     Resource (see MilovanaEosEditor.csproj Fonts/) and is referenced by the packaged font URI below —
+     never from the src/design copy or an installed system family. The brush keys here are the single
+     source of colour truth for the editor; EditorColors.cs resolves them (with matching fallbacks). -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <FontFamily x:Key="CodeFontFamily">pack://application:,,,/Fonts/#JetBrains Mono</FontFamily>
+
+    <!-- DSL syntax colours -->
+    <SolidColorBrush x:Key="SyntaxKeywordBrush" Color="#0b6bcb" />
+    <SolidColorBrush x:Key="SyntaxPageBrush" Color="#a626a4" />
+    <SolidColorBrush x:Key="SyntaxParamNameBrush" Color="#267f99" />
+    <SolidColorBrush x:Key="SyntaxParamValueBrush" Color="#0a7c46" />
+    <SolidColorBrush x:Key="SyntaxNumberBrush" Color="#098658" />
+    <SolidColorBrush x:Key="SyntaxNavTargetBrush" Color="#a05a00" />
+    <SolidColorBrush x:Key="SyntaxPunctuationBrush" Color="#888888" />
+    <SolidColorBrush x:Key="SyntaxSayTextBrush" Color="#444444" />
+    <SolidColorBrush x:Key="SyntaxColorLiteralBrush" Color="#a05a00" />
+    <SolidColorBrush x:Key="LineNumberBrush" Color="#c4c4c4" />
+
+    <!-- Squiggle colours -->
+    <SolidColorBrush x:Key="EditorErrorBrush" Color="#c42b1c" />
+    <SolidColorBrush x:Key="EditorWarningBrush" Color="#e8a33d" />
+
+</ResourceDictionary>
